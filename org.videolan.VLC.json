@@ -24,6 +24,10 @@
     "*.la",
     "*.a"
   ],
+  "cleanup-commands": [
+    "rm -f /app/lib/vlc/plugins/plugins.dat",
+    "/app/lib/vlc/vlc-cache-gen /app/lib/vlc/plugins"
+  ],
   "modules": [
     "shared-modules/udev/udev-175.json",
     "shared-modules/qt5/qt5-qtbase.json",
