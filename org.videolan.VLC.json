@@ -290,46 +290,6 @@
       ]
     },
     {
-      "name": "dbus-glib",
-      "rm-configure": true,
-      "config-opts": [
-        "--enable-static=no",
-        "--enable-bash-completion=no"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.108.tar.gz",
-          "sha256": "9f340c7e2352e9cdf113893ca77ca9075d9f8d5e81476bf2bf361099383c602c"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
-      "name": "dbus-python",
-      "rm-configure": true,
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.4.tar.gz",
-          "sha256": "e2f1d6871f74fba23652e51d10873e54f71adab0525833c19bad9e99b1b2f9cc"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
       "name": "taglib",
       "buildsystem": "cmake",
       "config-opts": [
