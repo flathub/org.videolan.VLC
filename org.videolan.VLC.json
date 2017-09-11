@@ -25,6 +25,7 @@
     "*.a"
   ],
   "modules": [
+    "shared-modules/udev/udev-175.json",
     "shared-modules/qt5/qt5-qtbase.json",
     "shared-modules/SDL/SDL-1.2.15.json",
     "shared-modules/SDL/SDL_image-1.2.12.json",
@@ -676,6 +677,180 @@
             "autoreconf -fiv"
           ],
           "dest-filename": "autogen.sh"
+        }
+      ]
+    },
+    {
+      "name": "libsecret",
+      "config-opts": ["--disable-static", "--disable-manpages"],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/libsecret/0.18/libsecret-0.18.5.tar.xz",
+          "sha256": "9ce7bd8dd5831f2786c935d82638ac428fa085057cc6780aba0e39375887ccb3"
+        },
+        {
+          "type": "shell",
+          "commands": ["autoreconf -f"]
+        }
+      ]
+    },
+    {
+      "name": "libbluray",
+      "config-opts": ["--disable-static", "--disable-bdjava-jar"],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://get.videolan.org/libbluray/1.0.1/libbluray-1.0.1.tar.bz2",
+          "sha256": "0f9f9a1db2f48cafc70ed2596ff3594b597e2027408f5f2be6191c245d67853a"
+        }
+      ]
+    },
+    {
+      "name": "libusb",
+      "config-opts": ["--disable-static"],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/libusb/libusb/releases/download/v1.0.21/libusb-1.0.21.tar.bz2",
+          "sha256": "7dce9cce9a81194b7065ee912bcd55eeffebab694ea403ffb91b67db66b1824b"
+        }
+      ]
+    },
+    {
+      "name": "libmtp",
+      "config-opts": ["--disable-static", "--with-udev=/app/lib/udev"],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.sourceforge.net/libmtp/libmtp-1.1.13.tar.gz",
+          "sha256": "494ee02fbfbc316aad75b93263dac00f02a4899f28cfda1decbbd6e26fda6d40"
+        }
+      ]
+    },
+    {
+      "name": "fluidsynth",
+      "config-opts": ["--disable-static"],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://downloads.sourceforge.net/fluidsynth/fluidsynth-1.1.6.tar.bz2",
+          "sha256": "d28b47dfbf7f8e426902ae7fa2981d821fbf84f41da9e1b85be933d2d748f601"
+        }
+      ]
+    },
+    {
+      "name": "libmpeg2",
+      "config-opts": ["--disable-static"],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://libmpeg2.sourceforge.net/files/libmpeg2-0.5.1.tar.gz",
+          "sha256": "dee22e893cb5fc2b2b6ebd60b88478ab8556cb3b93f9a0d7ce8f3b61851871d4"
+        }
+      ]
+    },
+    {
+      "name": "libdca",
+      "config-opts": ["--disable-static"],
+      "sources": [
+        {
+          "type": "git",
+          "branch": "76c67bc024155d159762c287c33ad3e86634cc91",
+          "url": "https://code.videolan.org/videolan/libdca.git"
+        }
+      ]
+    },
+    {
+      "name": "libcaca",
+      "config-opts": ["--disable-static", "--disable-python"],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://caca.zoy.org/files/libcaca/libcaca-0.99.beta19.tar.gz",
+          "sha256": "128b467c4ed03264c187405172a4e83049342cc8cc2f655f53a2d0ee9d3772f4"
+        }
+      ]
+    },
+    {
+      "name": "protobuf",
+      "config-opts": ["--disable-static"],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/google/protobuf/archive/v3.4.0/protobuf-3.4.0.tar.gz",
+          "sha256": "f6600abeee3babfa18591961a0ff21e7db6a6d9ef82418a261ec4fee44ee6d44"
+        },
+        {
+          "type": "archive",
+          "url": "https://github.com/google/googlemock/archive/release-1.7.0.tar.gz#/googlemock-1.7.0.tar.gz",
+          "sha256": "3f20b6acb37e5a98e8c4518165711e3e35d47deb6cdb5a4dd4566563b5efd232",
+          "dest": "gmock"
+        },
+        {
+          "type": "archive",
+          "url": "https://github.com/google/googletest/archive/release-1.7.0.tar.gz#/googletest-1.7.0.tar.gz",
+          "sha256": "f73a6546fdf9fce9ff93a5015e0333a8af3062a152a9ad6bcb772c96687016cc",
+          "dest": "gmock/gtest"
+        }
+      ]
+    },
+    {
+      "name": "libXcursor",
+      "config-opts": [ "--disable-static" ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://xorg.freedesktop.org/archive/individual/lib/libXcursor-1.1.14.tar.bz2",
+          "sha256": "9bc6acb21ca14da51bda5bc912c8955bc6e5e433f0ab00c5e8bef842596c33df"
+        }
+      ]
+    },
+    {
+      "name": "gsettings-desktop-schemas",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/gsettings-desktop-schemas/3.24/gsettings-desktop-schemas-3.24.0.tar.xz",
+          "sha256": "f6573a3f661d22ff8a001cc2421d8647717f1c0e697e342d03c6102f29bbbb90"
+        }
+      ]
+    },
+    {
+      "name": "adwaita-icon-theme",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/adwaita-icon-theme/3.24/adwaita-icon-theme-3.24.0.tar.xz",
+          "sha256": "ccf79ff3bd340254737ce4d28b87f0ccee4b3358cd3cd5cd11dc7b42f41b272a"
+        }
+      ]
+    },
+    {
+      "name": "qgnomeplatform",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/MartinBriza/QGnomePlatform/archive/0.3/QGnomePlatform-0.3.tar.gz",
+          "sha256": "6335f86d8a3e7b2dedd356868dcc20e0d81736f88ee1364e7c19b6f5a20c9c0c"
+        },
+        {
+          "type": "script",
+          "commands": [
+            "qmake"
+          ],
+          "dest-filename": "configure"
+        }
+      ]
+    },
+    {
+      "name": "adwaita-qt",
+      "buildsystem": "cmake",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/MartinBriza/adwaita-qt/archive/1.0.tar.gz",
+          "sha256": "c2c0c71b131d0e3e58ee108570796cf70b35dccaa64ce17915d4486de5e91513"
         }
       ]
     },
