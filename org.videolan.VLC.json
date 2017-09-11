@@ -12,6 +12,7 @@
     "--filesystem=home:ro",
     "--device=all"
   ],
+  "rename-appdata-file": "vlc.appdata.xml",
   "rename-desktop-file": "vlc.desktop",
   "rename-icon": "vlc",
   "copy-icon": true,
@@ -24,11 +25,28 @@
     "*.a"
   ],
   "modules": [
-    "shared-modules/qt4/qt4-4.8.7-minimal.json",
+    "shared-modules/qt5/qt5-qtbase.json",
     "shared-modules/SDL/SDL-1.2.15.json",
     "shared-modules/SDL/SDL_image-1.2.12.json",
     "shared-modules/lua5.3/lua-5.3.2.json",
     "shared-modules/glu/glu-9.0.0.json",
+    {
+      "name": "qt5-qtx11extras",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://download.qt.io/official_releases/qt/5.9/5.9.1/submodules/qtx11extras-opensource-src-5.9.1.tar.xz",
+          "sha256": "a63d0e28958331d672dbd0f8c554bdaddbc974a27be37601f7f221a2ef1ad601"
+        },
+        {
+          "type": "script",
+          "commands": [
+            "qmake"
+          ],
+          "dest-filename": "configure"
+        }
+      ]
+    },
     {
       "name": "libmad",
       "config-opts": [
@@ -671,8 +689,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://ffmpeg.org/releases/ffmpeg-2.8.12.tar.xz",
-          "sha256": "6213f18a8bb93415724c40a1840a4591458c2949575978b9cf43d7b6a71283bd"
+          "url": "http://ffmpeg.org/releases/ffmpeg-3.3.3.tar.xz",
+          "sha256": "d2a9002cdc6b533b59728827186c044ad02ba64841f1b7cd6c21779875453a1e"
         }
       ]
     },
@@ -700,26 +718,22 @@
     {
       "name": "vlc",
       "rm-configure": true,
-      "post-install": [
-        "install -Dm644 org.videolan.VLC.appdata.xml /app/share/appdata/org.videolan.VLC.appdata.xml"
+      "config-opts": [
+        "BUILDCC=/usr/bin/gcc -std=gnu99"
       ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.videolan.org/vlc/2.2.6/vlc-2.2.6.tar.xz",
-          "sha256": "c403d3accd9a400eb2181c958f3e7bc5524fe5738425f4253d42883b425a42a8"
+          "url": "https://nightlies.videolan.org/build/source/vlc-3.0.0-20170823-0243-git.tar.xz",
+          "sha256": "ca18b035ef2cc37ead773465465fe1391b94fd20e2d0a4108723aeb1f4346334"
         },
         {
           "type": "patch",
-          "path": "vlc-gcrypt.patch"
+          "path": "vlc-fix-appdata.patch"
         },
         {
           "type": "patch",
-          "path": "vlc-2.2.6-lua5.3.patch"
-        },
-        {
-          "type": "file",
-          "path": "org.videolan.VLC.appdata.xml"
+          "path": "vlc-qt-Prefer-XCB-over-Wayland.patch"
         }
       ]
     }
