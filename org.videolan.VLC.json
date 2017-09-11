@@ -435,6 +435,10 @@
         {
           "type": "patch",
           "path": "gsm.patch"
+        },
+        {
+          "type": "patch",
+          "path": "gsm-makefile.patch"
         }
       ]
     },
