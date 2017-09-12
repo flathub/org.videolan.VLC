@@ -691,7 +691,7 @@
     },
     {
       "name": "libsecret",
-      "config-opts": ["--disable-static", "--disable-manpages"],
+      "config-opts": ["--disable-static", "--disable-manpages", "--disable-introspection"],
       "sources": [
         {
           "type": "archive",
@@ -817,6 +817,7 @@
     },
     {
       "name": "gsettings-desktop-schemas",
+      "config-opts": [ "--disable-introspection" ],
       "sources": [
         {
           "type": "archive",
