@@ -19,6 +19,11 @@
   "cleanup": [
     "/include",
     "/lib/pkgconfig",
+    "/share/aclocal",
+    "/share/doc",
+    "/share/gtk-doc",
+    "/share/info",
+    "/share/man",
     "/share/pkgconfig",
     "/lib/cmake",
     "*.la",
@@ -863,6 +868,9 @@
       "rm-configure": true,
       "config-opts": [
         "BUILDCC=/usr/bin/gcc -std=gnu99"
+      ],
+      "cleanup": [
+        "/share/macosx"
       ],
       "sources": [
         {
