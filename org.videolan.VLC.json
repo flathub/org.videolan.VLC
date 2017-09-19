@@ -12,7 +12,11 @@
     "--filesystem=home:ro",
     "--talk-name=org.mpris.MediaPlayer2.Player",
     "--own-name=org.mpris.MediaPlayer2.vlc",
-    "--device=all"
+    "--device=all",
+    "--filesystem=xdg-run/dconf",
+    "--filesystem=~/.config/dconf:ro",
+    "--talk-name=ca.desrt.dconf",
+    "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
   ],
   "rename-appdata-file": "vlc.appdata.xml",
   "rename-desktop-file": "vlc.desktop",
