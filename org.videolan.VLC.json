@@ -701,27 +701,6 @@
       ]
     },
     {
-      "name": "a52dec",
-      "rm-configure": true,
-      "build-options": {
-        "cflags": "-O2 -g -fPIC"
-      },
-      "sources": [
-        {
-          "type": "archive",
-          "url": "http://liba52.sourceforge.net/files/a52dec-0.7.4.tar.gz",
-          "sha256": "a21d724ab3b3933330194353687df82c475b5dfb997513eef4c25de6c865ec33"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
       "name": "libsecret",
       "config-opts": ["--disable-static", "--disable-manpages", "--disable-introspection"],
       "sources": [
@@ -777,36 +756,6 @@
           "type": "archive",
           "url": "http://downloads.sourceforge.net/fluidsynth/fluidsynth-1.1.6.tar.bz2",
           "sha256": "d28b47dfbf7f8e426902ae7fa2981d821fbf84f41da9e1b85be933d2d748f601"
-        }
-      ]
-    },
-    {
-      "name": "libmpeg2",
-      "rm-configure": true,
-      "config-opts": ["--disable-static"],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "http://libmpeg2.sourceforge.net/files/libmpeg2-0.5.1.tar.gz",
-          "sha256": "dee22e893cb5fc2b2b6ebd60b88478ab8556cb3b93f9a0d7ce8f3b61851871d4"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
-      "name": "libdca",
-      "config-opts": ["--disable-static"],
-      "sources": [
-        {
-          "type": "git",
-          "branch": "76c67bc024155d159762c287c33ad3e86634cc91",
-          "url": "https://code.videolan.org/videolan/libdca.git"
         }
       ]
     },
@@ -908,7 +857,8 @@
       "name": "vlc",
       "rm-configure": true,
       "config-opts": [
-        "BUILDCC=/usr/bin/gcc -std=gnu99"
+        "BUILDCC=/usr/bin/gcc -std=gnu99",
+        "--disable-a52"
       ],
       "cleanup": [
         "/share/macosx"
