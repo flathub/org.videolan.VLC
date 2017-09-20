@@ -896,10 +896,6 @@
         {
           "type": "patch",
           "path": "vlc-fix-appdata.patch"
-        },
-        {
-          "type": "patch",
-          "path": "vlc-qt-Prefer-XCB-over-Wayland.patch"
         }
       ]
     }
