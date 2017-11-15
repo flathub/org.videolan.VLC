@@ -9,7 +9,7 @@
     "--socket=x11",
     "--socket=pulseaudio",
     "--share=network",
-    "--filesystem=home:ro",
+    "--filesystem=host:ro",
     "--talk-name=org.mpris.MediaPlayer2.Player",
     "--own-name=org.mpris.MediaPlayer2.vlc",
     "--device=all",
