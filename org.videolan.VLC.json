@@ -134,50 +134,6 @@
       ]
     },
     {
-      "name": "libmad",
-      "config-opts": [
-        "--enable-accuracy",
-        "--disable-avcodec"
-      ],
-      "rm-configure": true,
-      "build-options": {
-        "arch": {
-          "x86_64": {
-            "config-opts": [
-              "--enable-fpm=64bit"
-            ]
-          }
-        }
-      },
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://downloads.sourceforge.net/project/mad/libmad/0.15.1b/libmad-0.15.1b.tar.gz",
-          "sha256": "bbfac3ed6bfbc2823d3775ebb931087371e142bb0e9bb1bee51a76a6e0078690"
-        },
-        {
-          "type": "patch",
-          "path": "libmad-0.15.1b-cflags.patch"
-        },
-        {
-          "type": "patch",
-          "path": "libmad-0.15.1b-cflags-O2.patch"
-        },
-        {
-          "type": "patch",
-          "path": "libmad-0.15.1b-gcc44-mips-h-constraint-removal.patch"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "touch NEWS AUTHORS ChangeLog",
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
       "name": "libraw1394",
       "rm-configure": true,
       "sources": [
@@ -542,7 +498,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://www.fribidi.org/download/fribidi-0.19.7.tar.bz2",
+          "url": "https://download.videolan.org/pub/contrib/fribidi/fribidi-0.19.7.tar.bz2",
           "sha256": "08222a6212bbc2276a2d55c3bf370109ae4a35b689acbc66571ad2a670595a8e"
         },
         {
@@ -679,7 +635,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://ftp.videolan.org/videolan/libdvdread/5.0.3/libdvdread-5.0.3.tar.bz2",
+          "url": "http://ftp.videolan.org/videolan/libdvdread/5.0.3/libdvdread-5.0.3.tar.bz2",
           "sha256": "321cdf2dbdc83c96572bc583cd27d8c660ddb540ff16672ecb28607d018ed82b"
         },
         {
@@ -697,7 +653,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://ftp.videolan.org/videolan/libdvdnav/5.0.3/libdvdnav-5.0.3.tar.bz2",
+          "url": "http://ftp.videolan.org/videolan/libdvdnav/5.0.3/libdvdnav-5.0.3.tar.bz2",
           "sha256": "5097023e3d2b36944c763f1df707ee06b19dc639b2b68fb30113a5f2cbf60b6d"
         },
         {
