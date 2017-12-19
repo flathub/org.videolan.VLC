@@ -1,0 +1,22 @@
+From 617a79af53918e39fd092d0555d09beb3e5c7a63 Mon Sep 17 00:00:00 2001
+From: Niklas Haas <git@haasn.xyz>
+Date: Sat, 30 Dec 2017 04:36:49 +0100
+Subject: [PATCH] shaders: fix typo in gamut warning shader
+
+---
+ src/shaders/colorspace.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/shaders/colorspace.c b/src/shaders/colorspace.c
+index b85e1b2..6d467f5 100644
+--- a/src/shaders/colorspace.c
++++ b/src/shaders/colorspace.c
+@@ -749,7 +749,7 @@ void pl_shader_color_map(struct pl_shader *sh,
+     if (params->gamut_warning) {
+         GLSL("if (any(greaterThan(color.rgb, vec3(1.01))) ||\n"
+              "    any(lessThan(color.rgb, vec3(-0.01))))\n"
+-             "    color.rgb = vec3(1.0) - color.rgb;) // invert\n");
++             "    color.rgb = vec3(1.0) - color.rgb; // invert\n");
+     }
+ 
+     if (src.light != dst.light)
