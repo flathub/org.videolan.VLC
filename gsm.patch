@@ -4,8 +4,8 @@
  # CCFLAGS 	= -c -O
  
  CC		= gcc -ansi -pedantic
--CCFLAGS 	= -c -O2 -DNeedFunctionPrototypes=1
-+CCFLAGS 	= -c -O2 -fPIC -DNeedFunctionPrototypes=1
+-CCFLAGS 	= -c -O2 -DNeedFunctionPrototypes=1 -Wall -Wno-comment
++CCFLAGS 	= -c -O2 -fPIC -DNeedFunctionPrototypes=1 -Wall -Wno-comment
  
  LD 		= $(CC)
  
@@ -60,9 +60,9 @@
 -		$(RANLIB) $(LIBGSM)
 -
 +$(LIBGSMSO): $(LIB) $(GSM_OBJECTS)
-+	$(LD) -shared -Wl,-soname,libgsm.so.1 -o $@.1.0.13 $(GSM_OBJECTS)
-+	$(LN) libgsm.so.1.0.13 $(LIBGSMSO).1
-+	$(LN) libgsm.so.1.0.13 $(LIBGSMSO)
++	$(LD) -shared -Wl,-soname,libgsm.so.1 -o $@.1.0.17 $(GSM_OBJECTS)
++	$(LN) libgsm.so.1.0.17 $(LIBGSMSO).1
++	$(LN) libgsm.so.1.0.17 $(LIBGSMSO)
  
  # Toast, Untoast and Tcat -- the compress-like frontends to gsm.
  
@@ -146,11 +146,11 @@
  		chmod 444 $@
  
 +$(GSM_INSTALL_LIB)/libgsm.so:	$(LIBGSMSO)
-+		-rm $(RMFLAGS) $@ $@.1 $@.1.0.13
-+		cp $?.1.0.13 $@.1.0.13
-+		chmod 755 $@.1.0.13
-+		$(LN) libgsm.so.1.0.13 $@
-+		$(LN) libgsm.so.1.0.13 $@.1
++		-rm $(RMFLAGS) $@ $@.1 $@.1.0.17
++		cp $?.1.0.17 $@.1.0.17
++		chmod 755 $@.1.0.17
++		$(LN) libgsm.so.1.0.17 $@
++		$(LN) libgsm.so.1.0.17 $@.1
  
  # Distribution
  

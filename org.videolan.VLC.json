@@ -40,6 +40,14 @@
     "rm -f /app/lib/vlc/plugins/plugins.dat",
     "/app/lib/vlc/vlc-cache-gen /app/lib/vlc/plugins"
   ],
+  "build-options": {
+    "cflags": "-O2 -g -fstack-protector-strong -D_FORTIFY_SOURCE=2",
+    "cxxflags": "-O2 -g -fstack-protector-strong -D_FORTIFY_SOURCE=2",
+    "ldflags": "-fstack-protector-strong -Wl,-z,relro,-z,now -L/app/lib",
+    "env": {
+      "V": "1"
+    }
+  },
   "modules": [
     "shared-modules/udev/udev-175.json",
     "shared-modules/SDL/SDL-1.2.15.json",
@@ -212,8 +220,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://www.samba.org/ftp/tdb/tdb-1.3.12.tar.gz",
-          "sha256": "60134e32253cac8e2efe5e0185d20123c208bcf6ad15edf2f50d80daadf8c348"
+          "url": "https://www.samba.org/ftp/tdb/tdb-1.3.15.tar.gz",
+          "sha256": "b4a1bf3833601bd9f10aff363cb750860aef9ce5b4617989239923192f946728"
         }
       ]
     },
@@ -244,8 +252,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://downloads.sourceforge.net/project/libdc1394/libdc1394-2/2.2.4/libdc1394-2.2.4.tar.gz",
-          "sha256": "a93689a353c241884a98727128f315ecf9965db70dca710b08af10e5fa0d2e6f"
+          "url": "https://downloads.sourceforge.net/project/libdc1394/libdc1394-2/2.2.5/libdc1394-2.2.5.tar.gz",
+          "sha256": "350cc8d08aee5ffc4e1f3049e2e1c2bc6660642d424595157da97ab5b1263337"
         },
         {
           "type": "script",
@@ -306,8 +314,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.fftw.org/fftw-3.3.5.tar.gz",
-          "sha256": "8ecfe1b04732ec3f5b7d279fdb8efcad536d555f9d1e8fabd027037d45ea8bcf"
+          "url": "http://www.fftw.org/fftw-3.3.7.tar.gz",
+          "sha256": "3b609b7feba5230e8f6dd8d245ddbefac324c5a6ae4186947670d9ac2cd25573"
         },
         {
           "type": "script",
@@ -316,7 +324,6 @@
           ],
           "dest-filename": "autogen.sh"
         }
-
       ]
     },
     {
@@ -325,8 +332,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://bitbucket.org/acoustid/chromaprint/downloads/chromaprint-1.2.tar.gz",
-          "sha256": "822b8949a322ac04c6f8a3ed78f5e689bcc493c6ca0972bf627c913c8430031a"
+          "url": "https://bitbucket.org/acoustid/chromaprint/downloads/chromaprint-1.4.2.tar.gz",
+          "sha256": "989609a7e841dd75b34ee793bd1d049ce99a8f0d444b3cea39d57c3e5d26b4d4"
         }
       ]
     },
@@ -354,8 +361,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://downloads.sourceforge.net/project/pupnp/pupnp/libUPnP%201.6.20/libupnp-1.6.20.tar.bz2",
-          "sha256": "ee3537081e3ea56f66ada10387486823989210bc98002f098305551c966e3a63"
+          "url": "https://downloads.sourceforge.net/project/pupnp/pupnp/libUPnP%201.6.24/libupnp-1.6.24.tar.bz2",
+          "sha256": "7d83d79af3bb4062e5c3a58bf2e90d2da5b8b99e2b2d57c23b5b6f766288cf96"
         },
         {
           "type": "script",
@@ -391,19 +398,13 @@
     },
     {
       "name": "openjpeg",
+      "builddir": true,
+      "buildsystem": "cmake",
       "sources": [
         {
           "type": "archive",
-          "url": "https://downloads.sourceforge.net/project/openjpeg.mirror/1.5.2/openjpeg-1.5.2.tar.gz",
-          "sha256": "15df7b194a5d8dba0052cd21c17a4dc761149a770a907d73fffb972078c28a87"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "rm -rf thirdparty",
-            "autoreconf -fi"
-          ],
-          "dest-filename": "autogen.sh"
+          "url": "https://github.com/uclouvain/openjpeg/archive/v2.3.0.tar.gz",
+          "sha256": "3dc787c1bb6023ba846c2a0d9b1f6e179f1cd255172bde9eb75b01f1e6c7d71a"
         }
       ]
     },
@@ -430,15 +431,13 @@
       "config-opts": [
         "--enable-custom-modes",
         "--disable-static",
-        "--enable-initrinsics",
-        "--enable-rtcd",
         "--enable-ambisonics"
       ],
       "sources": [
         {
           "type": "archive",
-          "url": "http://downloads.us.xiph.org/releases/opus/opus-1.1.3.tar.gz",
-          "sha256": "58b6fe802e7e30182e95d0cde890c0ace40b6f125cffc50635f0ad2eef69b633"
+          "url": "https://archive.mozilla.org/pub/opus/opus-1.2.1.tar.gz",
+          "sha256": "cfafd339ccd9c5ef8d6ab15d7e1a412c054bf4cb4ecbbbcc78c12ef2def70732"
         },
         {
           "type": "script",
@@ -466,8 +465,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.quut.com/gsm/gsm-1.0.14.tar.gz",
-          "sha256": "5814a16a30b3c026871b3739812dc4a2a84299331182c987da1c212c93e9352c"
+          "url": "http://www.quut.com/gsm/gsm-1.0.17.tar.gz",
+          "sha256": "855a57d1694941ddf3c73cb79b8d0b3891e9c9e7870b4981613b734e1ad07601"
         },
         {
           "type": "patch",
@@ -485,12 +484,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.videolan.org/pub/libdvbpsi/1.2.0/libdvbpsi-1.2.0.tar.bz2",
-          "sha256": "36d9b233306e48b58999e87864253b564e20932ed46a485e44ef7058f1f927e8"
-        },
-        {
-          "type": "patch",
-          "path": "libdvbpsi.patch"
+          "url": "https://download.videolan.org/pub/libdvbpsi/1.3.1/libdvbpsi-1.3.1.tar.bz2",
+          "sha256": "d68367afd5ad8e6ebca813e7958a3ceb9743b421adb4265eceeb6a3511c84420"
         },
         {
           "type": "script",
@@ -554,8 +549,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/libass/libass/releases/download/0.13.5/libass-0.13.5.tar.xz",
-          "sha256": "9387a2421b6e6a132c7d473de594b9f0367aa85af64aa103b66f0861431b1596"
+          "url": "https://github.com/libass/libass/releases/download/0.14.0/libass-0.14.0.tar.xz",
+          "sha256": "881f2382af48aead75b7a0e02e65d88c5ebd369fe46bc77d9270a94aa8fd38a2"
         },
         {
           "type": "script",
@@ -572,8 +567,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://dl.matroska.org/downloads/libebml/libebml-1.3.4.tar.bz2",
-          "sha256": "c50d3ecf133742c6549c0669c3873f968e11a365a5ba17b2f4dc339bbe51f387"
+          "url": "https://dl.matroska.org/downloads/libebml/libebml-1.3.5.tar.xz",
+          "sha256": "d818413f60742c2f036ba6f582c5e0320d12bffec1b0fc0fc17a398b6f04aa00"
         },
         {
           "type": "script",
@@ -593,35 +588,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.4.5.tar.bz2",
-          "sha256": "79023fa46901e5562b27d93a9dd168278fa101361d7fd11a35e84e58e11557bc"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
-      "name": "libcdio",
-      "rm-configure": true,
-      "config-opts": [
-        "--disable-vcd-info",
-        "--enable-cpp-progs",
-        "--disable-static"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://ftp.gnu.org/gnu/libcdio/libcdio-0.83.tar.gz",
-          "sha256": "235017e3eccb86424f9c108f2c5d5fca62630bda8c9dcf23b425ba9c5e2482c0"
-        },
-        {
-          "type": "patch",
-          "path": "libcdio.patch"
+          "url": "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.4.8.tar.xz",
+          "sha256": "d8c72b20d4c5bf888776884b0854f95e74139b5267494fae1f395f7212d7c992"
         },
         {
           "type": "script",
@@ -670,8 +638,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libdvdread/5.0.3/libdvdread-5.0.3.tar.bz2",
-          "sha256": "321cdf2dbdc83c96572bc583cd27d8c660ddb540ff16672ecb28607d018ed82b"
+          "url": "http://ftp.videolan.org/videolan/libdvdread/6.0.0/libdvdread-6.0.0.tar.bz2",
+          "sha256": "b33b1953b4860545b75f6efc06e01d9849e2ea4f797652263b0b4af6dd10f935"
         },
         {
           "type": "script",
@@ -688,8 +656,26 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libdvdnav/5.0.3/libdvdnav-5.0.3.tar.bz2",
-          "sha256": "5097023e3d2b36944c763f1df707ee06b19dc639b2b68fb30113a5f2cbf60b6d"
+          "url": "http://ftp.videolan.org/videolan/libdvdnav/6.0.0/libdvdnav-6.0.0.tar.bz2",
+          "sha256": "f0a2711b08a021759792f8eb14bb82ff8a3c929bf88c33b64ffcddaa27935618"
+        },
+        {
+          "type": "script",
+          "commands": [
+            "autoreconf -fiv"
+          ],
+          "dest-filename": "autogen.sh"
+        }
+      ]
+    },
+    {
+      "name": "libdvdcss",
+      "rm-configure": true,
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://ftp.videolan.org/videolan/libdvdcss/1.4.1/libdvdcss-1.4.1.tar.bz2",
+          "sha256": "eb073752b75ae6db3a3ffc9d22f6b585cd024079a2bf8acfa56f47a8fce6eaac"
         },
         {
           "type": "script",
@@ -706,8 +692,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://downloads.sourceforge.net/modplug-xmms/libmodplug-0.8.8.5.tar.gz",
-          "sha256": "77462d12ee99476c8645cb5511363e3906b88b33a6b54362b4dbc0f39aa2daad"
+          "url": "http://downloads.sourceforge.net/modplug-xmms/libmodplug-0.8.9.0.tar.gz",
+          "sha256": "457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de"
         },
         {
           "type": "script",
@@ -719,19 +705,107 @@
       ]
     },
     {
-      "name": "ffmpeg",
+      "name": "nasm",
+      "rm-configure": true,
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://www.nasm.us/pub/nasm/releasebuilds/2.13.02/nasm-2.13.02.tar.xz",
+          "sha256": "8ac3235f49a6838ff7a8d7ef7c19a4430d0deecc0c2d3e3e237b5e9f53291757"
+        },
+        {
+          "type": "script",
+          "commands": [
+            "autoreconf -fiv"
+          ],
+          "dest-filename": "autogen.sh"
+        }
+      ]
+    },
+    {
+      "name": "x264",
       "config-opts": [
         "--enable-pic",
         "--enable-shared",
-        "--disable-debug",
         "--disable-doc",
         "--disable-static"
       ],
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-3.3.3.tar.xz",
-          "sha256": "d2a9002cdc6b533b59728827186c044ad02ba64841f1b7cd6c21779875453a1e"
+          "url": "http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20171225-2245-stable.tar.bz2",
+          "sha256": "91143276d18414f1c94ecdc472b063c874308833d57d7353f15286372ba4ba68"
+        }
+      ]
+    },
+    {
+      "name": "x265",
+      "builddir": true,
+      "subdir": "source",
+      "buildsystem": "cmake",
+      "config-opts": [
+        "-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=true"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://ftp.videolan.org/pub/videolan/x265/x265_2.6.tar.gz",
+          "sha256": "1bf0036415996af841884802161065b9e6be74f5f6808ac04831363e2549cdbf"
+        }
+      ]
+    },
+    {
+      "name": "libvpx",
+      "config-opts": [
+        "--enable-pic",
+        "--enable-shared",
+        "--disable-examples",
+        "--disable-unit-tests",
+        "--disable-static"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/webmproject/libvpx/archive/v1.7.0.tar.gz",
+          "sha256": "1fec931eb5c94279ad219a5b6e0202358e94a93a90cfb1603578c326abfc1238"
+        }
+      ]
+    },
+    {
+      "name": "mp3lame",
+      "config-opts": [
+        "--with-pic",
+        "--enable-shared",
+        "--disable-static"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://downloads.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz",
+          "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
+        }
+      ]
+    },
+    {
+      "name": "ffmpeg",
+      "config-opts": [
+        "--enable-pic",
+        "--enable-shared",
+        "--disable-doc",
+        "--disable-static",
+        "--enable-gpl",
+        "--enable-libx264",
+        "--enable-libx265",
+        "--enable-libvpx",
+        "--enable-libmp3lame",
+        "--enable-libvorbis",
+        "--enable-libopus"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://ffmpeg.org/releases/ffmpeg-3.4.1.tar.xz",
+          "sha256": "5a77278a63741efa74e26bf197b9bb09ac6381b9757391b922407210f0f991c0"
         }
       ]
     },
@@ -756,8 +830,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/libbluray/1.0.1/libbluray-1.0.1.tar.bz2",
-          "sha256": "0f9f9a1db2f48cafc70ed2596ff3594b597e2027408f5f2be6191c245d67853a"
+          "url": "https://get.videolan.org/libbluray/1.0.2/libbluray-1.0.2.tar.bz2",
+          "sha256": "6d9e7c4e416f664c330d9fa5a05ad79a3fb39b95adfc3fd6910cbed503b7aeff"
         }
       ]
     },
@@ -778,25 +852,25 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.sourceforge.net/libmtp/libmtp-1.1.13.tar.gz",
-          "sha256": "494ee02fbfbc316aad75b93263dac00f02a4899f28cfda1decbbd6e26fda6d40"
+          "url": "https://download.sourceforge.net/libmtp/libmtp-1.1.14.tar.gz",
+          "sha256": "3817d3e296be8f1bc527385585780e70984e8e0d6a0d00349240d67e3df412e8"
         }
       ]
     },
     {
-      "name": "fluidsynth",
-      "config-opts": ["--disable-static"],
+      "name": "fluidlite",
+      "buildsystem": "cmake",
       "sources": [
         {
           "type": "archive",
-          "url": "http://downloads.sourceforge.net/fluidsynth/fluidsynth-1.1.6.tar.bz2",
-          "sha256": "d28b47dfbf7f8e426902ae7fa2981d821fbf84f41da9e1b85be933d2d748f601"
+          "url": "https://github.com/divideconcept/FluidLite/archive/7b5f2798d5c0f34e5436530412fe51e5183e8aa4.tar.gz",
+          "sha256": "da7cbf66289f259b3672f4febf85417100cf367c9da6d5c7576bf58773c8cdb7"
         }
       ]
     },
     {
       "name": "libcaca",
-      "config-opts": ["--disable-static", "--disable-python"],
+      "config-opts": ["--disable-static", "--disable-python", "--disable-ruby"],
       "sources": [
         {
           "type": "archive",
@@ -806,13 +880,28 @@
       ]
     },
     {
+      "name": "libplacebo",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/haasn/libplacebo/archive/v0.2.0.tar.gz",
+          "sha256": "f4648986f6624ff6b0147b44b5d4bab602a5b342fece8533033c9cefaa4bbefc"
+        },
+        {
+          "type": "patch",
+          "path": "libplacebo-fix-gamut-warning-shader.patch"
+        }
+      ]
+    },
+    {
       "name": "protobuf",
       "config-opts": ["--disable-static"],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/google/protobuf/archive/v3.4.0/protobuf-3.4.0.tar.gz",
-          "sha256": "f6600abeee3babfa18591961a0ff21e7db6a6d9ef82418a261ec4fee44ee6d44"
+          "url": "https://github.com/google/protobuf/archive/v3.5.1/protobuf-3.5.1.tar.gz",
+          "sha256": "826425182ee43990731217b917c5c3ea7190cfda141af4869e6d4ad9085a740f"
         },
         {
           "type": "archive",
@@ -825,6 +914,7 @@
           "url": "https://github.com/google/googletest/archive/release-1.7.0.tar.gz#/googletest-1.7.0.tar.gz",
           "sha256": "f73a6546fdf9fce9ff93a5015e0333a8af3062a152a9ad6bcb772c96687016cc",
           "dest": "gmock/gtest"
+
         }
       ]
     },
@@ -834,8 +924,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://xorg.freedesktop.org/archive/individual/lib/libXcursor-1.1.14.tar.bz2",
-          "sha256": "9bc6acb21ca14da51bda5bc912c8955bc6e5e433f0ab00c5e8bef842596c33df"
+          "url": "http://xorg.freedesktop.org/archive/individual/lib/libXcursor-1.1.15.tar.bz2",
+          "sha256": "294e670dd37cd23995e69aae626629d4a2dfe5708851bbc13d032401b7a3df6b"
         }
       ]
     },
@@ -889,27 +979,62 @@
       ]
     },
     {
-      "name": "smbclient",
-      "buildsystem": "simple",
-      "build-commands": [
-        "./buildtools/bin/waf configure --prefix=/app --disable-python --without-ad-dc --without-acl-support --without-ldap --without-ads --without-pam --without-systemd",
-        "./buildtools/bin/waf build -j `nproc` --targets=smbclient",
-        "mkdir -p /app/lib",
-        "find bin -type f -name '*.so' -exec cp {} /app/lib \\;",
-        "install -Dm644 bin/default/include/public/libsmbclient.h /app/include/libsmbclient.h",
-        "install -Dm644 bin/default/source3/libsmb/smbclient.pc /app/lib/pkgconfig/smbclient.pc"
-      ],
+      "name": "libdsm",
+      "config-opts": ["--disable-static"],
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.samba.org/pub/samba/stable/samba-4.7.4.tar.gz",
-          "sha256": "fb12d0c4452f85b67b78bbeabd4c762d8feb8ff83e39d044d285120c2c488247"
+          "url": "https://github.com/videolabs/libdsm/releases/download/v0.2.8/libdsm-0.2.8.tar.gz",
+          "sha256": "986696078f240086808191d7d739f2e4d3cc1af6695493d3845c58299feb7b38"
         }
       ]
     },
     {
-      "name": "vlc",
+      "name": "microdns",
       "rm-configure": true,
+      "config-opts": ["--disable-static"],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/videolabs/libmicrodns/releases/download/0.0.8/microdns-0.0.8.tar.gz",
+          "sha256": "4ffbc5d9f28edfaab475112b97c6ca650261541a926b69781626661ae736fe53"
+        },
+        {
+          "type": "script",
+          "commands": [
+            "autoreconf -fiv"
+          ],
+          "dest-filename": "autogen.sh"
+        }
+      ]
+    },
+    {
+      "name": "spatialaudio",
+      "builddir": true,
+      "buildsystem": "cmake",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/videolabs/libspatialaudio/releases/download/0.3.0/spatialaudio-0.3.0.tar.bz2",
+          "sha256": "284c1dbd8efd46c03be84ac7070bc87cae81b7125352b143a70be3e2b96988e3"
+        }
+      ]
+    },
+    {
+      "name": "srt",
+      "builddir": true,
+      "buildsystem": "cmake",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/Haivision/srt/archive/v1.2.2.tar.gz",
+          "sha256": "7a167cfe9f3a497c8d9483f25873fe63273c550aaee1d2bbb9d7bf39f169efcc"
+        }
+      ]
+    },
+
+    {
+      "name": "vlc",
       "config-opts": [
         "BUILDCC=/usr/bin/gcc -std=gnu99",
         "--disable-a52"
@@ -920,8 +1045,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://nightlies.videolan.org/build/source/vlc-3.0.0-20170823-0243-git.tar.xz",
-          "sha256": "ca18b035ef2cc37ead773465465fe1391b94fd20e2d0a4108723aeb1f4346334"
+          "url": "http://get.videolan.org/vlc/3.0.0/vlc-3.0.0.tar.xz",
+          "sha256": "68d587999f50d58df5ca3d69998bba910bdb5a82e5a1a39247179932fae0c19c"
         },
         {
           "type": "patch",
