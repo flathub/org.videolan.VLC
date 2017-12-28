@@ -888,6 +888,25 @@
       ]
     },
     {
+      "name": "smbclient",
+      "buildsystem": "simple",
+      "build-commands": [
+        "./buildtools/bin/waf configure --prefix=/app --disable-python --without-ad-dc --without-acl-support --without-ldap --without-ads --without-pam --without-systemd",
+        "./buildtools/bin/waf build -j `nproc` --targets=smbclient",
+        "mkdir -p /app/lib",
+        "find bin -type f -name '*.so' -exec cp {} /app/lib \\;",
+        "install -Dm644 bin/default/include/public/libsmbclient.h /app/include/libsmbclient.h",
+        "install -Dm644 bin/default/source3/libsmb/smbclient.pc /app/lib/pkgconfig/smbclient.pc"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.samba.org/pub/samba/stable/samba-4.7.4.tar.gz",
+          "sha256": "fb12d0c4452f85b67b78bbeabd4c762d8feb8ff83e39d044d285120c2c488247"
+        }
+      ]
+    },
+    {
       "name": "vlc",
       "rm-configure": true,
       "config-opts": [
