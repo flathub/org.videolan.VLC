@@ -895,8 +895,8 @@
         "./buildtools/bin/waf build -j `nproc` --targets=smbclient",
         "mkdir -p /app/lib",
         "find bin -type f -name '*.so' -exec cp {} /app/lib \\;",
-        "install -D bin/default/include/public/libsmbclient.h /app/include/libsmbclient.h",
-        "install -D bin/default/source3/libsmb/smbclient.pc /app/lib/pkgconfig/smbclient.pc"
+        "install -Dm644 bin/default/include/public/libsmbclient.h /app/include/libsmbclient.h",
+        "install -Dm644 bin/default/source3/libsmb/smbclient.pc /app/lib/pkgconfig/smbclient.pc"
       ],
       "sources": [
         {
