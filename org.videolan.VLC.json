@@ -22,6 +22,16 @@
     "--talk-name=ca.desrt.dconf",
     "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
   ],
+  "add-extensions": {
+    "org.videolan.VLC.Plugin": {
+      "directory": "share/vlc/extra",
+      "subdirectories": true,
+      "merge-dirs": "plugins",
+      "add-ld-path": "lib",
+      "no-autodownload": true,
+      "autodelete": true
+    }
+  },
   "rename-appdata-file": "vlc.appdata.xml",
   "rename-desktop-file": "vlc.desktop",
   "rename-icon": "vlc",
@@ -40,6 +50,8 @@
     "*.a"
   ],
   "cleanup-commands": [
+    "mkdir -p /app/share/vlc/extra",
+    "ln -s /app/share/vlc/extra/plugins /app/lib/vlc/plugins/extra",
     "rm -f /app/lib/vlc/plugins/plugins.dat",
     "/app/lib/vlc/vlc-cache-gen /app/lib/vlc/plugins"
   ],
@@ -908,6 +920,11 @@
       "cleanup": [
         "/share/macosx"
       ],
+      "post-install": [
+        "mv /app/bin/vlc /app/bin/vlc.bin",
+        "mv vlc.sh /app/bin/vlc",
+        "chmod +x /app/bin/vlc"
+      ],
       "sources": [
         {
           "type": "archive",
@@ -917,6 +934,10 @@
         {
           "type": "patch",
           "path": "vlc-fix-appdata.patch"
+        },
+        {
+          "type": "file",
+          "path": "vlc.sh"
         }
       ]
     }
