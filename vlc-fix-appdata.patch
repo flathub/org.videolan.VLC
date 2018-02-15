@@ -1,5 +1,5 @@
 diff --git a/share/vlc.appdata.xml.in.in b/share/vlc.appdata.xml.in.in
-index b271502eb9..f91f95f69c 100644
+index b271502eb9..17325aeef2 100644
 --- a/share/vlc.appdata.xml.in.in
 +++ b/share/vlc.appdata.xml.in.in
 @@ -2,8 +2,8 @@
@@ -13,7 +13,7 @@ index b271502eb9..f91f95f69c 100644
      <metadata_license>CC0-1.0</metadata_license>
      <name>VLC</name>
      <summary>VLC media player, the open-source multimedia player</summary>
-@@ -17,9 +17,6 @@
+@@ -17,10 +17,8 @@
      <url type="homepage">https://www.videolan.org/vlc/</url>
      <url type="bugtracker">https://trac.videolan.org/vlc/</url>
      <url type="donation">https://www.videolan.org/contribute.html</url>
@@ -24,4 +24,4 @@ index b271502eb9..f91f95f69c 100644
 +        <id>org.videolan.VLC</id>
          <library>libvlc.so.5</library>
      </provides>
-
+     <project_group>VideoLAN</project_group>
