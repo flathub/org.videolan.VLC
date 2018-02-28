@@ -592,8 +592,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.nasm.us/pub/nasm/releasebuilds/2.13.02/nasm-2.13.02.tar.xz",
-          "sha256": "8ac3235f49a6838ff7a8d7ef7c19a4430d0deecc0c2d3e3e237b5e9f53291757"
+          "url": "http://www.nasm.us/pub/nasm/releasebuilds/2.13.03/nasm-2.13.03.tar.xz",
+          "sha256": "812ecfb0dcbc5bd409aaa8f61c7de94c5b8752a7b00c632883d15b2ed6452573"
         },
         {
           "type": "script",
@@ -608,9 +608,7 @@
       "name": "x264",
       "config-opts": [
         "--enable-pic",
-        "--enable-shared",
-        "--disable-doc",
-        "--disable-static"
+        "--enable-shared"
       ],
       "sources": [
         {
@@ -631,8 +629,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/pub/videolan/x265/x265_2.6.tar.gz",
-          "sha256": "1bf0036415996af841884802161065b9e6be74f5f6808ac04831363e2549cdbf"
+          "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_2.7.tar.gz",
+          "sha256": "d5e75fa62ffe6ed49e691f8eb8ab8c1634ffcc0725dd553c6fdb4d5443b494a2"
         }
       ]
     },
@@ -686,8 +684,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-3.4.1.tar.xz",
-          "sha256": "5a77278a63741efa74e26bf197b9bb09ac6381b9757391b922407210f0f991c0"
+          "url": "http://ffmpeg.org/releases/ffmpeg-3.4.2.tar.xz",
+          "sha256": "2b92e9578ef8b3e49eeab229e69305f5f4cbc1fdaa22e927fc7fca18acccd740"
         }
       ]
     },
@@ -767,12 +765,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/haasn/libplacebo/archive/v0.2.0.tar.gz",
-          "sha256": "f4648986f6624ff6b0147b44b5d4bab602a5b342fece8533033c9cefaa4bbefc"
-        },
-        {
-          "type": "patch",
-          "path": "libplacebo-fix-gamut-warning-shader.patch"
+          "url": "https://github.com/haasn/libplacebo/archive/v0.2.1.tar.gz",
+          "sha256": "d5d920a1745e4209287d32e8b96a85127b61b843304813980e11104cd9f15e82"
         }
       ]
     },
@@ -818,8 +812,12 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/videolabs/libmicrodns/releases/download/0.0.8/microdns-0.0.8.tar.gz",
-          "sha256": "4ffbc5d9f28edfaab475112b97c6ca650261541a926b69781626661ae736fe53"
+          "url": "https://github.com/videolabs/libmicrodns/releases/download/0.0.9/microdns-0.0.9.tar.gz",
+          "sha256": "0aa268c5eb9be7ec2bec6b3dd60b26a0672ad2d059be52d2d6c2f2d4f1e22c64"
+        },
+        {
+          "type": "patch",
+          "path": "microdns-fix-null-deref.patch"
         },
         {
           "type": "script",
@@ -857,6 +855,7 @@
 
     {
       "name": "vlc",
+      "rm-configure": true,
       "config-opts": [
         "BUILDCC=/usr/bin/gcc -std=gnu99",
         "--disable-a52"
@@ -867,12 +866,20 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://get.videolan.org/vlc/3.0.0/vlc-3.0.0.tar.xz",
-          "sha256": "68d587999f50d58df5ca3d69998bba910bdb5a82e5a1a39247179932fae0c19c"
+          "url": "http://get.videolan.org/vlc/3.0.1/vlc-3.0.1.tar.xz",
+          "sha256": "ce700cdfb49d721b75581ee727e98cc60dae97407ccec0f82124d5e9a1cb1301"
         },
         {
           "type": "patch",
           "path": "vlc-fix-appdata.patch"
+        },
+        {
+          "type": "patch",
+          "path": "vlc-lua-fix-loading-file.patch"
+        },
+        {
+          "type": "patch",
+          "path": "vlc-fix-arm.patch"
         }
       ]
     }
