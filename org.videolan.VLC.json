@@ -9,7 +9,7 @@
     "--socket=x11",
     "--socket=pulseaudio",
     "--share=network",
-    "--filesystem=host:ro",
+    "--filesystem=host",
     "--talk-name=org.freedesktop.ScreenSaver",
     "--talk-name=org.mpris.MediaPlayer2.Player",
     "--own-name=org.mpris.MediaPlayer2.vlc",
