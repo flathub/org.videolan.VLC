@@ -1,0 +1,167 @@
+{
+  "name": "qt5",
+  "modules":
+  [
+    {
+      "name": "qt5-qtbase",
+      "cleanup": [
+        "/bin",
+        "/doc",
+        "/include",
+        "/lib/*.a",
+        "/lib/*.la",
+        "/lib/*.prl",
+        "/lib/cmake",
+        "/lib/debug",
+        "/lib/mkspecs",
+        "/lib/pkgconfig"
+      ],
+      "config-opts": [
+        "-confirm-license",
+        "-opensource",
+        "-debug",
+        "-shared",
+        "-platform",
+        "linux-g++",
+        "-optimized-qmake",
+        "-nomake",
+        "examples",
+        "-nomake",
+        "tests",
+        "-system-harfbuzz",
+        "-system-sqlite",
+        "-accessibility",
+        "-dbus-linked",
+        "-fontconfig",
+        "-glib",
+        "-icu",
+        "-openssl-linked",
+        "-no-pch",
+        "-no-rpath",
+        "-no-separate-debug-info",
+        "-no-directfb",
+        "-no-linuxfb",
+        "-no-kms",
+        "-no-cups",
+        "-system-proxies",
+        "-archdatadir",
+        "/app/lib/"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.qt.io/official_releases/qt/5.9/5.9.4/submodules/qtbase-opensource-src-5.9.4.tar.xz",
+          "sha256": "69e6bde3ab00673a77e1506173551fec7d0cd899fcbf9b1260517db1b61004cf"
+        },
+        {
+          "type": "shell",
+          "commands": [
+            "mv configure configure.qt"
+          ]
+        },
+        {
+          "type": "script",
+          "commands": [
+            "processed=`sed -e 's/--/-/g ; s/=/ /g' <<< $@`",
+            "./configure.qt $processed"
+          ],
+          "dest-filename": "configure"
+        },
+        {
+          "type": "patch",
+          "path": "qtbase-hidpi_scale_at_192.patch"
+        }
+      ]
+    },
+    {
+      "name": "qt5-qtsvg",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://download.qt.io/official_releases/qt/5.9/5.9.4/submodules/qtsvg-opensource-src-5.9.4.tar.xz",
+          "sha256": "a2f22732bfd4f0f0204443daaa59448298ab5018750dce4600d01d969355037a"
+        },
+        {
+          "type": "script",
+          "commands": [
+            "qmake"
+          ],
+          "dest-filename": "configure"
+        }
+      ]
+    },
+    {
+      "name": "qt5-qtx11extras",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://download.qt.io/official_releases/qt/5.9/5.9.4/submodules/qtx11extras-opensource-src-5.9.4.tar.xz",
+          "sha256": "879b18c44550e1be86c29adcca555c92915aab9222c40384beae2f7aa22b22a8"
+        },
+        {
+          "type": "script",
+          "commands": [
+            "qmake"
+          ],
+          "dest-filename": "configure"
+        }
+      ]
+    },
+    {
+      "name": "qt5-qtwayland",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.qt.io/official_releases/qt/5.9/5.9.4/submodules/qtwayland-opensource-src-5.9.4.tar.xz",
+          "sha256": "3f7496522013e6122bb8dc00d0c3cc7753a44dca94fa3b22096eaa21e6099874"
+        },
+        {
+          "type": "script",
+          "commands": [
+            "qmake"
+          ],
+          "dest-filename": "configure"
+        }
+      ]
+    },
+    {
+      "name": "gsettings-desktop-schemas",
+      "config-opts": [ "--disable-introspection" ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/gsettings-desktop-schemas/3.24/gsettings-desktop-schemas-3.24.0.tar.xz",
+          "sha256": "f6573a3f661d22ff8a001cc2421d8647717f1c0e697e342d03c6102f29bbbb90"
+        }
+      ]
+    },
+    {
+      "name": "qgnomeplatform",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/MartinBriza/QGnomePlatform/archive/0.3/QGnomePlatform-0.3.tar.gz",
+          "sha256": "6335f86d8a3e7b2dedd356868dcc20e0d81736f88ee1364e7c19b6f5a20c9c0c"
+        },
+        {
+          "type": "script",
+          "commands": [
+            "qmake"
+          ],
+          "dest-filename": "configure"
+        }
+      ]
+    },
+    {
+      "name": "adwaita-qt",
+      "buildsystem": "cmake",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/MartinBriza/adwaita-qt/archive/1.0.tar.gz",
+          "sha256": "c2c0c71b131d0e3e58ee108570796cf70b35dccaa64ce17915d4486de5e91513"
+        }
+      ]
+    }
+  ]
+}

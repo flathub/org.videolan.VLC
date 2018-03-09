@@ -57,128 +57,7 @@
     "shared-modules/SDL/SDL_image-1.2.12.json",
     "shared-modules/lua5.3/lua-5.3.2.json",
     "shared-modules/glu/glu-9.0.0.json",
-    {
-      "name": "qt5-qtbase",
-      "cleanup": [
-        "/bin",
-        "/doc",
-        "/include",
-        "/lib/*.a",
-        "/lib/*.la",
-        "/lib/*.prl",
-        "/lib/cmake",
-        "/lib/debug",
-        "/lib/mkspecs",
-        "/lib/pkgconfig"
-      ],
-      "config-opts": [
-        "-confirm-license",
-        "-opensource",
-        "-debug",
-        "-shared",
-        "-platform",
-        "linux-g++",
-        "-optimized-qmake",
-        "-nomake",
-        "examples",
-        "-nomake",
-        "tests",
-        "-system-harfbuzz",
-        "-system-sqlite",
-        "-accessibility",
-        "-dbus-linked",
-        "-fontconfig",
-        "-glib",
-        "-icu",
-        "-openssl-linked",
-        "-no-pch",
-        "-no-rpath",
-        "-no-separate-debug-info",
-        "-no-directfb",
-        "-no-linuxfb",
-        "-no-kms",
-        "-no-cups",
-        "-system-proxies",
-        "-archdatadir",
-        "/app/lib/"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.qt.io/official_releases/qt/5.9/5.9.3/submodules/qtbase-opensource-src-5.9.3.tar.xz",
-          "sha256": "9e7c44005e7691dc7c85165bd4510282c47f0163521f4973eab71dbdb39a9982"
-        },
-        {
-          "type": "shell",
-          "commands": [
-            "mv configure configure.qt"
-          ]
-        },
-        {
-          "type": "script",
-          "commands": [
-            "processed=`sed -e 's/--/-/g ; s/=/ /g' <<< $@`",
-            "./configure.qt $processed"
-          ],
-          "dest-filename": "configure"
-        },
-        {
-          "type": "patch",
-          "path": "qtbase-hidpi_scale_at_192.patch"
-        }
-      ]
-    },
-    {
-      "name": "qt5-qtsvg",
-      "sources": [
-        {
-          "type": "archive",
-          "url": "http://download.qt.io/official_releases/qt/5.9/5.9.3/submodules/qtsvg-opensource-src-5.9.3.tar.xz",
-          "sha256": "df6628a60c8fbbcff99e6a24955c29494268d741509a3367a2294031ab4f5df2"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "qmake"
-          ],
-          "dest-filename": "configure"
-        }
-      ]
-    },
-    {
-      "name": "qt5-qtx11extras",
-      "sources": [
-        {
-          "type": "archive",
-          "url": "http://download.qt.io/official_releases/qt/5.9/5.9.3/submodules/qtx11extras-opensource-src-5.9.3.tar.xz",
-          "sha256": "e4e0bf8cbb629758ab85b72d240d7424642482f602ce414e06deef4e147bf2be"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "qmake"
-          ],
-          "dest-filename": "configure"
-        }
-      ]
-    },
-    {
-      "name": "qt5-qtwayland",
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.qt.io/official_releases/qt/5.9/5.9.3/submodules/qtwayland-opensource-src-5.9.3.tar.xz",
-          "sha256": "308e8c44b0ad13520868365d72786d3e3f0b384da99ee72ba543cd866f655f6d"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "qmake"
-          ],
-          "dest-filename": "configure"
-        }
-      ]
-    },
+    "qt5.json",
     {
       "name": "libraw1394",
       "rm-configure": true,
@@ -206,7 +85,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://downloads.sourceforge.net/project/libavc1394/libavc1394/libavc1394-0.5.4.tar.gz",
+          "url": "http://http.debian.net/debian/pool/main/liba/libavc1394/libavc1394_0.5.4.orig.tar.gz",
           "sha256": "7cb1ff09506ae911ca9860bef4af08c2403f3e131f6c913a2cbd6ddca4215b53"
         },
         {
@@ -234,7 +113,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://downloads.sourceforge.net/project/zapping/zvbi/0.2.35/zvbi-0.2.35.tar.bz2",
+          "url": "http://http.debian.net/debian/pool/main/z/zvbi/zvbi_0.2.35.orig.tar.bz2",
           "sha256": "fc883c34111a487c4a783f91b1b2bb5610d8d8e58dcba80c7ab31e67e4765318"
         },
         {
@@ -255,7 +134,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://downloads.sourceforge.net/project/libdc1394/libdc1394-2/2.2.5/libdc1394-2.2.5.tar.gz",
+          "url": "http://http.debian.net/debian/pool/main/libd/libdc1394-22/libdc1394-22_2.2.5.orig.tar.gz",
           "sha256": "350cc8d08aee5ffc4e1f3049e2e1c2bc6660642d424595157da97ab5b1263337"
         },
         {
@@ -274,7 +153,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://downloads.sourceforge.net/project/libcddb/libcddb/1.3.2/libcddb-1.3.2.tar.bz2",
+          "url": "http://distcache.freebsd.org/ports-distfiles/libcddb-1.3.2.tar.bz2",
           "sha256": "35ce0ee1741ea38def304ddfe84a958901413aa829698357f0bee5bb8f0a223b"
         },
         {
@@ -293,7 +172,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://downloads.sourceforge.net/project/aa-project/aa-lib/1.4rc5/aalib-1.4rc5.tar.gz",
+          "url": "http://distcache.freebsd.org/ports-distfiles/aalib-1.4rc5.tar.gz",
           "sha256": "fbddda9230cf6ee2a4f5706b4b11e2190ae45f5eda1f0409dc4f99b35e0a70ee"
         },
         {
@@ -364,7 +243,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://downloads.sourceforge.net/project/pupnp/pupnp/libUPnP%201.6.24/libupnp-1.6.24.tar.bz2",
+          "url": "http://http.debian.net/debian/pool/main/libu/libupnp/libupnp_1.6.24.orig.tar.bz2",
           "sha256": "7d83d79af3bb4062e5c3a58bf2e90d2da5b8b99e2b2d57c23b5b6f766288cf96"
         },
         {
@@ -695,7 +574,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://downloads.sourceforge.net/modplug-xmms/libmodplug-0.8.9.0.tar.gz",
+          "url": "http://http.debian.net/debian/pool/main/libm/libmodplug/libmodplug_0.8.9.0.orig.tar.gz",
           "sha256": "457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de"
         },
         {
@@ -713,8 +592,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.nasm.us/pub/nasm/releasebuilds/2.13.02/nasm-2.13.02.tar.xz",
-          "sha256": "8ac3235f49a6838ff7a8d7ef7c19a4430d0deecc0c2d3e3e237b5e9f53291757"
+          "url": "http://www.nasm.us/pub/nasm/releasebuilds/2.13.03/nasm-2.13.03.tar.xz",
+          "sha256": "812ecfb0dcbc5bd409aaa8f61c7de94c5b8752a7b00c632883d15b2ed6452573"
         },
         {
           "type": "script",
@@ -729,9 +608,7 @@
       "name": "x264",
       "config-opts": [
         "--enable-pic",
-        "--enable-shared",
-        "--disable-doc",
-        "--disable-static"
+        "--enable-shared"
       ],
       "sources": [
         {
@@ -752,8 +629,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/pub/videolan/x265/x265_2.6.tar.gz",
-          "sha256": "1bf0036415996af841884802161065b9e6be74f5f6808ac04831363e2549cdbf"
+          "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_2.7.tar.gz",
+          "sha256": "d5e75fa62ffe6ed49e691f8eb8ab8c1634ffcc0725dd553c6fdb4d5443b494a2"
         }
       ]
     },
@@ -784,7 +661,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://downloads.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz",
+          "url": "http://http.debian.net/debian/pool/main/l/lame/lame_3.100.orig.tar.gz",
           "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
         }
       ]
@@ -807,8 +684,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-3.4.1.tar.xz",
-          "sha256": "5a77278a63741efa74e26bf197b9bb09ac6381b9757391b922407210f0f991c0"
+          "url": "http://ffmpeg.org/releases/ffmpeg-3.4.2.tar.xz",
+          "sha256": "2b92e9578ef8b3e49eeab229e69305f5f4cbc1fdaa22e927fc7fca18acccd740"
         }
       ]
     },
@@ -855,7 +732,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.sourceforge.net/libmtp/libmtp-1.1.14.tar.gz",
+          "url": "http://distcache.freebsd.org/ports-distfiles/libmtp-1.1.14.tar.gz",
           "sha256": "3817d3e296be8f1bc527385585780e70984e8e0d6a0d00349240d67e3df412e8"
         }
       ]
@@ -888,12 +765,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/haasn/libplacebo/archive/v0.2.0.tar.gz",
-          "sha256": "f4648986f6624ff6b0147b44b5d4bab602a5b342fece8533033c9cefaa4bbefc"
-        },
-        {
-          "type": "patch",
-          "path": "libplacebo-fix-gamut-warning-shader.patch"
+          "url": "https://github.com/haasn/libplacebo/archive/v0.2.1.tar.gz",
+          "sha256": "d5d920a1745e4209287d32e8b96a85127b61b843304813980e11104cd9f15e82"
         }
       ]
     },
@@ -922,66 +795,6 @@
       ]
     },
     {
-      "name": "libXcursor",
-      "config-opts": [ "--disable-static" ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "http://xorg.freedesktop.org/archive/individual/lib/libXcursor-1.1.15.tar.bz2",
-          "sha256": "294e670dd37cd23995e69aae626629d4a2dfe5708851bbc13d032401b7a3df6b"
-        }
-      ]
-    },
-    {
-      "name": "gsettings-desktop-schemas",
-      "config-opts": [ "--disable-introspection" ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.gnome.org/sources/gsettings-desktop-schemas/3.24/gsettings-desktop-schemas-3.24.0.tar.xz",
-          "sha256": "f6573a3f661d22ff8a001cc2421d8647717f1c0e697e342d03c6102f29bbbb90"
-        }
-      ]
-    },
-    {
-      "name": "adwaita-icon-theme",
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.gnome.org/sources/adwaita-icon-theme/3.24/adwaita-icon-theme-3.24.0.tar.xz",
-          "sha256": "ccf79ff3bd340254737ce4d28b87f0ccee4b3358cd3cd5cd11dc7b42f41b272a"
-        }
-      ]
-    },
-    {
-      "name": "qgnomeplatform",
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://github.com/MartinBriza/QGnomePlatform/archive/0.3/QGnomePlatform-0.3.tar.gz",
-          "sha256": "6335f86d8a3e7b2dedd356868dcc20e0d81736f88ee1364e7c19b6f5a20c9c0c"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "qmake"
-          ],
-          "dest-filename": "configure"
-        }
-      ]
-    },
-    {
-      "name": "adwaita-qt",
-      "buildsystem": "cmake",
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://github.com/MartinBriza/adwaita-qt/archive/1.0.tar.gz",
-          "sha256": "c2c0c71b131d0e3e58ee108570796cf70b35dccaa64ce17915d4486de5e91513"
-        }
-      ]
-    },
-    {
       "name": "libdsm",
       "config-opts": ["--disable-static"],
       "sources": [
@@ -999,8 +812,12 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/videolabs/libmicrodns/releases/download/0.0.8/microdns-0.0.8.tar.gz",
-          "sha256": "4ffbc5d9f28edfaab475112b97c6ca650261541a926b69781626661ae736fe53"
+          "url": "https://github.com/videolabs/libmicrodns/releases/download/0.0.9/microdns-0.0.9.tar.gz",
+          "sha256": "0aa268c5eb9be7ec2bec6b3dd60b26a0672ad2d059be52d2d6c2f2d4f1e22c64"
+        },
+        {
+          "type": "patch",
+          "path": "microdns-fix-null-deref.patch"
         },
         {
           "type": "script",
@@ -1038,6 +855,7 @@
 
     {
       "name": "vlc",
+      "rm-configure": true,
       "config-opts": [
         "BUILDCC=/usr/bin/gcc -std=gnu99",
         "--disable-a52"
@@ -1048,12 +866,20 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://get.videolan.org/vlc/3.0.0/vlc-3.0.0.tar.xz",
-          "sha256": "68d587999f50d58df5ca3d69998bba910bdb5a82e5a1a39247179932fae0c19c"
+          "url": "http://get.videolan.org/vlc/3.0.1/vlc-3.0.1.tar.xz",
+          "sha256": "ce700cdfb49d721b75581ee727e98cc60dae97407ccec0f82124d5e9a1cb1301"
         },
         {
           "type": "patch",
           "path": "vlc-fix-appdata.patch"
+        },
+        {
+          "type": "patch",
+          "path": "vlc-lua-fix-loading-file.patch"
+        },
+        {
+          "type": "patch",
+          "path": "vlc-fix-arm.patch"
         }
       ]
     }
