@@ -210,7 +210,12 @@
     },
     {
       "name": "chromaprint",
-      "buildsystem": "cmake",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
+      ],
       "sources": [
         {
           "type": "archive",
@@ -257,9 +262,11 @@
     },
     {
       "name": "taglib",
-      "buildsystem": "cmake",
+      "buildsystem": "cmake-ninja",
       "config-opts": [
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
         "-DBUILD_SHARED_LIBS=ON",
+        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
         "-DWITH_MP4=ON",
         "-DWITH_ASF=ON"
       ],
@@ -281,7 +288,12 @@
     {
       "name": "openjpeg",
       "builddir": true,
-      "buildsystem": "cmake",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
+      ],
       "sources": [
         {
           "type": "archive",
@@ -366,8 +378,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.videolan.org/pub/libdvbpsi/1.3.1/libdvbpsi-1.3.1.tar.bz2",
-          "sha256": "d68367afd5ad8e6ebca813e7958a3ceb9743b421adb4265eceeb6a3511c84420"
+          "url": "https://download.videolan.org/pub/libdvbpsi/1.3.2/libdvbpsi-1.3.2.tar.bz2",
+          "sha256": "ac4e39f2b9b1e15706ad261fa175a9430344d650a940be9aaf502d4cb683c5fe"
         },
         {
           "type": "script",
@@ -445,40 +457,35 @@
     },
     {
       "name": "libebml",
-      "rm-configure": true,
+      "builddir": true,
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
+      ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://dl.matroska.org/downloads/libebml/libebml-1.3.5.tar.xz",
-          "sha256": "d818413f60742c2f036ba6f582c5e0320d12bffec1b0fc0fc17a398b6f04aa00"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
+          "url": "https://dl.matroska.org/downloads/libebml/libebml-1.3.6.tar.xz",
+          "sha256": "1e5a7a7820c493aa62b0f35e15b4233c792cc03458c55ebdfa7a6521e4b43e9e"
         }
       ]
     },
     {
       "name": "libmatroska",
-      "rm-configure": true,
+      "builddir": true,
+      "buildsystem": "cmake-ninja",
       "config-opts": [
-        "--disable-static"
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
       ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.4.8.tar.xz",
-          "sha256": "d8c72b20d4c5bf888776884b0854f95e74139b5267494fae1f395f7212d7c992"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
+          "url": "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.4.9.tar.xz",
+          "sha256": "38a61dd5d87c070928b5deb3922b63b2b83c09e2e4a10f9393eecb6afa9795c8"
         }
       ]
     },
@@ -556,8 +563,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libdvdcss/1.4.1/libdvdcss-1.4.1.tar.bz2",
-          "sha256": "eb073752b75ae6db3a3ffc9d22f6b585cd024079a2bf8acfa56f47a8fce6eaac"
+          "url": "http://ftp.videolan.org/videolan/libdvdcss/1.4.2/libdvdcss-1.4.2.tar.bz2",
+          "sha256": "78c2ed77ec9c0d8fbed7bf7d3abc82068b8864be494cfad165821377ff3f2575"
         },
         {
           "type": "script",
@@ -622,9 +629,11 @@
       "name": "x265",
       "builddir": true,
       "subdir": "source",
-      "buildsystem": "cmake",
+      "buildsystem": "cmake-ninja",
       "config-opts": [
-        "-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=true"
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
       ],
       "sources": [
         {
@@ -684,8 +693,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-3.4.2.tar.xz",
-          "sha256": "2b92e9578ef8b3e49eeab229e69305f5f4cbc1fdaa22e927fc7fca18acccd740"
+          "url": "http://ffmpeg.org/releases/ffmpeg-4.0.tar.xz",
+          "sha256": "ed945daf40b124e77a685893cc025d086f638bc703183460aff49508edb3a43f"
         }
       ]
     },
@@ -710,7 +719,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/libbluray/1.0.2/libbluray-1.0.2.tar.bz2",
+          "url": "http://ftp.videolan.org/videolan/libbluray/1.0.2/libbluray-1.0.2.tar.bz2",
           "sha256": "6d9e7c4e416f664c330d9fa5a05ad79a3fb39b95adfc3fd6910cbed503b7aeff"
         }
       ]
@@ -739,7 +748,12 @@
     },
     {
       "name": "fluidlite",
-      "buildsystem": "cmake",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
+      ],
       "sources": [
         {
           "type": "archive",
@@ -754,7 +768,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://caca.zoy.org/files/libcaca/libcaca-0.99.beta19.tar.gz",
+          "url": "http://http.debian.net/debian/pool/main/libc/libcaca/libcaca_0.99.beta19.orig.tar.gz",
           "sha256": "128b467c4ed03264c187405172a4e83049342cc8cc2f655f53a2d0ee9d3772f4"
         }
       ]
@@ -812,12 +826,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/videolabs/libmicrodns/releases/download/0.0.9/microdns-0.0.9.tar.gz",
-          "sha256": "0aa268c5eb9be7ec2bec6b3dd60b26a0672ad2d059be52d2d6c2f2d4f1e22c64"
-        },
-        {
-          "type": "patch",
-          "path": "microdns-fix-null-deref.patch"
+          "url": "https://github.com/videolabs/libmicrodns/releases/download/0.0.10/microdns-0.0.10.tar.gz",
+          "sha256": "f83c427cbbbad226729234245ce0d31ae7cdf11359d0ccdd0402d4c48fd3dd33"
         },
         {
           "type": "script",
@@ -831,7 +841,12 @@
     {
       "name": "spatialaudio",
       "builddir": true,
-      "buildsystem": "cmake",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
+      ],
       "sources": [
         {
           "type": "archive",
@@ -843,12 +858,17 @@
     {
       "name": "srt",
       "builddir": true,
-      "buildsystem": "cmake",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
+      ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Haivision/srt/archive/v1.2.2.tar.gz",
-          "sha256": "7a167cfe9f3a497c8d9483f25873fe63273c550aaee1d2bbb9d7bf39f169efcc"
+          "url": "https://github.com/Haivision/srt/archive/v1.2.3.tar.gz",
+          "sha256": "81c728c04732b79e350ada51a8d54021906ee3e910e798e2968091a6f6b86eff"
         }
       ]
     },
@@ -866,20 +886,12 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://get.videolan.org/vlc/3.0.1/vlc-3.0.1.tar.xz",
-          "sha256": "ce700cdfb49d721b75581ee727e98cc60dae97407ccec0f82124d5e9a1cb1301"
+          "url": "http://get.videolan.org/vlc/3.0.2/vlc-3.0.2.tar.xz",
+          "sha256": "efe8c889b69bffba9662140bdcf434d9d36edc5dbb0e300fcce4553c354ea198"
         },
         {
           "type": "patch",
           "path": "vlc-fix-appdata.patch"
-        },
-        {
-          "type": "patch",
-          "path": "vlc-lua-fix-loading-file.patch"
-        },
-        {
-          "type": "patch",
-          "path": "vlc-fix-arm.patch"
         }
       ]
     }
