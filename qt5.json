@@ -50,8 +50,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.qt.io/official_releases/qt/5.9/5.9.4/submodules/qtbase-opensource-src-5.9.4.tar.xz",
-          "sha256": "69e6bde3ab00673a77e1506173551fec7d0cd899fcbf9b1260517db1b61004cf"
+          "url": "https://download.qt.io/official_releases/qt/5.9/5.9.5/submodules/qtbase-opensource-src-5.9.5.tar.xz",
+          "sha256": "7d3ef666d2efcf260a5a0780a1ccd49f897e839e1d9932225be4859ec26730d4"
         },
         {
           "type": "shell",
@@ -78,8 +78,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://download.qt.io/official_releases/qt/5.9/5.9.4/submodules/qtsvg-opensource-src-5.9.4.tar.xz",
-          "sha256": "a2f22732bfd4f0f0204443daaa59448298ab5018750dce4600d01d969355037a"
+          "url": "http://download.qt.io/official_releases/qt/5.9/5.9.5/submodules/qtsvg-opensource-src-5.9.5.tar.xz",
+          "sha256": "62222e435cee458c67c810832aae68b90a11285e486473fe2675cd6ed4f4e3c2"
         },
         {
           "type": "script",
@@ -95,8 +95,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://download.qt.io/official_releases/qt/5.9/5.9.4/submodules/qtx11extras-opensource-src-5.9.4.tar.xz",
-          "sha256": "879b18c44550e1be86c29adcca555c92915aab9222c40384beae2f7aa22b22a8"
+          "url": "http://download.qt.io/official_releases/qt/5.9/5.9.5/submodules/qtx11extras-opensource-src-5.9.5.tar.xz",
+          "sha256": "2be254e7e94be38b1847eccf63f1dcf2298fb6391b145235db74dcf81d026008"
         },
         {
           "type": "script",
@@ -112,8 +112,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.qt.io/official_releases/qt/5.9/5.9.4/submodules/qtwayland-opensource-src-5.9.4.tar.xz",
-          "sha256": "3f7496522013e6122bb8dc00d0c3cc7753a44dca94fa3b22096eaa21e6099874"
+          "url": "https://download.qt.io/official_releases/qt/5.9/5.9.5/submodules/qtwayland-opensource-src-5.9.5.tar.xz",
+          "sha256": "c4224196f2866230a4a177a6fc74c494e4db8624de1ca4d568371521f294e247"
         },
         {
           "type": "script",
