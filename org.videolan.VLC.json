@@ -1,8 +1,8 @@
 {
   "app-id": "org.videolan.VLC",
-  "runtime": "org.freedesktop.Platform",
-  "runtime-version": "1.6",
-  "sdk": "org.freedesktop.Sdk",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "5.11",
+  "sdk": "org.kde.Sdk",
   "command": "vlc",
   "finish-args": [
     "--share=ipc",
@@ -57,7 +57,6 @@
     "shared-modules/SDL/SDL_image-1.2.12.json",
     "shared-modules/lua5.3/lua-5.3.2.json",
     "shared-modules/glu/glu-9.0.0.json",
-    "qt5.json",
     {
       "name": "libraw1394",
       "rm-configure": true,
@@ -892,6 +891,10 @@
         {
           "type": "patch",
           "path": "vlc-fix-appdata.patch"
+        },
+        {
+          "type": "patch",
+          "path": "vlc-qt5.11-fix.patch"
         }
       ]
     }

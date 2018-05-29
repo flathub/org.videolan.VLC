@@ -1,0 +1,28 @@
+From 39b0590165501cdeb85595a19bf076d06bcc594c Mon Sep 17 00:00:00 2001
+From: Dominique Leuenberger <dimstar@opensuse.org>
+Date: Thu, 17 May 2018 17:40:37 +0200
+Subject: [PATCH 1/1] qt: fix build against Qt 5.11
+
+Qt 5.11 is in RC phase now, and some headers need to be explicitly
+included in order to build successfully.
+
+Signed-off-by: Jean-Baptiste Kempf <jb@videolan.org>
+---
+ modules/gui/qt/components/simple_preferences.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/modules/gui/qt/components/simple_preferences.cpp b/modules/gui/qt/components/simple_preferences.cpp
+index b48ea7b67f..7a9c2dbf28 100644
+--- a/modules/gui/qt/components/simple_preferences.cpp
++++ b/modules/gui/qt/components/simple_preferences.cpp
+@@ -36,6 +36,7 @@
+ #include <QString>
+ #include <QFont>
+ #include <QToolButton>
++#include <QButtonGroup>
+ #include <QSignalMapper>
+ #include <QVBoxLayout>
+ #include <QScrollArea>
+-- 
+2.11.0
+
