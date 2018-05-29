@@ -813,8 +813,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/videolabs/libdsm/releases/download/v0.2.8/libdsm-0.2.8.tar.gz",
-          "sha256": "986696078f240086808191d7d739f2e4d3cc1af6695493d3845c58299feb7b38"
+          "url": "https://github.com/videolabs/libdsm/releases/download/v0.3.0/libdsm-0.3.0.tar.gz",
+          "sha256": "96caef854a1f7aa61ab6fdfca9c36a1813b37d23d013db0bc4ec7cd38a570b1c"
         }
       ]
     },
@@ -866,8 +866,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Haivision/srt/archive/v1.2.3.tar.gz",
-          "sha256": "81c728c04732b79e350ada51a8d54021906ee3e910e798e2968091a6f6b86eff"
+          "url": "https://github.com/Haivision/srt/archive/v1.3.0.tar.gz",
+          "sha256": "645c13a9a5c5b59315f82245737289e071a5441ee40de6e2e45af61e305e1f2c"
         }
       ]
     },
@@ -885,8 +885,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.videolan.org/pub/videolan/vlc/3.0.3/vlc-3.0.3.tar.xz",
-          "sha256": "9ba8b04bdb13f7860a2041768ac83b47b397a36549c71c530b94028a3cfd5b51"
+          "url": "https://download.videolan.org/pub/videolan/vlc/3.0.3/vlc-3.0.3-1.tar.xz",
+          "sha256": "bc9dde8d11ecb5a999e4fb4dec0ec7034fc7f53216fec936fa94f0f476dbf8dc"
         },
         {
           "type": "patch",
