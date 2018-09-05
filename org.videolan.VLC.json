@@ -619,8 +619,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20171225-2245-stable.tar.bz2",
-          "sha256": "91143276d18414f1c94ecdc472b063c874308833d57d7353f15286372ba4ba68"
+          "url": "http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20180104-2245-stable.tar.bz2",
+          "sha256": "096f40f8d32ed792e0f9435a6c2b447370523e47ddfa1cfcba395b351d139ccf"
         }
       ]
     },
@@ -639,6 +639,32 @@
           "type": "archive",
           "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_2.7.tar.gz",
           "sha256": "d5e75fa62ffe6ed49e691f8eb8ab8c1634ffcc0725dd553c6fdb4d5443b494a2"
+        }
+      ]
+    },
+    {
+      "name": "aom",
+      "buildsystem": "cmake-ninja",
+      "builddir": true,
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
+      ],
+      "build-options": {
+        "arch": {
+          "arm": {
+            "config-opts": [
+              "-DAOM_TARGET_CPU=generic"
+            ]
+          }
+        }
+      },
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://aomedia.googlesource.com/aom",
+          "branch": "v1.0.0"
         }
       ]
     },
@@ -692,8 +718,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-4.0.tar.xz",
-          "sha256": "ed945daf40b124e77a685893cc025d086f638bc703183460aff49508edb3a43f"
+          "url": "http://ffmpeg.org/releases/ffmpeg-4.0.2.tar.xz",
+          "sha256": "a95c0cc9eb990e94031d2183f2e6e444cc61c99f6f182d1575c433d62afb2f97"
         }
       ]
     },
@@ -729,8 +755,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/libusb/libusb/releases/download/v1.0.21/libusb-1.0.21.tar.bz2",
-          "sha256": "7dce9cce9a81194b7065ee912bcd55eeffebab694ea403ffb91b67db66b1824b"
+          "url": "https://github.com/libusb/libusb/releases/download/v1.0.22/libusb-1.0.22.tar.bz2",
+          "sha256": "75aeb9d59a4fdb800d329a545c2e6799f732362193b465ea198f2aa275518157"
         }
       ]
     },
@@ -866,8 +892,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Haivision/srt/archive/v1.3.0.tar.gz",
-          "sha256": "645c13a9a5c5b59315f82245737289e071a5441ee40de6e2e45af61e305e1f2c"
+          "url": "https://github.com/Haivision/srt/archive/v1.3.1.tar.gz",
+          "sha256": "f202801d9e53cd8854fccc1ca010272076c32c318396c8f61fb9a61807c3dbea"
         }
       ]
     },
@@ -885,16 +911,12 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.videolan.org/pub/videolan/vlc/3.0.3/vlc-3.0.3-1.tar.xz",
-          "sha256": "bc9dde8d11ecb5a999e4fb4dec0ec7034fc7f53216fec936fa94f0f476dbf8dc"
+          "url": "http://get.videolan.org/vlc/3.0.4/vlc-3.0.4.tar.xz",
+          "sha256": "01f3db3790714038c01f5e23c709e31ecd6f1c046ac93d19e1dde38b3fc05a9e"
         },
         {
           "type": "patch",
           "path": "vlc-fix-appdata.patch"
-        },
-        {
-          "type": "patch",
-          "path": "vlc-qt5.11-fix.patch"
         }
       ]
     }
