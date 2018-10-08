@@ -1,0 +1,68 @@
+{
+  "id": "org.videolan.VLC.Plugin.fdkaac",
+  "build-extension": true,
+  "runtime": "org.videolan.VLC",
+  "sdk": "org.freedesktop.Sdk//1.6",
+  "tags": ["nonfree"],
+  "separate-locales": false,
+  "build-options": {
+    "cflags": "-O2 -g -fstack-protector-strong -D_FORTIFY_SOURCE=2",
+    "cxxflags": "-O2 -g -fstack-protector-strong -D_FORTIFY_SOURCE=2",
+    "ldflags": "-fstack-protector-strong -Wl,-z,relro,-z,now",
+    "env": {
+      "V": "1"
+    }
+  },
+  "modules": [
+    {
+      "name": "fdkaac",
+      "config-opts": [
+        "--with-pic",
+        "--disable-static",
+        "--enable-shared",
+        "--prefix=/app/share/vlc/extra/fdkaac"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/mstorsjo/fdk-aac/archive/v0.1.5.tar.gz",
+          "sha256": "ff53d1d01cacc29c071e23192dfefa93bdbeaf775fc5d296259b4859d0306b79"
+        },
+        {
+          "type": "script",
+          "commands": [
+            "autoreconf -fiv"
+          ],
+          "dest-filename": "autogen.sh"
+        }
+      ]
+    },
+    {
+      "name": "vlc",
+      "rm-configure": true,
+      "config-opts": [
+        "BUILDCC=/usr/bin/gcc -std=gnu99",
+        "PKG_CONFIG_PATH=/app/share/vlc/extra/fdkaac/lib/pkgconfig",
+        "--disable-a52",
+        "--disable-lua",
+        "--enable-fdkaac",
+        "--prefix=/var/tmp/install"
+      ],
+      "post-install": [
+        "mkdir -p /app/share/vlc/extra/fdkaac/plugins",
+        "mv /var/tmp/install/lib/vlc/plugins/codec/libfdkaac_plugin.so /app/share/vlc/extra/fdkaac/plugins"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://get.videolan.org/vlc/3.0.0/vlc-3.0.1.tar.xz",
+          "sha256": "ce700cdfb49d721b75581ee727e98cc60dae97407ccec0f82124d5e9a1cb1301"
+        },
+        {
+          "type": "patch",
+          "path": "vlc-fix-appdata.patch"
+        }
+      ]
+    }
+  ]
+}
