@@ -5,4 +5,4 @@ for f in /app/share/vlc/extra/*/*.sh; do
   source $f
 done
 
-/app/bin/vlc.bin $VLC_ARGS "$@"
+exec /app/bin/vlc.bin $VLC_ARGS "$@"
