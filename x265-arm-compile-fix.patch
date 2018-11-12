@@ -1,0 +1,52 @@
+# HG changeset patch
+# User Praveen Tiwari <praveen@multicorewareinc.com>
+# Date 1540983948 -19800
+# Branch stable
+# Node ID 471726d3a0462739ff8e3518eb1a1e8a01de4e8d
+# Parent  3e4a041742707f3d2a4a8bc36b419dda83cd982c
+fix Issue #442: linking issue on non x86 platform
+
+diff --git a/source/common/quant.cpp b/source/common/quant.cpp
+--- a/source/common/quant.cpp
++++ b/source/common/quant.cpp
+@@ -723,6 +723,7 @@
+             X265_CHECK(coeffNum[cgScanPos] == 0, "count of coeff failure\n");
+             uint32_t scanPosBase = (cgScanPos << MLS_CG_SIZE);
+             uint32_t blkPos      = codeParams.scan[scanPosBase];
++#if X265_ARCH_X86
+             bool enable512 = detect512();
+             if (enable512)
+                 primitives.cu[log2TrSize - 2].psyRdoQuant(m_resiDctCoeff, m_fencDctCoeff, costUncoded, &totalUncodedCost, &totalRdCost, &psyScale, blkPos);
+@@ -731,6 +732,10 @@
+                 primitives.cu[log2TrSize - 2].psyRdoQuant_1p(m_resiDctCoeff,  costUncoded, &totalUncodedCost, &totalRdCost,blkPos);
+                 primitives.cu[log2TrSize - 2].psyRdoQuant_2p(m_resiDctCoeff, m_fencDctCoeff, costUncoded, &totalUncodedCost, &totalRdCost, &psyScale, blkPos);
+             }
++#else
++            primitives.cu[log2TrSize - 2].psyRdoQuant_1p(m_resiDctCoeff, costUncoded, &totalUncodedCost, &totalRdCost, blkPos);
++            primitives.cu[log2TrSize - 2].psyRdoQuant_2p(m_resiDctCoeff, m_fencDctCoeff, costUncoded, &totalUncodedCost, &totalRdCost, &psyScale, blkPos);
++#endif
+         }
+     }
+     else
+@@ -805,8 +810,8 @@
+             uint32_t blkPos = codeParams.scan[scanPosBase];
+             if (usePsyMask)
+             {
++#if X265_ARCH_X86
+                 bool enable512 = detect512();
+-
+                 if (enable512)
+                     primitives.cu[log2TrSize - 2].psyRdoQuant(m_resiDctCoeff, m_fencDctCoeff, costUncoded, &totalUncodedCost, &totalRdCost, &psyScale, blkPos);
+                 else
+@@ -814,6 +819,10 @@
+                     primitives.cu[log2TrSize - 2].psyRdoQuant_1p(m_resiDctCoeff, costUncoded, &totalUncodedCost, &totalRdCost, blkPos);
+                     primitives.cu[log2TrSize - 2].psyRdoQuant_2p(m_resiDctCoeff, m_fencDctCoeff, costUncoded, &totalUncodedCost, &totalRdCost, &psyScale, blkPos);
+                 }
++#else
++                primitives.cu[log2TrSize - 2].psyRdoQuant_1p(m_resiDctCoeff, costUncoded, &totalUncodedCost, &totalRdCost, blkPos);
++                primitives.cu[log2TrSize - 2].psyRdoQuant_2p(m_resiDctCoeff, m_fencDctCoeff, costUncoded, &totalUncodedCost, &totalRdCost, &psyScale, blkPos);
++#endif
+                 blkPos = codeParams.scan[scanPosBase];
+                 for (int y = 0; y < MLS_CG_SIZE; y++)
+                 {
+
