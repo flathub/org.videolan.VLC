@@ -209,8 +209,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.fftw.org/fftw-3.3.7.tar.gz",
-          "sha256": "3b609b7feba5230e8f6dd8d245ddbefac324c5a6ae4186947670d9ac2cd25573"
+          "url": "http://www.fftw.org/fftw-3.3.8.tar.gz",
+          "sha256": "6113262f6e92c5bd474f2875fa1b01054c4ad5040f6b0da7c03c98821d9ae303"
         },
         {
           "type": "script",
@@ -261,8 +261,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://http.debian.net/debian/pool/main/libu/libupnp/libupnp_1.6.24.orig.tar.bz2",
-          "sha256": "7d83d79af3bb4062e5c3a58bf2e90d2da5b8b99e2b2d57c23b5b6f766288cf96"
+          "url": "http://http.debian.net/debian/pool/main/libu/libupnp/libupnp_1.6.25.orig.tar.bz2",
+          "sha256": "c5a300b86775435c076d58a79cc0d5a977d76027d2a7d721590729b7f369fa43"
         },
         {
           "type": "script",
@@ -343,8 +343,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://archive.mozilla.org/pub/opus/opus-1.2.1.tar.gz",
-          "sha256": "cfafd339ccd9c5ef8d6ab15d7e1a412c054bf4cb4ecbbbcc78c12ef2def70732"
+          "url": "https://archive.mozilla.org/pub/opus/opus-1.3.tar.gz",
+          "sha256": "4f3d69aefdf2dbaf9825408e452a8a414ffc60494c70633560700398820dc550"
         },
         {
           "type": "script",
@@ -435,8 +435,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.videolan.org/pub/contrib/fribidi/fribidi-0.19.7.tar.bz2",
-          "sha256": "08222a6212bbc2276a2d55c3bf370109ae4a35b689acbc66571ad2a670595a8e"
+          "url": "https://github.com/fribidi/fribidi/releases/download/v1.0.5/fribidi-1.0.5.tar.bz2",
+          "sha256": "6a64f2a687f5c4f203a46fa659f43dd43d1f8b845df8d723107e8a7e6158e4ce"
         },
         {
           "type": "script",
@@ -612,8 +612,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.nasm.us/pub/nasm/releasebuilds/2.13.03/nasm-2.13.03.tar.xz",
-          "sha256": "812ecfb0dcbc5bd409aaa8f61c7de94c5b8752a7b00c632883d15b2ed6452573"
+          "url": "https://www.nasm.us/pub/nasm/releasebuilds/2.14/nasm-2.14.tar.xz",
+          "sha256": "97c615dbf02ef80e4e2b6c385f7e28368d51efc214daa98e600ca4572500eec0"
         },
         {
           "type": "script",
@@ -633,8 +633,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20180104-2245-stable.tar.bz2",
-          "sha256": "096f40f8d32ed792e0f9435a6c2b447370523e47ddfa1cfcba395b351d139ccf"
+          "url": "http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20181111-2245.tar.bz2",
+          "sha256": "22c05954aab2c08e37673b206b154ad7a50255fbc482fa9b46d74ee795a5dfd4"
         }
       ]
     },
@@ -651,8 +651,12 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_2.7.tar.gz",
-          "sha256": "d5e75fa62ffe6ed49e691f8eb8ab8c1634ffcc0725dd553c6fdb4d5443b494a2"
+          "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_2.9.tar.gz",
+          "sha256": "ebae687c84a39f54b995417c52a2fdde65a4e2e7ebac5730d251471304b91024"
+        },
+        {
+          "type": "patch",
+          "path": "x265-arm-compile-fix.patch"
         }
       ]
     },
@@ -732,8 +736,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-4.0.2.tar.xz",
-          "sha256": "a95c0cc9eb990e94031d2183f2e6e444cc61c99f6f182d1575c433d62afb2f97"
+          "url": "http://ffmpeg.org/releases/ffmpeg-4.1.tar.xz",
+          "sha256": "a38ec4d026efb58506a99ad5cd23d5a9793b4bf415f2c4c2e9c1bb444acd1994"
         }
       ]
     },
@@ -930,8 +934,9 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://get.videolan.org/vlc/3.0.4/vlc-3.0.4.tar.xz",
-          "sha256": "01f3db3790714038c01f5e23c709e31ecd6f1c046ac93d19e1dde38b3fc05a9e"
+          "url": "http://get.videolan.org/vlc/3.0.5/vlc-3.0.5.tar.xz",
+          "sha256": "f5c087dfebd4827052bf3b97996b3a05c79ae336dcb60a9e8d1a010f270072db"
+
         },
         {
           "type": "patch",
