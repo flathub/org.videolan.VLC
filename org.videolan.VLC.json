@@ -929,7 +929,9 @@
       "post-install": [
         "mv /app/bin/vlc /app/bin/vlc.bin",
         "mv vlc.sh /app/bin/vlc",
-        "chmod +x /app/bin/vlc"
+        "chmod +x /app/bin/vlc",
+        "sed -i -e 's/Icon=vlc/Icon=org.videolan.VLC/g' /app/share/applications/vlc-*.desktop",
+        "for s in openbd opendvd opencda openvcd; do mv /app/share/applications/vlc-$s.desktop /app/share/applications/org.videolan.VLC-$s.desktop; done"
       ],
       "sources": [
         {
@@ -941,6 +943,10 @@
         {
           "type": "patch",
           "path": "vlc-fix-appdata.patch"
+        },
+        {
+          "type": "patch",
+          "path": "vlc-disc-shortcuts.patch"
         },
         {
           "type": "file",
