@@ -665,6 +665,21 @@
       ]
     },
     {
+      "name": "dav1d",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://get.videolan.org/dav1d/0.1.0/dav1d-0.1.0.tar.xz",
+          "sha256": "4ce7cdb0d3eda131306dd35d6d8df18d91d7e17fcb549863f68b21af5aa48037"
+        },
+        {
+          "type": "patch",
+          "path": "dav1d-pass-the-sequence-header-corresponding-to-the-picture.patch"
+        }
+      ]
+    },
+    {
       "name": "libvpx",
       "config-opts": [
         "--enable-pic",
