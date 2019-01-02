@@ -1,7 +1,7 @@
 {
   "app-id": "org.videolan.VLC",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.11",
+  "runtime-version": "5.12",
   "sdk": "org.kde.Sdk",
   "command": "vlc",
   "finish-args": [
@@ -25,7 +25,7 @@
   ],
   "add-extensions": {
     "org.videolan.VLC.Plugin": {
-      "versions": "3-5.11;3-1.6",
+      "versions": "3-5.12;3-18.08",
       "directory": "share/vlc/extra",
       "subdirectories": true,
       "merge-dirs": "plugins",
@@ -58,9 +58,6 @@
     "/app/lib/vlc/vlc-cache-gen /app/lib/vlc/plugins"
   ],
   "build-options": {
-    "cflags": "-O2 -g -fstack-protector-strong -D_FORTIFY_SOURCE=2",
-    "cxxflags": "-O2 -g -fstack-protector-strong -D_FORTIFY_SOURCE=2",
-    "ldflags": "-fstack-protector-strong -Wl,-z,relro,-z,now -L/app/lib",
     "env": {
       "V": "1"
     }
@@ -199,29 +196,6 @@
       ]
     },
     {
-      "name": "fftw",
-      "rm-configure": true,
-      "config-opts": [
-        "--enable-shared",
-        "--enable-threads",
-        "--enable-openmp"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "http://www.fftw.org/fftw-3.3.8.tar.gz",
-          "sha256": "6113262f6e92c5bd474f2875fa1b01054c4ad5040f6b0da7c03c98821d9ae303"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
       "name": "chromaprint",
       "buildsystem": "cmake-ninja",
       "config-opts": [
@@ -245,6 +219,10 @@
           "type": "archive",
           "url": "http://downloads.xiph.org/releases/libshout/libshout-2.4.1.tar.gz",
           "sha256": "f3acb8dec26f2dbf6df778888e0e429a4ce9378a9d461b02a7ccbf2991bbf24d"
+        },
+        {
+          "type": "patch",
+          "path": "libshout-openssl11.patch"
         },
         {
           "type": "script",
@@ -708,7 +686,8 @@
       "config-opts": [
         "--with-pic",
         "--enable-shared",
-        "--disable-static"
+        "--disable-static",
+        "--disable-frontend"
       ],
       "sources": [
         {
