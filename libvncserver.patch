@@ -7,5 +7,8 @@
 -	AM_PATH_LIBGCRYPT(1.4.0, , with_client_gcrypt=no)
 +	PKG_CHECK_MODULES(LIBGCRYPT, libgcrypt >= 1.4.0,,:)
  	CFLAGS="$CFLAGS $LIBGCRYPT_CFLAGS"
- 	LIBS="$LIBS $LIBGCRYPT_LIBS"
+-	LIBS="$LIBS $LIBGCRYPT_LIBS"
++	LIBS="$LIBS $LIBGCRYPT_LIBS -lgcrypt"
  	if test "x$with_client_gcrypt" != "xno"; then
+ 		AC_DEFINE(WITH_CLIENT_GCRYPT)
+ 	fi
