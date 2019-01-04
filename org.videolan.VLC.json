@@ -312,28 +312,6 @@
       ]
     },
     {
-      "name": "opus",
-      "config-opts": [
-        "--enable-custom-modes",
-        "--disable-static",
-        "--enable-ambisonics"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://archive.mozilla.org/pub/opus/opus-1.3.tar.gz",
-          "sha256": "4f3d69aefdf2dbaf9825408e452a8a414ffc60494c70633560700398820dc550"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
       "name": "gsm",
       "no-autogen": true,
       "build-options": {
@@ -397,24 +375,6 @@
         {
           "type": "patch",
           "path": "libkate.patch"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
-      "name": "fribidi",
-      "rm-configure": true,
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://github.com/fribidi/fribidi/releases/download/v1.0.5/fribidi-1.0.5.tar.bz2",
-          "sha256": "6a64f2a687f5c4f203a46fa659f43dd43d1f8b845df8d723107e8a7e6158e4ce"
         },
         {
           "type": "script",
@@ -585,24 +545,6 @@
       ]
     },
     {
-      "name": "nasm",
-      "rm-configure": true,
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://www.nasm.us/pub/nasm/releasebuilds/2.14/nasm-2.14.tar.xz",
-          "sha256": "97c615dbf02ef80e4e2b6c385f7e28368d51efc214daa98e600ca4572500eec0"
-        },
-        {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
       "name": "x264",
       "config-opts": [
         "--enable-pic",
@@ -676,39 +618,6 @@
         {
           "type": "patch",
           "path": "dav1d-pass-the-sequence-header-corresponding-to-the-picture.patch"
-        }
-      ]
-    },
-    {
-      "name": "libvpx",
-      "config-opts": [
-        "--enable-pic",
-        "--enable-shared",
-        "--disable-examples",
-        "--disable-unit-tests",
-        "--disable-static"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://github.com/webmproject/libvpx/archive/v1.7.0.tar.gz",
-          "sha256": "1fec931eb5c94279ad219a5b6e0202358e94a93a90cfb1603578c326abfc1238"
-        }
-      ]
-    },
-    {
-      "name": "mp3lame",
-      "config-opts": [
-        "--with-pic",
-        "--enable-shared",
-        "--disable-static",
-        "--disable-frontend"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "http://http.debian.net/debian/pool/main/l/lame/lame_3.100.orig.tar.gz",
-          "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
         }
       ]
     },
