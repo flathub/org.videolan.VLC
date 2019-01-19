@@ -839,8 +839,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://get.videolan.org/vlc/3.0.5/vlc-3.0.5.tar.xz",
-          "sha256": "f5c087dfebd4827052bf3b97996b3a05c79ae336dcb60a9e8d1a010f270072db"
+          "url": "http://get.videolan.org/vlc/3.0.6/vlc-3.0.6.tar.xz",
+          "sha256": "18c16d4be0f34861d0aa51fbd274fb87f0cab3b7119757ead93f3db3a1f27ed3"
 
         },
         {
