@@ -239,7 +239,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://http.debian.net/debian/pool/main/libu/libupnp/libupnp_1.6.25.orig.tar.bz2",
+          "url": "https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.6.25.tar.bz2",
           "sha256": "c5a300b86775435c076d58a79cc0d5a977d76027d2a7d721590729b7f369fa43"
         },
         {
