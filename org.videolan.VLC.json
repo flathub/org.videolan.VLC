@@ -658,36 +658,6 @@
       ]
     },
     {
-      "name": "libgpg-error",
-      "config-opts": [
-        "--with-pic",
-        "--enable-shared",
-        "--disable-static"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.32.tar.bz2",
-          "sha256": "c345c5e73cc2332f8d50db84a2280abfb1d8f6d4f1858b9daa30404db44540ca"
-        }
-      ]
-    },
-    {
-      "name": "libgcrypt",
-      "config-opts": [
-        "--with-pic",
-        "--enable-shared",
-        "--disable-static"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.4.tar.bz2",
-          "sha256": "f638143a0672628fde0cad745e9b14deb85dffb175709cacc1f4fe24b93f2227"
-        }
-      ]
-    },
-    {
       "name": "libaacs",
       "config-opts": [
         "--with-pic",
