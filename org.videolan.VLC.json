@@ -418,8 +418,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://dl.matroska.org/downloads/libebml/libebml-1.3.6.tar.xz",
-          "sha256": "1e5a7a7820c493aa62b0f35e15b4233c792cc03458c55ebdfa7a6521e4b43e9e"
+          "url": "https://dl.matroska.org/downloads/libebml/libebml-1.3.7.tar.xz",
+          "sha256": "e3244c87f584d7fc8c371881a6b7b06583cc041f88e2e3fae9a215d9ca58e9f4"
         }
       ]
     },
@@ -435,8 +435,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.4.9.tar.xz",
-          "sha256": "38a61dd5d87c070928b5deb3922b63b2b83c09e2e4a10f9393eecb6afa9795c8"
+          "url": "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.5.0.tar.xz",
+          "sha256": "f0efdc1827fa8012a16d764a45ed84d544d92a2027113245f522f5e1f713ad1e"
         }
       ]
     },
@@ -555,8 +555,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20181111-2245.tar.bz2",
-          "sha256": "22c05954aab2c08e37673b206b154ad7a50255fbc482fa9b46d74ee795a5dfd4"
+          "url": "http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20190319-2245-stable.tar.bz2",
+          "sha256": "9c8b6aa2a031473a3cdb6d0b7924d28d1c9a054981ac9f23d7113d8fb7cd09c9"
         }
       ]
     },
@@ -610,12 +610,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/dav1d/0.1.0/dav1d-0.1.0.tar.xz",
-          "sha256": "4ce7cdb0d3eda131306dd35d6d8df18d91d7e17fcb549863f68b21af5aa48037"
-        },
-        {
-          "type": "patch",
-          "path": "dav1d-pass-the-sequence-header-corresponding-to-the-picture.patch"
+          "url": "https://get.videolan.org/dav1d/0.2.1/dav1d-0.2.1.tar.xz",
+          "sha256": "43b3b273c27529ba7ad563ce9522ed20fb345b13717a58c60ec63df1b282e732"
         }
       ]
     },
@@ -637,8 +633,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-4.1.tar.xz",
-          "sha256": "a38ec4d026efb58506a99ad5cd23d5a9793b4bf415f2c4c2e9c1bb444acd1994"
+          "url": "http://ffmpeg.org/releases/ffmpeg-4.1.1.tar.xz",
+          "sha256": "373749824dfd334d84e55dff406729edfd1606575ee44dd485d97d45ea4d2d86"
         }
       ]
     },
@@ -696,8 +692,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libbluray/1.0.2/libbluray-1.0.2.tar.bz2",
-          "sha256": "6d9e7c4e416f664c330d9fa5a05ad79a3fb39b95adfc3fd6910cbed503b7aeff"
+          "url": "http://ftp.videolan.org/videolan/libbluray/1.1.0/libbluray-1.1.0.tar.bz2",
+          "sha256": "e6a600d26ad3453a168dbb144f041134e954b541b44a9a5aa213d1c7d8c3fe83"
         }
       ]
     },
@@ -844,8 +840,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Haivision/srt/archive/v1.3.1.tar.gz",
-          "sha256": "f202801d9e53cd8854fccc1ca010272076c32c318396c8f61fb9a61807c3dbea"
+          "url": "https://github.com/Haivision/srt/archive/v1.3.2.tar.gz",
+          "sha256": "1b8bfb52313cd2c5455b461b18e3ca1e3d2433e7ea01a02c68a50ab5c53ed0af"
         }
       ]
     },
