@@ -418,8 +418,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://dl.matroska.org/downloads/libebml/libebml-1.3.7.tar.xz",
-          "sha256": "e3244c87f584d7fc8c371881a6b7b06583cc041f88e2e3fae9a215d9ca58e9f4"
+          "url": "https://dl.matroska.org/downloads/libebml/libebml-1.3.9.tar.xz",
+          "sha256": "c6b6c6cd8b20a46203cb5dce636883aef68beb2846f1e4103b660a7da2c9c548"
         }
       ]
     },
@@ -435,8 +435,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.5.0.tar.xz",
-          "sha256": "f0efdc1827fa8012a16d764a45ed84d544d92a2027113245f522f5e1f713ad1e"
+          "url": "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.5.2.tar.xz",
+          "sha256": "0ac6debfbf781d47f001b830aaf9be9dfbcefd13bcfb80ca5efc1c04b4a3c962"
         }
       ]
     },
@@ -610,8 +610,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/dav1d/0.3.0/dav1d-0.3.0.tar.xz",
-          "sha256": "7f229261595ed0940b5cb360d5f0045032ad5c9cbe0f7e71562ae6bee9bacf25"
+          "url": "https://get.videolan.org/dav1d/0.3.1/dav1d-0.3.1.tar.xz",
+          "sha256": "4b1e2be5ea751749e0a8feeb444d9b8e0c1e815e612067344e427cc19d26d73e"
         }
       ]
     },
@@ -692,8 +692,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libbluray/1.1.1/libbluray-1.1.1.tar.bz2",
-          "sha256": "106478a17c8bcac8c7b4174e7432b2bad5a1e6dd2926c4224791fd4669472338"
+          "url": "http://ftp.videolan.org/videolan/libbluray/1.1.2/libbluray-1.1.2.tar.bz2",
+          "sha256": "a3dd452239b100dc9da0d01b30e1692693e2a332a7d29917bf84bb10ea7c0b42"
         }
       ]
     },
