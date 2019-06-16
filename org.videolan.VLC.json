@@ -881,6 +881,10 @@
           "path": "vlc-disc-shortcuts.patch"
         },
         {
+          "type": "patch",
+          "path": "vlc-ignore-time-for-cache.patch"
+        },
+        {
           "type": "file",
           "path": "vlc.sh"
         },
