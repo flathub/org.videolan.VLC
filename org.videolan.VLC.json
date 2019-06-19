@@ -819,7 +819,34 @@
         }
       ]
     },
-
+    {
+      "name": "live555",
+      "buildsystem": "simple",
+      "build-commands": [
+        "CXXFLAGS=`sed \"s/'/\\\"/g\" /etc/flatpak-builder/defaults.json | jq -r .cxxflags` ; sed -i -e \"s|-O2|$CXXFLAGS|\" config.linux-with-shared-libraries",
+        "./genMakefiles linux-with-shared-libraries",
+        "LDFLAGS=`sed \"s/'/\\\"/g\" /etc/flatpak-builder/defaults.json | jq -r .ldflags` ; make -j4 PREFIX=/app LIBDIR=/app/lib install",
+        "chmod +x /app/lib/libliveMedia.so* /app/lib/libUsageEnvironment.so* /app/lib/libBasicUsageEnvironment.so* /app/lib/libgroupsock.so*"
+      ],
+      "cleanup": [
+        "/bin"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "http://www.live555.com/liveMedia/public/live.2019.05.29.tar.gz",
+          "sha256": "be06c4f3da6c956b0a258568f07489d47c3f34f5c3965f70ecc1c288b21c2622"
+        },
+        {
+          "type": "patch",
+          "path": "live555-add-pkgconfig-file.patch"
+        },
+        {
+          "type": "patch",
+          "path": "live555-nosignal.patch"
+        }
+      ]
+    },
     {
       "name": "vlc",
       "rm-configure": true,
