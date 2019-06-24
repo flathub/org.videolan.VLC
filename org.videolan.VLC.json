@@ -858,7 +858,7 @@
         "/share/macosx"
       ],
       "post-install": [
-        "install -Dp -m 644 org.videolan.VLC.appdata.xml --target-directory=/app/share/appdata",
+        "install -Dp -m 644 org.videolan.VLC.appdata.xml /app/share/appdata/vlc.appdata.xml",
         "mv /app/bin/vlc /app/bin/vlc.bin",
         "mv vlc.sh /app/bin/vlc",
         "chmod +x /app/bin/vlc",
