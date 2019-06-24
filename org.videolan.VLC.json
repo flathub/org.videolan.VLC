@@ -858,6 +858,7 @@
         "/share/macosx"
       ],
       "post-install": [
+        "install -Dp -m 644 org.videolan.VLC.appdata.xml --target-directory=/app/share/appdata",
         "mv /app/bin/vlc /app/bin/vlc.bin",
         "mv vlc.sh /app/bin/vlc",
         "chmod +x /app/bin/vlc",
@@ -872,6 +873,10 @@
           "url": "https://get.videolan.org/vlc/3.0.7.1/vlc-3.0.7.1.tar.xz",
           "sha256": "0655804371096772f06104b75c21cde8a76e3b6c8a2fdadc97914f082c6264f5"
 
+        },
+        {
+          "type": "file",
+          "path": "org.videolan.VLC.appdata.xml"
         },
         {
           "type": "patch",

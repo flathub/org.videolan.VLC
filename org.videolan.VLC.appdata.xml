@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2016-2017 Jean-Baptiste Kempf CC-0 -->
+
+<component type="desktop">
+    <id>org.videolan.VLC</id>
+    <launchable type="desktop-id">vlc.desktop</launchable>
+    <metadata_license>CC0-1.0</metadata_license>
+    <name>VLC</name>
+    <summary>VLC media player, the open-source multimedia player</summary>
+    <description>
+        <p>
+            VLC is a free and open source cross-platform multimedia player and
+            framework that plays most multimedia files as well as DVDs, Audio CDs,
+            VCDs, and various streaming protocols.
+        </p>
+    </description>
+    <categories>
+        <category>Video</category>
+        <category>AudioVideo</category>
+        <category>Player</category>
+    </categories>
+    <content_rating type="oars-1.1" />
+    <url type="homepage">https://www.videolan.org/vlc/</url>
+    <url type="bugtracker">https://trac.videolan.org/vlc/</url>
+    <url type="donation">https://www.videolan.org/contribute.html</url>
+    <releases>
+        <release version="3.0.7.1" date="2019-06-11"/>
+        <release version="3.0.7" date="2019-05-24"/>
+        <release version="3.0.6" date="2019-01-10"/>
+    </releases>
+    <provides>
+        <library>libvlc.so.5</library>
+    </provides>
+    <project_group>VideoLAN</project_group>
+    <project_license>GPL-2.0+</project_license>
+    <developer_name>VideoLAN et al.</developer_name>
+    <update_contact>matmaul@gmail.com</update_contact>
+    <screenshots>
+        <screenshot type="default"><image type="source">https://images.videolan.org/vlc/screenshots/3.0.0/3.0.0_4k_gnome_1.jpg</image></screenshot>
+    </screenshots>
+</component>
