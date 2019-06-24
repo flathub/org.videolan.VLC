@@ -35,6 +35,8 @@
     <project_license>GPL-2.0+</project_license>
     <developer_name>VideoLAN et al.</developer_name>
     <update_contact>matmaul@gmail.com</update_contact>
+    <icon type="remote" height="128" width="128">https://images.videolan.org/images/vlc128x128.png</icon>
+    <icon type="remote" height="64" width="64">https://images.videolan.org/images/vlc64x64.png</icon>
     <screenshots>
         <screenshot type="default"><image type="source">https://images.videolan.org/vlc/screenshots/3.0.0/3.0.0_4k_gnome_1.jpg</image></screenshot>
     </screenshots>
