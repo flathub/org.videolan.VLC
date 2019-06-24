@@ -11,6 +11,7 @@
     "--socket=pulseaudio",
     "--share=network",
     "--filesystem=host",
+    "--talk-name=org.freedesktop.Notifications",
     "--talk-name=org.freedesktop.ScreenSaver",
     "--talk-name=org.freedesktop.secrets",
     "--talk-name=org.kde.kwalletd5",
@@ -844,6 +845,17 @@
         {
           "type": "patch",
           "path": "live555-nosignal.patch"
+        }
+      ]
+    },
+    {
+      "name": "libnotify",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://ftp.gnome.org/pub/GNOME/sources/libnotify/0.7/libnotify-0.7.8.tar.xz",
+          "sha256": "69209e0b663776a00c7b6c0e560302a8dbf66b2551d55616304f240bba66e18c"
         }
       ]
     },
