@@ -2,7 +2,7 @@
 <!-- Copyright 2016-2017 Jean-Baptiste Kempf CC-0 -->
 
 <component type="desktop-application">
-    <id>org.videolan.VLC</id>
+    <id>org.videolan.vlc</id>
     <launchable type="desktop-id">org.videolan.VLC.desktop</launchable>
     <metadata_license>CC0-1.0</metadata_license>
     <name>VLC</name>
