@@ -29,6 +29,7 @@
         <release version="3.0.6" date="2019-01-10"/>
     </releases>
     <provides>
+        <id>org.videolan.vlc</id>
         <library>libvlc.so.5</library>
     </provides>
     <project_group>VideoLAN</project_group>
