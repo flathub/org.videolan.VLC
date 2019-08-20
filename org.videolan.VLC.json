@@ -835,8 +835,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.live555.com/liveMedia/public/live.2019.05.29.tar.gz",
-          "sha256": "be06c4f3da6c956b0a258568f07489d47c3f34f5c3965f70ecc1c288b21c2622"
+          "url": "http://www.live555.com/liveMedia/public/live.2019.08.16.tar.gz",
+          "sha256": "1b336a0614e43cade869a7145dbc576ed6ad568c079c6e120fe3b48e0b6be7f8"
         },
         {
           "type": "patch",
