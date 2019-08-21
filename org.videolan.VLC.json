@@ -574,8 +574,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_3.1.1.tar.gz",
-          "sha256": "827900c7cc0a0105b8a96460fab7cd22b97afa7b2835b5cb979c44bddaa3c8d0"
+          "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_3.1.2.tar.gz",
+          "sha256": "6f785f1c9a42e00a56402da88463bb861c49d9af108be53eb3ef10295f2a59aa"
         }
       ]
     },
@@ -585,8 +585,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/dav1d/0.3.1/dav1d-0.3.1.tar.xz",
-          "sha256": "4b1e2be5ea751749e0a8feeb444d9b8e0c1e815e612067344e427cc19d26d73e"
+          "url": "https://get.videolan.org/dav1d/0.4.0/dav1d-0.4.0.tar.xz",
+          "sha256": "2553b2e65081c0ec799c11a752ea43ad8f2d11b2fb36a83375972d1a00add823"
         }
       ]
     },
@@ -608,8 +608,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-4.1.4.tar.xz",
-          "sha256": "f1f049a82fcfbf156564e73a3935d7e750891fab2abf302e735104fd4050a7e1"
+          "url": "http://ffmpeg.org/releases/ffmpeg-4.2.tar.xz",
+          "sha256": "023f10831a97ad93d798f53a3640e55cd564abfeba807ecbe8524dac4fedecd5"
         }
       ]
     },
