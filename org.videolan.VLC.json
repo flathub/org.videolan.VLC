@@ -19,6 +19,8 @@
     "--talk-name=org.mpris.MediaPlayer2.Player",
     "--own-name=org.mpris.MediaPlayer2.vlc",
     "--device=all",
+    "--filesystem=xdg-run/gvfs",
+    "--filesystem=/run/media",
     "--filesystem=xdg-run/dconf",
     "--filesystem=~/.config/dconf:ro",
     "--talk-name=ca.desrt.dconf",
