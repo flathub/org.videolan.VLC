@@ -1,7 +1,7 @@
 {
   "app-id": "org.videolan.VLC",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.12",
+  "runtime-version": "5.13",
   "sdk": "org.kde.Sdk",
   "command": "vlc",
   "finish-args": [
@@ -65,7 +65,6 @@
     }
   },
   "modules": [
-    "shared-modules/udev/udev-175.json",
     "shared-modules/SDL/SDL-1.2.15.json",
     "shared-modules/SDL/SDL_image-1.2.12.json",
     "shared-modules/lua5.3/lua-5.3.5.json",
