@@ -808,8 +808,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.live555.com/liveMedia/public/live.2019.08.16.tar.gz",
-          "sha256": "1b336a0614e43cade869a7145dbc576ed6ad568c079c6e120fe3b48e0b6be7f8"
+          "url": "http://www.live555.com/liveMedia/public/live.2019.09.18.tar.gz",
+          "sha256": "7c04db4ba5048b301e27853f10004bbbbf059f3cf2686db6067d0d3e396625fd"
         },
         {
           "type": "patch",
