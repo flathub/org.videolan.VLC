@@ -27,7 +27,7 @@
   ],
   "add-extensions": {
     "org.videolan.VLC.Plugin": {
-      "versions": "3-5.12;3-18.08",
+      "versions": "3-5.13;3-19.08",
       "directory": "share/vlc/extra",
       "subdirectories": true,
       "merge-dirs": "plugins",
