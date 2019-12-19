@@ -305,8 +305,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.videolan.org/pub/libdvbpsi/1.3.2/libdvbpsi-1.3.2.tar.bz2",
-          "sha256": "ac4e39f2b9b1e15706ad261fa175a9430344d650a940be9aaf502d4cb683c5fe"
+          "url": "https://download.videolan.org/pub/libdvbpsi/1.3.3/libdvbpsi-1.3.3.tar.bz2",
+          "sha256": "02b5998bcf289cdfbd8757bedd5987e681309b0a25b3ffe6cebae599f7a00112"
         },
         {
           "type": "script",
@@ -438,8 +438,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libdvdread/6.0.1/libdvdread-6.0.1.tar.bz2",
-          "sha256": "28ce4f0063883ca4d37dfd40a2f6685503d679bca7d88d58e04ee8112382d5bd"
+          "url": "http://ftp.videolan.org/videolan/libdvdread/6.0.2/libdvdread-6.0.2.tar.bz2",
+          "sha256": "f91401af213b219cdde24b46c50a57f29301feb7f965678f1d7ed4632cc6feb0"
         },
         {
           "type": "script",
@@ -456,8 +456,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libdvdnav/6.0.0/libdvdnav-6.0.0.tar.bz2",
-          "sha256": "f0a2711b08a021759792f8eb14bb82ff8a3c929bf88c33b64ffcddaa27935618"
+          "url": "http://ftp.videolan.org/videolan/libdvdnav/6.0.1/libdvdnav-6.0.1.tar.bz2",
+          "sha256": "e566a396f1950017088bfd760395b0565db44234195ada5413366c9d23926733"
         },
         {
           "type": "script",
@@ -531,8 +531,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_3.1.2.tar.gz",
-          "sha256": "6f785f1c9a42e00a56402da88463bb861c49d9af108be53eb3ef10295f2a59aa"
+          "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_3.2.1.tar.gz",
+          "sha256": "fb9badcf92364fd3567f8b5aa0e5e952aeea7a39a2b864387cec31e3b58cbbcc"
         }
       ]
     },
@@ -542,8 +542,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/dav1d/0.4.0/dav1d-0.4.0.tar.xz",
-          "sha256": "2553b2e65081c0ec799c11a752ea43ad8f2d11b2fb36a83375972d1a00add823"
+          "url": "https://get.videolan.org/dav1d/0.5.2/dav1d-0.5.2.tar.xz",
+          "sha256": "f94cf88c4a3ac2fd3cb30d688e8ef5943854d73db2dd12985a78892e76560f0a"
         }
       ]
     },
@@ -576,8 +576,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/libsecret/0.18/libsecret-0.18.5.tar.xz",
-          "sha256": "9ce7bd8dd5831f2786c935d82638ac428fa085057cc6780aba0e39375887ccb3"
+          "url": "https://download.gnome.org/sources/libsecret/0.19/libsecret-0.19.1.tar.xz",
+          "sha256": "8583e10179456ae2c83075d95455f156dc08db6278b32bf4bd61819335a30e3a"
         },
         {
           "type": "shell",
@@ -635,8 +635,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/libusb/libusb/releases/download/v1.0.22/libusb-1.0.22.tar.bz2",
-          "sha256": "75aeb9d59a4fdb800d329a545c2e6799f732362193b465ea198f2aa275518157"
+          "url": "https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2",
+          "sha256": "db11c06e958a82dac52cf3c65cb4dd2c3f339c8a988665110e0d24d19312ad8d"
         }
       ]
     },
@@ -719,8 +719,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/videolabs/libdsm/releases/download/v0.3.0/libdsm-0.3.0.tar.gz",
-          "sha256": "96caef854a1f7aa61ab6fdfca9c36a1813b37d23d013db0bc4ec7cd38a570b1c"
+          "url": "https://github.com/videolabs/libdsm/releases/download/v0.3.1/libdsm-0.3.1.tar.gz",
+          "sha256": "329390829ffe0f102e4f9eba9ac19252513b8c55fe7f74d57d60cb9ea0637762"
         }
       ]
     },
@@ -731,8 +731,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/videolabs/libmicrodns/releases/download/0.0.10/microdns-0.0.10.tar.gz",
-          "sha256": "f83c427cbbbad226729234245ce0d31ae7cdf11359d0ccdd0402d4c48fd3dd33"
+          "url": "https://github.com/videolabs/libmicrodns/releases/download/0.1.0/microdns-0.1.0.tar.gz",
+          "sha256": "5d839b6ba787be67cabf49021dada5d2550c352c2761dae149019923d3cf486c"
         },
         {
           "type": "script",
@@ -772,8 +772,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Haivision/srt/archive/v1.3.2.tar.gz",
-          "sha256": "1b8bfb52313cd2c5455b461b18e3ca1e3d2433e7ea01a02c68a50ab5c53ed0af"
+          "url": "https://github.com/Haivision/srt/archive/v1.4.1.tar.gz",
+          "sha256": "e80ca1cd0711b9c70882c12ec365cda1ba852e1ce8acd43161a21a04de0cbf14"
         }
       ]
     },
@@ -792,8 +792,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.live555.com/liveMedia/public/live.2019.09.18.tar.gz",
-          "sha256": "7c04db4ba5048b301e27853f10004bbbbf059f3cf2686db6067d0d3e396625fd"
+          "url": "http://www.live555.com/liveMedia/public/live.2019.12.13.tar.gz",
+          "sha256": "63593214bcb088540801902df23d1a650b502c21cd6ac21523c4a228cc6c8f68"
         },
         {
           "type": "patch",
