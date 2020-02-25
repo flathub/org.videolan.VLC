@@ -1,7 +1,7 @@
 {
   "app-id": "org.videolan.VLC",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.13",
+  "runtime-version": "5.14",
   "sdk": "org.kde.Sdk",
   "command": "vlc",
   "finish-args": [
