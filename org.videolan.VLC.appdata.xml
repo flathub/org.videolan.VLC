@@ -32,6 +32,7 @@
     </releases>
     <provides>
         <id>org.videolan.vlc</id>
+        <id>vlc.desktop</id>
         <library>libvlc.so.5</library>
     </provides>
     <project_group>VideoLAN</project_group>
