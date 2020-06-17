@@ -231,8 +231,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.6.25.tar.bz2",
-          "sha256": "c5a300b86775435c076d58a79cc0d5a977d76027d2a7d721590729b7f369fa43"
+          "url": "https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.8.7.tar.bz2",
+          "sha256": "e38c69b2b67322e67cd53680db9b02c7c1f720a47a3cd626fd89d57d2dca93b8"
         },
         {
           "type": "script",
@@ -404,8 +404,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://www.libssh2.org/download/libssh2-1.8.0.tar.gz",
-          "sha256": "39f34e2f6835f4b992cafe8625073a88e5a28ba78f83e8099610a7b3af4676d4"
+          "url": "https://www.libssh2.org/download/libssh2-1.9.0.tar.gz",
+          "sha256": "d5fb8bd563305fd1074dda90bd053fb2d29fc4bce048d182f96eaa466dfadafd"
         },
         {
           "type": "script",
@@ -427,8 +427,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.12.tar.gz",
-          "sha256": "33cbbb4e15bb390f723c311b323cef4a43bcf781984f92d92adda3243a116136"
+          "url": "https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.13.tar.gz",
+          "sha256": "0ae5bb9175dc0a602fe85c1cf591ac47ee5247b87f2bf164c16b05f87cbfa81a"
         }
       ]
     },
@@ -438,8 +438,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libdvdread/6.1.0/libdvdread-6.1.0.tar.bz2",
-          "sha256": "501bbd7d1e7d5f2d2a0ff8d0a6ac2fbd7e5e7e0e80ef82fef818f43a30b4750c"
+          "url": "http://ftp.videolan.org/videolan/libdvdread/6.1.1/libdvdread-6.1.1.tar.bz2",
+          "sha256": "3e357309a17c5be3731385b9eabda6b7e3fa010f46022a06f104553bf8e21796"
         },
         {
           "type": "script",
@@ -512,9 +512,9 @@
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20191217-2245-stable.tar.bz2",
-          "sha256": "b2495c8f2930167d470994b1ce02b0f4bfb24b3317ba36ba7f112e9809264160"
+          "type": "git",
+          "url": "https://code.videolan.org/videolan/x264.git",
+          "branch": "296494a4011f58f32adc54304a2654627558c59a"
         }
       ]
     },
@@ -531,8 +531,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_3.3.tar.gz",
-          "sha256": "f26e148ed1f4dfb33fd1eb3ff5e60e08078d1b2017e88bcbb045b3fb58300b9c"
+          "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_3.4.tar.gz",
+          "sha256": "c2047f23a6b729e5c70280d23223cb61b57bfe4ad4e8f1471eeee2a61d148672"
         }
       ]
     },
@@ -542,8 +542,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/dav1d/0.6.0/dav1d-0.6.0.tar.xz",
-          "sha256": "099f3115bbdd1ac2338dff73d5fccc1a9a98bf7c1228bd1affe7f62fc529b370"
+          "url": "https://get.videolan.org/dav1d/0.7.0/dav1d-0.7.0.tar.xz",
+          "sha256": "d3e2445006b9be4cf53625e7e37cf1693eca1aa361868e7ff5f309e2549e9e75"
         }
       ]
     },
@@ -565,8 +565,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-4.2.2.tar.xz",
-          "sha256": "cb754255ab0ee2ea5f66f8850e1bd6ad5cac1cd855d0a2f4990fb8c668b0d29c"
+          "url": "http://ffmpeg.org/releases/ffmpeg-4.2.3.tar.xz",
+          "sha256": "9df6c90aed1337634c1fb026fb01c154c29c82a64ea71291ff2da9aacb9aad31"
         }
       ]
     },
@@ -770,8 +770,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.live555.com/liveMedia/public/live.2020.04.06.tar.gz",
-          "sha256": "cb66c9d7d1895a238274c20ddecfc8dbeb9207926a038fe2bf860e83589ba492"
+          "url": "http://www.live555.com/liveMedia/public/live.2020.05.15.tar.gz",
+          "sha256": "54bfa9bf10e979d742b687339595968c9b443afbb5f264682daa024c74756cb9"
         },
         {
           "type": "patch",
@@ -820,8 +820,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/vlc/3.0.10/vlc-3.0.10.tar.xz",
-          "sha256": "a966abfc7f3b2ff3adaa130306ecaf5d6ad3b6dc73385fc9ab0c1204029d4c31"
+          "url": "https://get.videolan.org/vlc/3.0.11/vlc-3.0.11.tar.xz",
+          "sha256": "3e94a1acf33445e9da15d528aa48657aa26b912eaa2656b403d43860a8834919"
         },
         {
           "type": "file",
