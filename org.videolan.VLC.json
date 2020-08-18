@@ -376,8 +376,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://dl.matroska.org/downloads/libebml/libebml-1.3.10.tar.xz",
-          "sha256": "c6a792f4127b8059bc446fb32391e6633811f45748d7d7ba873d7028362f5e3e"
+          "url": "https://dl.matroska.org/downloads/libebml/libebml-1.4.0.tar.xz",
+          "sha256": "80abc9a82549615018798ee704997270a39b43de9a6e7e0d23b62f8ce682c4b3"
         }
       ]
     },
@@ -393,8 +393,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.5.2.tar.xz",
-          "sha256": "0ac6debfbf781d47f001b830aaf9be9dfbcefd13bcfb80ca5efc1c04b4a3c962"
+          "url": "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.6.2.tar.xz",
+          "sha256": "bc4479aa8422ab07643df6a1fa5a19e4bed4badfd41ca77e081628620d1e1990"
         }
       ]
     },
@@ -542,8 +542,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/dav1d/0.7.0/dav1d-0.7.0.tar.xz",
-          "sha256": "d3e2445006b9be4cf53625e7e37cf1693eca1aa361868e7ff5f309e2549e9e75"
+          "url": "https://get.videolan.org/dav1d/0.7.1/dav1d-0.7.1.tar.xz",
+          "sha256": "3334b5d05ec00b0745f94e2c57e23f1874197c4b435a6656cc65af531e73d3c2"
         }
       ]
     },
@@ -565,8 +565,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-4.2.3.tar.xz",
-          "sha256": "9df6c90aed1337634c1fb026fb01c154c29c82a64ea71291ff2da9aacb9aad31"
+          "url": "http://ffmpeg.org/releases/ffmpeg-4.3.1.tar.xz",
+          "sha256": "ad009240d46e307b4e03a213a0f49c11b650e445b1f8be0dda2a9212b34d2ffb"
         }
       ]
     },
@@ -581,8 +581,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libaacs/0.10.0/libaacs-0.10.0.tar.bz2",
-          "sha256": "93f6b19ef71e6f73e77bd7535946c09c45330e9b42e832a63a1d6b042f6b12fe"
+          "url": "http://ftp.videolan.org/videolan/libaacs/0.11.0/libaacs-0.11.0.tar.bz2",
+          "sha256": "6d884381fbb659e2a565eba91e72499778635975e4b3d6fd94ab364a25965387"
         }
       ]
     },
@@ -760,8 +760,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.live555.com/liveMedia/public/live.2020.05.15.tar.gz",
-          "sha256": "54bfa9bf10e979d742b687339595968c9b443afbb5f264682daa024c74756cb9"
+          "url": "http://www.live555.com/liveMedia/public/live.2020.08.19.tar.gz",
+          "sha256": "af3af7f2510b0b45f38892c232abca2cee2ab36a62503e7085b47ed2c3c2c537"
         },
         {
           "type": "patch",
@@ -810,8 +810,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/vlc/3.0.11/vlc-3.0.11.tar.xz",
-          "sha256": "3e94a1acf33445e9da15d528aa48657aa26b912eaa2656b403d43860a8834919"
+          "url": "https://get.videolan.org/vlc/3.0.11.1/vlc-3.0.11.1.tar.xz",
+          "sha256": "189311d28aa814f106a7b3645211ac52c0b3e2b9f4b348de2f63bab3218086b8"
         },
         {
           "type": "file",
