@@ -1,7 +1,7 @@
 {
   "app-id": "org.videolan.VLC",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.14",
+  "runtime-version": "5.15",
   "sdk": "org.kde.Sdk",
   "command": "vlc",
   "finish-args": [
@@ -27,7 +27,7 @@
   ],
   "add-extensions": {
     "org.videolan.VLC.Plugin": {
-      "versions": "3-5.13;3-19.08",
+      "versions": "3-5.15;3-20.08",
       "directory": "share/vlc/extra",
       "subdirectories": true,
       "merge-dirs": "plugins",
