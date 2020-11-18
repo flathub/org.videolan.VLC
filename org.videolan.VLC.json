@@ -531,7 +531,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_3.4.tar.gz",
+          "url": "https://ftp.osuosl.org/pub/blfs/conglomeration/x265/x265_3.4.tar.gz",
           "sha256": "c2047f23a6b729e5c70280d23223cb61b57bfe4ad4e8f1471eeee2a61d148672"
         }
       ]
@@ -614,8 +614,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libbluray/1.2.0/libbluray-1.2.0.tar.bz2",
-          "sha256": "cd41ea06fd2512a77ebf63872873641908ef81ce2fe4e4c842f6035a47696c11"
+          "url": "http://ftp.videolan.org/videolan/libbluray/1.2.1/libbluray-1.2.1.tar.bz2",
+          "sha256": "5223e83f7988ea2cc860b5cadcaf9cf971087b0c80ca7b60cc17c8300cae36ec"
         }
       ]
     },
@@ -664,8 +664,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/haasn/libplacebo/archive/v2.72.0.tar.gz",
-          "sha256": "41f83de4271c00d01facce683af798035707874c21113dcf0b00e74b6fce713b"
+          "url": "https://github.com/haasn/libplacebo/archive/v2.72.2.tar.gz",
+          "sha256": "64f6e17e943028332deca17f79822c66176988cf7868c0c8bdd82d2e8a366dff"
         }
       ]
     },
@@ -710,8 +710,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/videolabs/libmicrodns/releases/download/0.1.2/microdns-0.1.2.tar.xz",
-          "sha256": "666c4b9d86b5b3c37357bb78453c7e8b72cd65ade22d0a7963bfbefe51509b5c"
+          "url": "https://github.com/videolabs/libmicrodns/releases/download/0.2.0/microdns-0.2.0.tar.xz",
+          "sha256": "2da28e7dda4861d76f797f92ac3e6c3e048333b95f9e4fc3a6548ad8afd8c446"
         }
       ]
     },
@@ -764,8 +764,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.live555.com/liveMedia/public/live.2020.08.19.tar.gz",
-          "sha256": "af3af7f2510b0b45f38892c232abca2cee2ab36a62503e7085b47ed2c3c2c537"
+          "url": "http://www.live555.com/liveMedia/public/live.2020.11.05.tar.gz",
+          "sha256": "89bdfba7fd215e16be2c9d46a797bf85c5f7f7c46b53dc8af2d1171a658da5b7"
         },
         {
           "type": "patch",
