@@ -636,9 +636,9 @@
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://github.com/divideconcept/FluidLite/archive/7b5f2798d5c0f34e5436530412fe51e5183e8aa4.tar.gz",
-          "sha256": "da7cbf66289f259b3672f4febf85417100cf367c9da6d5c7576bf58773c8cdb7"
+          "type": "git",
+          "url": "https://github.com/divideconcept/FluidLite.git",
+          "branch": "7b5f2798d5c0f34e5436530412fe51e5183e8aa4"
         }
       ]
     },
