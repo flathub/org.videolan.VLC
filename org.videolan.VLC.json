@@ -825,10 +825,6 @@
           "path": "vlc-ignore-time-for-cache.patch"
         },
         {
-          "type": "patch",
-          "path": "vlc-qt_5_15.patch"
-        },
-        {
           "type": "file",
           "path": "vlc.sh"
         },
