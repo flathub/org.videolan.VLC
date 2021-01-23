@@ -264,7 +264,6 @@
         }
       ]
     },
-    "shared-modules/openjpeg/openjpeg.json",
     {
       "name": "gsm",
       "no-autogen": true,
@@ -348,8 +347,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/libass/libass/releases/download/0.14.0/libass-0.14.0.tar.xz",
-          "sha256": "881f2382af48aead75b7a0e02e65d88c5ebd369fe46bc77d9270a94aa8fd38a2"
+          "url": "https://github.com/libass/libass/releases/download/0.15.0/libass-0.15.0.tar.xz",
+          "sha256": "9f09230c9a0aa68ef7aa6a9e2ab709ca957020f842e52c5b2e52b801a7d9e833"
         },
         {
           "type": "script",
@@ -372,8 +371,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://dl.matroska.org/downloads/libebml/libebml-1.4.0.tar.xz",
-          "sha256": "80abc9a82549615018798ee704997270a39b43de9a6e7e0d23b62f8ce682c4b3"
+          "url": "https://dl.matroska.org/downloads/libebml/libebml-1.4.1.tar.xz",
+          "sha256": "6e94c669405061aa0d25a523b9f1bea8ac73536e37721a110b3372c7f8717032"
         }
       ]
     },
@@ -510,7 +509,7 @@
         {
           "type": "git",
           "url": "https://code.videolan.org/videolan/x264.git",
-          "branch": "296494a4011f58f32adc54304a2654627558c59a"
+          "branch": "d198931a63049db1f2c92d96c34904c69fde8117"
         }
       ]
     },
@@ -538,8 +537,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/dav1d/0.7.1/dav1d-0.7.1.tar.xz",
-          "sha256": "3334b5d05ec00b0745f94e2c57e23f1874197c4b435a6656cc65af531e73d3c2"
+          "url": "https://get.videolan.org/dav1d/0.8.1/dav1d-0.8.1.tar.xz",
+          "sha256": "a4b503063d411dd129f5eb43616675e613b36ac0aa1e449976d645c05add21ea"
         },
         {
           "type": "patch",
@@ -740,8 +739,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Haivision/srt/archive/v1.4.1.tar.gz",
-          "sha256": "e80ca1cd0711b9c70882c12ec365cda1ba852e1ce8acd43161a21a04de0cbf14"
+          "url": "https://github.com/Haivision/srt/archive/v1.4.2.tar.gz",
+          "sha256": "28a308e72dcbb50eb2f61b50cc4c393c413300333788f3a8159643536684a0c4"
         }
       ]
     },
@@ -760,8 +759,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.live555.com/liveMedia/public/live.2020.11.05.tar.gz",
-          "sha256": "89bdfba7fd215e16be2c9d46a797bf85c5f7f7c46b53dc8af2d1171a658da5b7"
+          "url": "http://www.live555.com/liveMedia/public/live.2021.01.21.tar.gz",
+          "sha256": "5a45fff55a26fb12a0411d98f30127f8a14b2d727607366e041e082d7a71e616"
         },
         {
           "type": "patch",
@@ -810,8 +809,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/vlc/3.0.11.1/vlc-3.0.11.1.tar.xz",
-          "sha256": "189311d28aa814f106a7b3645211ac52c0b3e2b9f4b348de2f63bab3218086b8"
+          "url": "https://get.videolan.org/vlc/3.0.12/vlc-3.0.12.tar.xz",
+          "sha256": "eff458f38a92126094f44f2263c2bf2c7cdef271b48192d0fe7b1726388cf879"
         },
         {
           "type": "file",
