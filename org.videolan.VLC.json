@@ -539,10 +539,6 @@
           "type": "archive",
           "url": "https://get.videolan.org/dav1d/0.8.1/dav1d-0.8.1.tar.xz",
           "sha256": "a4b503063d411dd129f5eb43616675e613b36ac0aa1e449976d645c05add21ea"
-        },
-        {
-          "type": "patch",
-          "path": "nasm-syntax-fix.patch"
         }
       ]
     },
