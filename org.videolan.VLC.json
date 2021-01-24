@@ -755,8 +755,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://www.live555.com/liveMedia/public/live.2021.01.21.tar.gz",
-          "sha256": "5a45fff55a26fb12a0411d98f30127f8a14b2d727607366e041e082d7a71e616"
+          "url": "http://deb.debian.org/debian/pool/main/libl/liblivemedia/liblivemedia_2020.01.19.orig.tar.gz",
+          "sha256": "582ab7b2a4e62fb4469ef9eea69bc3bab15939b9de0a06b3fcf6f0d6419f796f"
         },
         {
           "type": "patch",

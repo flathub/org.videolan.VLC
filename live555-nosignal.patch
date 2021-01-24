@@ -1,100 +1,86 @@
 diff --git a/groupsock/GroupsockHelper.cpp b/groupsock/GroupsockHelper.cpp
-index b47db01..51b8cd0 100644
+index c40bf57..adecbac 100644
 --- a/groupsock/GroupsockHelper.cpp
 +++ b/groupsock/GroupsockHelper.cpp
-@@ -44,6 +44,10 @@ extern "C" int initializeWinsockIfNecessary();
+@@ -43,6 +43,9 @@ extern "C" int initializeWinsockIfNecessary();
+ #define USE_SIGNALS 1
  #endif
  #include <stdio.h>
- 
 +#ifndef MSG_NOSIGNAL
 +# define MSG_NOSIGNAL 0
 +#endif
-+
+ 
  // By default, use INADDR_ANY for the sending and receiving interfaces:
- ipv4AddressBits SendingInterfaceAddr = INADDR_ANY;
- ipv4AddressBits ReceivingInterfaceAddr = INADDR_ANY;
-@@ -443,7 +447,7 @@ Boolean writeSocket(UsageEnvironment& env,
+ netAddressBits SendingInterfaceAddr = INADDR_ANY;
+@@ -395,7 +398,7 @@ Boolean writeSocket(UsageEnvironment& env,
  		    unsigned char* buffer, unsigned bufferSize) {
    do {
-     SOCKLEN_T dest_len = addressSize(addressAndPort);
+     MAKE_SOCKADDR_IN(dest, address.s_addr, portNum);
 -    int bytesSent = sendto(socket, (char*)buffer, bufferSize, 0,
 +    int bytesSent = sendto(socket, (char*)buffer, bufferSize, MSG_NOSIGNAL,
- 			   (struct sockaddr const*)&addressAndPort, dest_len);
+ 			   (struct sockaddr*)&dest, sizeof dest);
      if (bytesSent != (int)bufferSize) {
        char tmpBuf[100];
 diff --git a/liveMedia/RTPInterface.cpp b/liveMedia/RTPInterface.cpp
-index fb0ab3a..a417d2b 100644
+index 78b37d4..05a8b34 100644
 --- a/liveMedia/RTPInterface.cpp
 +++ b/liveMedia/RTPInterface.cpp
-@@ -24,6 +24,10 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
+@@ -23,6 +23,9 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
+ #include "RTPInterface.hh"
  #include <GroupsockHelper.hh>
  #include <stdio.h>
- 
 +#ifndef MSG_NOSIGNAL
 +# define MSG_NOSIGNAL 0
 +#endif
-+
+ 
  ////////// Helper Functions - Definition //////////
  
- // Helper routines and data structures, used to implement
-@@ -363,7 +367,7 @@ Boolean RTPInterface::sendRTPorRTCPPacketOverTCP(u_int8_t* packet, unsigned pack
+@@ -363,7 +366,7 @@ Boolean RTPInterface::sendRTPorRTCPPacketOverTCP(u_int8_t* packet, unsigned pack
  #endif
  
  Boolean RTPInterface::sendDataOverTCP(int socketNum, u_int8_t const* data, unsigned dataSize, Boolean forceSendToSucceed) {
 -  int sendResult = send(socketNum, (char const*)data, dataSize, 0/*flags*/);
-+  int sendResult = send(socketNum, (char const*)data, dataSize, MSG_NOSIGNAL/*flags*/);
++  int sendResult = send(socketNum, (char const*)data, dataSize, MSG_NOSIGNAL);
    if (sendResult < (int)dataSize) {
      // The TCP send() failed - at least partially.
  
-@@ -377,7 +381,7 @@ Boolean RTPInterface::sendDataOverTCP(int socketNum, u_int8_t const* data, unsig
+@@ -377,7 +380,7 @@ Boolean RTPInterface::sendDataOverTCP(int socketNum, u_int8_t const* data, unsig
        fprintf(stderr, "sendDataOverTCP: resending %d-byte send (blocking)\n", numBytesRemainingToSend); fflush(stderr);
  #endif
        makeSocketBlocking(socketNum, RTPINTERFACE_BLOCKING_WRITE_TIMEOUT_MS);
 -      sendResult = send(socketNum, (char const*)(&data[numBytesSentSoFar]), numBytesRemainingToSend, 0/*flags*/);
-+      sendResult = send(socketNum, (char const*)(&data[numBytesSentSoFar]), numBytesRemainingToSend, MSG_NOSIGNAL/*flags*/);
++      sendResult = send(socketNum, (char const*)(&data[numBytesSentSoFar]), numBytesRemainingToSend, MSG_NOSIGNAL);
        if ((unsigned)sendResult != numBytesRemainingToSend) {
  	// The blocking "send()" failed, or timed out.  In either case, we assume that the
  	// TCP connection has failed (or is 'hanging' indefinitely), and we stop using it
 diff --git a/liveMedia/RTSPClient.cpp b/liveMedia/RTSPClient.cpp
-index 092e12e..4677fa1 100644
+index 35b108b..36d9215 100644
 --- a/liveMedia/RTSPClient.cpp
 +++ b/liveMedia/RTSPClient.cpp
-@@ -25,6 +25,10 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
+@@ -24,6 +24,9 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
+ #include "Locale.hh"
  #include <GroupsockHelper.hh>
  #include "ourMD5.hh"
- 
 +#ifndef MSG_NOSIGNAL
 +# define MSG_NOSIGNAL 0
 +#endif
-+
+ 
  RTSPClient* RTSPClient::createNew(UsageEnvironment& env, char const* rtspURL,
  				  int verbosityLevel,
- 				  char const* applicationName,
-@@ -1983,7 +1987,7 @@ int RTSPClient::write(const char* data, unsigned count) {
+@@ -1939,7 +1942,7 @@ int RTSPClient::write(const char* data, unsigned count) {
        if (fTLS.isNeeded) {
  	return fTLS.write(data, count);
        } else {
--	return send(fOutputSocketNum, data, count, 0);
-+	return send(fOutputSocketNum, data, count, MSG_NOSIGNAL);
+-	return send(fOutputSocketNum, (const u_int8_t*)data, count, 0);
++	return send(fOutputSocketNum, (const u_int8_t*)data, count, MSG_NOSIGNAL);
        }
  }
  
 diff --git a/liveMedia/RTSPServer.cpp b/liveMedia/RTSPServer.cpp
-index b6b14d9..3dfe9f5 100644
+index a6b1ca4..f7c68f5 100644
 --- a/liveMedia/RTSPServer.cpp
 +++ b/liveMedia/RTSPServer.cpp
-@@ -24,6 +24,10 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
- #include "Base64.hh"
- #include <GroupsockHelper.hh>
- 
-+#ifndef MSG_NOSIGNAL
-+# define MSG_NOSIGNAL 0
-+#endif
-+
- ////////// RTSPServer implementation //////////
- 
- RTSPServer*
-@@ -911,7 +915,7 @@ void RTSPServer::RTSPClientConnection::handleRequestBytes(int newBytesRead) {
+@@ -882,7 +882,7 @@ void RTSPServer::RTSPClientConnection::handleRequestBytes(int newBytesRead) {
  #ifdef DEBUG
      fprintf(stderr, "sending response: %s", fResponseBuffer);
  #endif
@@ -103,3 +89,58 @@ index b6b14d9..3dfe9f5 100644
      
      if (playAfterSetup) {
        // The client has asked for streaming to commence now, rather than after a
+diff --git a/liveMedia/RTSPServerSupportingHTTPStreaming.cpp b/liveMedia/RTSPServerSupportingHTTPStreaming.cpp
+index 691e7c8..1db83e1 100644
+--- a/liveMedia/RTSPServerSupportingHTTPStreaming.cpp
++++ b/liveMedia/RTSPServerSupportingHTTPStreaming.cpp
+@@ -25,6 +25,9 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
+ #include <sys/stat.h>
+ #endif
+ #include <time.h>
++#ifndef MSG_NOSIGNAL
++# define MSG_NOSIGNAL 0
++#endif
+ 
+ RTSPServerSupportingHTTPStreaming*
+ RTSPServerSupportingHTTPStreaming::createNew(UsageEnvironment& env, Port rtspPort,
+@@ -142,7 +145,7 @@ void RTSPServerSupportingHTTPStreaming::RTSPClientConnectionSupportingHTTPStream
+ 	       lastModifiedHeader(streamName),
+ 	       numTSBytesToStream);
+       // Send the response now, because we're about to add more data (from the source):
+-      send(fClientOutputSocket, (char const*)fResponseBuffer, strlen((char*)fResponseBuffer), 0);
++      send(fClientOutputSocket, (char const*)fResponseBuffer, strlen((char*)fResponseBuffer), MSG_NOSIGNAL);
+       fResponseBuffer[0] = '\0'; // We've already sent the response.  This tells the calling code not to send it again.
+       
+       // Ask the media source to deliver - to the TCP sink - the desired data:
+@@ -240,7 +243,7 @@ void RTSPServerSupportingHTTPStreaming::RTSPClientConnectionSupportingHTTPStream
+ 	   playlistLen);
+ 
+   // Send the response header now, because we're about to add more data (the playlist):
+-  send(fClientOutputSocket, (char const*)fResponseBuffer, strlen((char*)fResponseBuffer), 0);
++  send(fClientOutputSocket, (char const*)fResponseBuffer, strlen((char*)fResponseBuffer), MSG_NOSIGNAL);
+   fResponseBuffer[0] = '\0'; // We've already sent the response.  This tells the calling code not to send it again.
+ 
+   // Then, send the playlist.  Because it's large, we don't do so using "send()", because that might not send it all at once.
+diff --git a/liveMedia/TCPStreamSink.cpp b/liveMedia/TCPStreamSink.cpp
+index aaa6149..0b34878 100644
+--- a/liveMedia/TCPStreamSink.cpp
++++ b/liveMedia/TCPStreamSink.cpp
+@@ -20,6 +20,9 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
+ 
+ #include "TCPStreamSink.hh"
+ #include <GroupsockHelper.hh> // for "ignoreSigPipeOnSocket()"
++#ifndef MSG_NOSIGNAL
++# define MSG_NOSIGNAL 0
++#endif
+ 
+ TCPStreamSink* TCPStreamSink::createNew(UsageEnvironment& env, int socketNum) {
+   return new TCPStreamSink(env, socketNum);
+@@ -51,7 +54,7 @@ void TCPStreamSink::processBuffer() {
+   // First, try writing data to our output socket, if we can:
+   if (fOutputSocketIsWritable && numUnwrittenBytes() > 0) {
+     int numBytesWritten
+-      = send(fOutputSocketNum, (const char*)&fBuffer[fUnwrittenBytesStart], numUnwrittenBytes(), 0);
++      = send(fOutputSocketNum, (const char*)&fBuffer[fUnwrittenBytesStart], numUnwrittenBytes(), MSG_NOSIGNAL);
+     if (numBytesWritten < (int)numUnwrittenBytes()) {
+       // The output socket is no longer writable.  Set a handler to be called when it becomes writable again.
+       fOutputSocketIsWritable = False;
