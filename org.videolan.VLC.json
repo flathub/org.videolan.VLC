@@ -755,8 +755,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://deb.debian.org/debian/pool/main/libl/liblivemedia/liblivemedia_2020.01.19.orig.tar.gz",
-          "sha256": "582ab7b2a4e62fb4469ef9eea69bc3bab15939b9de0a06b3fcf6f0d6419f796f"
+          "url": "https://download.videolan.org/contrib/live555/live.2020.11.05.tar.gz",
+          "sha256": "89bdfba7fd215e16be2c9d46a797bf85c5f7f7c46b53dc8af2d1171a658da5b7"
         },
         {
           "type": "patch",
