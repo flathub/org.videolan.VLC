@@ -21,7 +21,8 @@
     </categories>
     <content_rating type="oars-1.1" />
     <url type="homepage">https://www.videolan.org/vlc/</url>
-    <url type="bugtracker">https://trac.videolan.org/vlc/</url>
+    <url type="bugtracker">https://code.videolan.org/videolan/vlc/-/issues/</url>
+    <url type="help">https://wiki.videolan.org/Documentation:User_Guide/</url>
     <url type="donation">https://www.videolan.org/contribute.html</url>
     <releases>
         <release version="3.0.12" date="2021-01-23"/>
