@@ -433,8 +433,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libdvdread/6.1.1/libdvdread-6.1.1.tar.bz2",
-          "sha256": "3e357309a17c5be3731385b9eabda6b7e3fa010f46022a06f104553bf8e21796"
+          "url": "http://ftp.videolan.org/videolan/libdvdread/6.1.2/libdvdread-6.1.2.tar.bz2",
+          "sha256": "cc190f553758ced7571859e301f802cb4821f164d02bfacfd320c14a4e0da763"
         },
         {
           "type": "script",
@@ -451,8 +451,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libdvdnav/6.1.0/libdvdnav-6.1.0.tar.bz2",
-          "sha256": "f697b15ea9f75e9f36bdf6ec3726308169f154e2b1e99865d0bbe823720cee5b"
+          "url": "http://ftp.videolan.org/videolan/libdvdnav/6.1.1/libdvdnav-6.1.1.tar.bz2",
+          "sha256": "c191a7475947d323ff7680cf92c0fb1be8237701885f37656c64d04e98d18d48"
         },
         {
           "type": "script",
@@ -469,8 +469,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libdvdcss/1.4.2/libdvdcss-1.4.2.tar.bz2",
-          "sha256": "78c2ed77ec9c0d8fbed7bf7d3abc82068b8864be494cfad165821377ff3f2575"
+          "url": "http://ftp.videolan.org/videolan/libdvdcss/1.4.3/libdvdcss-1.4.3.tar.bz2",
+          "sha256": "233cc92f5dc01c5d3a96f5b3582be7d5cee5a35a52d3a08158745d3d86070079"
         },
         {
           "type": "script",
@@ -537,8 +537,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/dav1d/0.8.2/dav1d-0.8.2.tar.xz",
-          "sha256": "3dd91d96b44e9d8ba7e82ad9e730d6c579ab5e19edca0db857a60f5ae6a0eb13"
+          "url": "https://get.videolan.org/dav1d/0.9.0/dav1d-0.9.0.tar.xz",
+          "sha256": "cfae88e8067c9b2e5b96d95a7a00155c353376fe9b992a96b4336e0eab19f9f6"
         }
       ]
     },
@@ -560,8 +560,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-4.3.2.tar.xz",
-          "sha256": "46e4e64f1dd0233cbc0934b9f1c0da676008cad34725113fb7f802cfa84ccddb"
+          "url": "http://ffmpeg.org/releases/ffmpeg-4.4.tar.xz",
+          "sha256": "06b10a183ce5371f915c6bb15b7b1fffbe046e8275099c96affc29e17645d909"
         }
       ]
     },
@@ -805,8 +805,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/vlc/3.0.12/vlc-3.0.12.tar.xz",
-          "sha256": "eff458f38a92126094f44f2263c2bf2c7cdef271b48192d0fe7b1726388cf879"
+          "url": "https://get.videolan.org/vlc/3.0.14/vlc-3.0.14.tar.xz",
+          "sha256": "49b93e5b33deaa37060e6b24a98200cad70c407947f14eb2a8b6a0c64d8535a6"
         },
         {
           "type": "file",
