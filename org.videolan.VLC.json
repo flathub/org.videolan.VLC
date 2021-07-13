@@ -655,8 +655,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/haasn/libplacebo/archive/v2.72.2.tar.gz",
-          "sha256": "64f6e17e943028332deca17f79822c66176988cf7868c0c8bdd82d2e8a366dff"
+          "url": "https://github.com/haasn/libplacebo/archive/refs/tags/v3.120.3.tar.gz",
+          "sha256": "aeea8edb38af8034fa592f7c028aa612823707087db32e11908ba8ce72a9f419"
         }
       ]
     },
