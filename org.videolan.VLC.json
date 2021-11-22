@@ -656,6 +656,9 @@
     {
       "name": "libplacebo",
       "buildsystem": "meson",
+      "config-opts": [
+        "-Dglslang=disabled"
+      ],
       "sources": [
         {
           "type": "archive",
