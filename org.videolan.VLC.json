@@ -1,7 +1,7 @@
 {
   "app-id": "org.videolan.VLC",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15",
+  "runtime-version": "5.15-21.08",
   "sdk": "org.kde.Sdk",
   "command": "vlc",
   "finish-args": [
@@ -23,7 +23,7 @@
   ],
   "add-extensions": {
     "org.videolan.VLC.Plugin": {
-      "versions": "3-5.15;3-20.08",
+      "versions": "3-5.15-21.08;3-21.08",
       "directory": "share/vlc/extra",
       "subdirectories": true,
       "merge-dirs": "plugins",
@@ -184,22 +184,6 @@
       ]
     },
     {
-      "name": "chromaprint",
-      "buildsystem": "cmake-ninja",
-      "config-opts": [
-        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-        "-DBUILD_SHARED_LIBS=ON",
-        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://bitbucket.org/acoustid/chromaprint/downloads/chromaprint-1.4.2.tar.gz",
-          "sha256": "989609a7e841dd75b34ee793bd1d049ce99a8f0d444b3cea39d57c3e5d26b4d4"
-        }
-      ]
-    },
-    {
       "name": "libshout",
       "rm-configure": true,
       "sources": [
@@ -347,8 +331,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/libass/libass/releases/download/0.15.0/libass-0.15.0.tar.xz",
-          "sha256": "9f09230c9a0aa68ef7aa6a9e2ab709ca957020f842e52c5b2e52b801a7d9e833"
+          "url": "https://github.com/libass/libass/releases/download/0.15.2/libass-0.15.2.tar.xz",
+          "sha256": "1be2df9c4485a57d78bb18c0a8ed157bc87a5a8dd48c661961c625cb112832fd"
         },
         {
           "type": "script",
@@ -373,6 +357,10 @@
           "type": "archive",
           "url": "https://dl.matroska.org/downloads/libebml/libebml-1.4.2.tar.xz",
           "sha256": "41c7237ce05828fb220f62086018b080af4db4bb142f31bec0022c925889b9f2"
+        },
+        {
+          "type": "patch",
+          "path": "libebml-gcc11.patch"
         }
       ]
     },
@@ -399,8 +387,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://www.libssh2.org/download/libssh2-1.9.0.tar.gz",
-          "sha256": "d5fb8bd563305fd1074dda90bd053fb2d29fc4bce048d182f96eaa466dfadafd"
+          "url": "https://www.libssh2.org/download/libssh2-1.10.0.tar.gz",
+          "sha256": "2d64e90f3ded394b91d3a2e774ca203a4179f69aebee03003e5a6fa621e41d51"
         },
         {
           "type": "script",
@@ -509,7 +497,7 @@
         {
           "type": "git",
           "url": "https://code.videolan.org/videolan/x264.git",
-          "branch": "d198931a63049db1f2c92d96c34904c69fde8117"
+          "branch": "5db6aa6cab1b146e07b60cc1736a01f21da01154"
         }
       ]
     },
@@ -526,8 +514,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://ftp.osuosl.org/pub/blfs/conglomeration/x265/x265_3.4.tar.gz",
-          "sha256": "c2047f23a6b729e5c70280d23223cb61b57bfe4ad4e8f1471eeee2a61d148672"
+          "url": "https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz",
+          "sha256": "e70a3335cacacbba0b3a20ec6fecd6783932288ebc8163ad74bcc9606477cae8"
         }
       ]
     },
@@ -537,8 +525,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/dav1d/0.9.0/dav1d-0.9.0.tar.xz",
-          "sha256": "cfae88e8067c9b2e5b96d95a7a00155c353376fe9b992a96b4336e0eab19f9f6"
+          "url": "https://get.videolan.org/dav1d/0.9.2/dav1d-0.9.2.tar.xz",
+          "sha256": "e3235ab6c43c0135b0db1d131e1923fad4c84db9d85683e30b91b33a52d61c71"
         }
       ]
     },
@@ -560,8 +548,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-4.4.tar.xz",
-          "sha256": "06b10a183ce5371f915c6bb15b7b1fffbe046e8275099c96affc29e17645d909"
+          "url": "http://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz",
+          "sha256": "eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02"
         }
       ]
     },
@@ -623,6 +611,22 @@
       ]
     },
     {
+      "name": "chromaprint",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/acoustid/chromaprint/releases/download/v1.5.0/chromaprint-1.5.0.tar.gz",
+          "sha256": "573a5400e635b3823fc2394cfa7a217fbb46e8e50ecebd4a61991451a8af766a"
+        }
+      ]
+    },
+    {
       "name": "fluidlite",
       "buildsystem": "cmake-ninja",
       "config-opts": [
@@ -652,35 +656,15 @@
     {
       "name": "libplacebo",
       "buildsystem": "meson",
+      "config-opts": [
+        "-Dvulkan=disabled",
+        "-Dglslang=disabled"
+      ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/haasn/libplacebo/archive/refs/tags/v3.120.3.tar.gz",
-          "sha256": "aeea8edb38af8034fa592f7c028aa612823707087db32e11908ba8ce72a9f419"
-        }
-      ]
-    },
-    {
-      "name": "protobuf",
-      "config-opts": ["--disable-static"],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://github.com/google/protobuf/archive/v3.5.1/protobuf-3.5.1.tar.gz",
-          "sha256": "826425182ee43990731217b917c5c3ea7190cfda141af4869e6d4ad9085a740f"
-        },
-        {
-          "type": "archive",
-          "url": "https://github.com/google/googlemock/archive/release-1.7.0.tar.gz#/googlemock-1.7.0.tar.gz",
-          "sha256": "3f20b6acb37e5a98e8c4518165711e3e35d47deb6cdb5a4dd4566563b5efd232",
-          "dest": "gmock"
-        },
-        {
-          "type": "archive",
-          "url": "https://github.com/google/googletest/archive/release-1.7.0.tar.gz#/googletest-1.7.0.tar.gz",
-          "sha256": "f73a6546fdf9fce9ff93a5015e0333a8af3062a152a9ad6bcb772c96687016cc",
-          "dest": "gmock/gtest"
-
+          "url": "https://github.com/haasn/libplacebo/archive/refs/tags/v4.157.0.tar.gz",
+          "sha256": "c6881083fe63f0fea9898a81e12b384f07d6b7c394c52f6d0cfb8b3bea657e8a"
         }
       ]
     },
