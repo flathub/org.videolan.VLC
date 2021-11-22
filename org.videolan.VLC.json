@@ -184,22 +184,6 @@
       ]
     },
     {
-      "name": "chromaprint",
-      "buildsystem": "cmake-ninja",
-      "config-opts": [
-        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-        "-DBUILD_SHARED_LIBS=ON",
-        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://bitbucket.org/acoustid/chromaprint/downloads/chromaprint-1.4.2.tar.gz",
-          "sha256": "989609a7e841dd75b34ee793bd1d049ce99a8f0d444b3cea39d57c3e5d26b4d4"
-        }
-      ]
-    },
-    {
       "name": "libshout",
       "rm-configure": true,
       "sources": [
@@ -627,6 +611,21 @@
       ]
     },
     {
+      "name": "chromaprint",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/acoustid/chromaprint/releases/download/v1.5.0/chromaprint-1.5.0.tar.gz",
+        }
+      ]
+    },
+    {
       "name": "fluidlite",
       "buildsystem": "cmake-ninja",
       "config-opts": [
@@ -661,30 +660,6 @@
           "type": "archive",
           "url": "https://github.com/haasn/libplacebo/archive/refs/tags/v3.120.3.tar.gz",
           "sha256": "aeea8edb38af8034fa592f7c028aa612823707087db32e11908ba8ce72a9f419"
-        }
-      ]
-    },
-    {
-      "name": "protobuf",
-      "config-opts": ["--disable-static"],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://github.com/google/protobuf/archive/v3.5.1/protobuf-3.5.1.tar.gz",
-          "sha256": "826425182ee43990731217b917c5c3ea7190cfda141af4869e6d4ad9085a740f"
-        },
-        {
-          "type": "archive",
-          "url": "https://github.com/google/googlemock/archive/release-1.7.0.tar.gz#/googlemock-1.7.0.tar.gz",
-          "sha256": "3f20b6acb37e5a98e8c4518165711e3e35d47deb6cdb5a4dd4566563b5efd232",
-          "dest": "gmock"
-        },
-        {
-          "type": "archive",
-          "url": "https://github.com/google/googletest/archive/release-1.7.0.tar.gz#/googletest-1.7.0.tar.gz",
-          "sha256": "f73a6546fdf9fce9ff93a5015e0333a8af3062a152a9ad6bcb772c96687016cc",
-          "dest": "gmock/gtest"
-
         }
       ]
     },
