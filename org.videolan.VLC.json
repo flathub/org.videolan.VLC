@@ -1,5 +1,6 @@
 {
   "app-id": "org.videolan.VLC",
+  "branch": "beta",
   "runtime": "org.kde.Platform",
   "runtime-version": "5.15-21.08",
   "sdk": "org.kde.Sdk",
@@ -23,7 +24,7 @@
   ],
   "add-extensions": {
     "org.videolan.VLC.Plugin": {
-      "versions": "3-5.15-21.08;3-21.08",
+      "versions": "4-5.15-21.08;4-21.08",
       "directory": "share/vlc/extra",
       "subdirectories": true,
       "merge-dirs": "plugins",
@@ -52,8 +53,7 @@
   "cleanup-commands": [
     "mkdir -p /app/share/vlc/extra",
     "ln -s /app/share/vlc/extra/plugins /app/lib/vlc/plugins/extra",
-    "rm -f /app/lib/vlc/plugins/plugins.dat",
-    "/app/lib/vlc/vlc-cache-gen /app/lib/vlc/plugins"
+    "rm -f /app/lib/vlc/plugins/plugins.dat"
   ],
   "build-options": {
     "env": {
@@ -768,7 +768,6 @@
     },
     {
       "name": "vlc",
-      "rm-configure": true,
       "config-opts": [
         "BUILDCC=/usr/bin/gcc -std=gnu99",
         "--disable-a52"
@@ -788,9 +787,9 @@
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://get.videolan.org/vlc/3.0.16/vlc-3.0.16.tar.xz",
-          "sha256": "ffae35fc64f625c175571d2346bc5f6207be99762517f15423e74f18399410f6"
+          "type": "git",
+          "url": "https://code.videolan.org/videolan/vlc.git",
+          "branch": "016dfd442a008ea6f0dcb676cb6a32603d10c4ad"
         },
         {
           "type": "file",
@@ -799,10 +798,6 @@
         {
           "type": "patch",
           "path": "vlc-fix-appdata.patch"
-        },
-        {
-          "type": "patch",
-          "path": "vlc-disc-shortcuts.patch"
         },
         {
           "type": "patch",
