@@ -45,8 +45,7 @@
     <developer_name>VideoLAN et al.</developer_name>
     <update_contact>matmaul_at_gmail.com</update_contact>
     <screenshots>
-        <screenshot type="default"><image type="source">http://images.videolan.org/vlc/screenshots/2.0.0/vlc-2.0-poney.jpg</image></screenshot>
-        <screenshot><image type="source">http://images.videolan.org/vlc/screenshots/2.0.0/vlc-2.0-gnome3-open.jpg</image></screenshot>
-        <screenshot><image type="source">http://images.videolan.org/vlc/screenshots/2.0.0/vlc-2.0-gnome3-debian.jpg</image></screenshot>
+        <screenshot type="default"><image type="source">https://raw.githubusercontent.com/flathub/org.videolan.VLC/master/vlc_screenshot_gnome3.jpg</image></screenshot>
+        <screenshot><image type="source">https://raw.githubusercontent.com/flathub/org.videolan.VLC/master/vlc_screenshot_gnome3_dark.jpg</image></screenshot>
     </screenshots>
 </component>
