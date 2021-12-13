@@ -93,7 +93,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://http.debian.net/debian/pool/main/liba/libavc1394/libavc1394_0.5.4.orig.tar.gz",
+          "url": "https://deb.debian.org/debian/pool/main/liba/libavc1394/libavc1394_0.5.4.orig.tar.gz",
           "sha256": "7cb1ff09506ae911ca9860bef4af08c2403f3e131f6c913a2cbd6ddca4215b53"
         },
         {
@@ -111,7 +111,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://http.debian.net/debian/pool/main/z/zvbi/zvbi_0.2.35.orig.tar.bz2",
+          "url": "https://deb.debian.org/debian/pool/main/z/zvbi/zvbi_0.2.35.orig.tar.bz2",
           "sha256": "fc883c34111a487c4a783f91b1b2bb5610d8d8e58dcba80c7ab31e67e4765318"
         },
         {
@@ -132,7 +132,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://http.debian.net/debian/pool/main/libd/libdc1394-22/libdc1394-22_2.2.5.orig.tar.gz",
+          "url": "https://deb.debian.org/debian/pool/main/libd/libdc1394-22/libdc1394-22_2.2.5.orig.tar.gz",
           "sha256": "350cc8d08aee5ffc4e1f3049e2e1c2bc6660642d424595157da97ab5b1263337"
         },
         {
@@ -475,7 +475,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://http.debian.net/debian/pool/main/libm/libmodplug/libmodplug_0.8.9.0.orig.tar.gz",
+          "url": "https://deb.debian.org/debian/pool/main/libm/libmodplug/libmodplug_0.8.9.0.orig.tar.gz",
           "sha256": "457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de"
         },
         {
@@ -648,7 +648,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://http.debian.net/debian/pool/main/libc/libcaca/libcaca_0.99.beta19.orig.tar.gz",
+          "url": "https://deb.debian.org/debian/pool/main/libc/libcaca/libcaca_0.99.beta19.orig.tar.gz",
           "sha256": "128b467c4ed03264c187405172a4e83049342cc8cc2f655f53a2d0ee9d3772f4"
         }
       ]
