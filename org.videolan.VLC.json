@@ -151,7 +151,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://distcache.freebsd.org/ports-distfiles/libcddb-1.3.2.tar.bz2",
+          "url": "https://pkg.freebsd.org/ports-distfiles/libcddb-1.3.2.tar.bz2",
           "sha256": "35ce0ee1741ea38def304ddfe84a958901413aa829698357f0bee5bb8f0a223b"
         },
         {
@@ -170,7 +170,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://distcache.freebsd.org/ports-distfiles/aalib-1.4rc5.tar.gz",
+          "url": "https://pkg.freebsd.org/ports-distfiles/aalib-1.4rc5.tar.gz",
           "sha256": "fbddda9230cf6ee2a4f5706b4b11e2190ae45f5eda1f0409dc4f99b35e0a70ee"
         },
         {
@@ -189,7 +189,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://downloads.xiph.org/releases/libshout/libshout-2.4.1.tar.gz",
+          "url": "https://downloads.xiph.org/releases/libshout/libshout-2.4.1.tar.gz",
           "sha256": "f3acb8dec26f2dbf6df778888e0e429a4ce9378a9d461b02a7ccbf2991bbf24d"
         },
         {
@@ -236,7 +236,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://taglib.org/releases/taglib-1.11.1.tar.gz",
+          "url": "https://taglib.org/releases/taglib-1.11.1.tar.gz",
           "sha256": "b6d1a5a610aae6ff39d93de5efd0fdc787aa9e9dc1e7026fa4c961b26563526b"
         },
         {
@@ -421,7 +421,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libdvdread/6.1.2/libdvdread-6.1.2.tar.bz2",
+          "url": "https://download.videolan.org/videolan/libdvdread/6.1.2/libdvdread-6.1.2.tar.bz2",
           "sha256": "cc190f553758ced7571859e301f802cb4821f164d02bfacfd320c14a4e0da763"
         },
         {
@@ -439,7 +439,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libdvdnav/6.1.1/libdvdnav-6.1.1.tar.bz2",
+          "url": "https://download.videolan.org/videolan/libdvdnav/6.1.1/libdvdnav-6.1.1.tar.bz2",
           "sha256": "c191a7475947d323ff7680cf92c0fb1be8237701885f37656c64d04e98d18d48"
         },
         {
@@ -457,7 +457,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libdvdcss/1.4.3/libdvdcss-1.4.3.tar.bz2",
+          "url": "https://download.videolan.org/videolan/libdvdcss/1.4.3/libdvdcss-1.4.3.tar.bz2",
           "sha256": "233cc92f5dc01c5d3a96f5b3582be7d5cee5a35a52d3a08158745d3d86070079"
         },
         {
@@ -548,7 +548,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz",
+          "url": "https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz",
           "sha256": "eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02"
         }
       ]
@@ -564,7 +564,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libaacs/0.11.0/libaacs-0.11.0.tar.bz2",
+          "url": "https://download.videolan.org/videolan/libaacs/0.11.0/libaacs-0.11.0.tar.bz2",
           "sha256": "6d884381fbb659e2a565eba91e72499778635975e4b3d6fd94ab364a25965387"
         }
       ]
@@ -582,7 +582,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libbdplus/0.1.2/libbdplus-0.1.2.tar.bz2",
+          "url": "https://download.videolan.org/videolan/libbdplus/0.1.2/libbdplus-0.1.2.tar.bz2",
           "sha256": "a631cae3cd34bf054db040b64edbfc8430936e762eb433b1789358ac3d3dc80a"
         }
       ]
@@ -593,7 +593,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.videolan.org/videolan/libbluray/1.3.0/libbluray-1.3.0.tar.bz2",
+          "url": "https://download.videolan.org/videolan/libbluray/1.3.0/libbluray-1.3.0.tar.bz2",
           "sha256": "e2dbaf99e84e0a9725f4985bcb85d41e52c2261cc651d8884b1b790b5ef016f9"
         }
       ]
@@ -605,7 +605,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://distcache.freebsd.org/ports-distfiles/libmtp-1.1.17.tar.gz",
+          "url": "https://pkg.freebsd.org/ports-distfiles/libmtp-1.1.17.tar.gz",
           "sha256": "f8a34cf52d9f9b9cb8c7f26b12da347d4af7eb904c13189602e4c6b62d1a79dc"
         }
       ]
