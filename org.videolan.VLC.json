@@ -767,6 +767,22 @@
       ]
     },
     {
+      "name": "protobuf",
+      "config-opts": [
+        "DIST_LANG=cpp"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.3/protobuf-all-3.19.3.tar.gz",
+          "sha256": "84cca73ed97abce159c381e682ba0237bc21952359b07d8d45dc7e6399edd923"
+        }
+      ],
+      "cleanup": [
+        "/bin"
+      ]
+    },
+    {
       "name": "vlc",
       "rm-configure": true,
       "config-opts": [
