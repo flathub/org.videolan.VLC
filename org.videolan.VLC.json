@@ -236,8 +236,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://taglib.org/releases/taglib-1.11.1.tar.gz",
-          "sha256": "b6d1a5a610aae6ff39d93de5efd0fdc787aa9e9dc1e7026fa4c961b26563526b"
+          "url": "https://taglib.org/releases/taglib-1.12.tar.gz",
+          "sha256": "7fccd07669a523b07a15bd24c8da1bbb92206cb19e9366c3692af3d79253b703"
         },
         {
           "type": "script",
@@ -621,8 +621,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/acoustid/chromaprint/releases/download/v1.5.0/chromaprint-1.5.0.tar.gz",
-          "sha256": "573a5400e635b3823fc2394cfa7a217fbb46e8e50ecebd4a61991451a8af766a"
+          "url": "https://github.com/acoustid/chromaprint/releases/download/v1.5.1/chromaprint-1.5.1.tar.gz",
+          "sha256": "a1aad8fa3b8b18b78d3755b3767faff9abb67242e01b478ec9a64e190f335e1c"
         }
       ]
     },
@@ -663,19 +663,19 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/haasn/libplacebo/archive/refs/tags/v4.157.0.tar.gz",
-          "sha256": "c6881083fe63f0fea9898a81e12b384f07d6b7c394c52f6d0cfb8b3bea657e8a"
+          "url": "https://github.com/haasn/libplacebo/archive/refs/tags/v4.192.1.tar.gz",
+          "sha256": "2dc42e96bb67260a854fa7fd71b77af0f05e71aab0b5a7a3990d95b15ad68ce4"
         }
       ]
     },
     {
       "name": "libdsm",
-      "config-opts": ["--disable-static"],
+      "buildsystem": "meson",
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/videolabs/libdsm/releases/download/v0.3.2/libdsm-0.3.2.tar.gz",
-          "sha256": "6a91269d5756e9648b2453d9234a8010bb3c479b7fb81c809540000b35633d75"
+          "url": "https://github.com/videolabs/libdsm/releases/download/v0.4.0/libdsm-0.4.0.tar.xz",
+          "sha256": "cc21ad9412de72bbf1636896f1372394b28a1d01a9f5462f2e567bdbfe984e0c"
         }
       ]
     },
@@ -719,8 +719,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Haivision/srt/archive/v1.4.1.tar.gz",
-          "sha256": "e80ca1cd0711b9c70882c12ec365cda1ba852e1ce8acd43161a21a04de0cbf14"
+          "url": "https://github.com/Haivision/srt/archive/v1.4.4.tar.gz",
+          "sha256": "93f5f3715bd5bd522b8d65fc0d086ef2ad49db6a41ad2d7b35df2e8bd7094114"
         }
       ]
     },
