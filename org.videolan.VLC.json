@@ -657,14 +657,13 @@
       "name": "libplacebo",
       "buildsystem": "meson",
       "config-opts": [
-        "-Dvulkan=disabled",
-        "-Dglslang=disabled"
+        "-Dvulkan=false"
       ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/haasn/libplacebo/archive/refs/tags/v4.192.1.tar.gz",
-          "sha256": "2dc42e96bb67260a854fa7fd71b77af0f05e71aab0b5a7a3990d95b15ad68ce4"
+          "url": "https://github.com/haasn/libplacebo/archive/refs/tags/v0.2.1.tar.gz",
+          "sha256": "d5d920a1745e4209287d32e8b96a85127b61b843304813980e11104cd9f15e82"
         }
       ]
     },
@@ -805,8 +804,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/vlc/3.0.17/vlc-3.0.17.tar.xz",
-          "sha256": "48bd9bf337aa107a1524eba57c52dc4a91e29f5a97fbdee92f6a4dba90383cd0"
+          "url": "https://get.videolan.org/vlc/3.0.17.3/vlc-3.0.17.3.tar.xz",
+          "sha256": "6f7e90ef8973d31d96de64db817173e345150829717a94084b1bb8321cde2014"
         },
         {
           "type": "file",
