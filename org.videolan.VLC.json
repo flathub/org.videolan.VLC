@@ -497,7 +497,7 @@
         {
           "type": "git",
           "url": "https://code.videolan.org/videolan/x264.git",
-          "branch": "5db6aa6cab1b146e07b60cc1736a01f21da01154"
+          "commit": "5db6aa6cab1b146e07b60cc1736a01f21da01154"
         }
       ]
     },
@@ -638,7 +638,7 @@
         {
           "type": "git",
           "url": "https://github.com/divideconcept/FluidLite.git",
-          "branch": "fdd05bad03cdb24d1f78b5fe3453842890c1b0e8"
+          "commit": "fdd05bad03cdb24d1f78b5fe3453842890c1b0e8"
         }
       ]
     },
