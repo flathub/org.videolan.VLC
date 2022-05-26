@@ -48,7 +48,9 @@
     <developer_name>VideoLAN et al.</developer_name>
     <update_contact>matmaul_at_gmail.com</update_contact>
     <screenshots>
-        <screenshot type="default"><image type="source">https://raw.githubusercontent.com/flathub/org.videolan.VLC/master/vlc_screenshot_gnome3.jpg</image></screenshot>
-        <screenshot><image type="source">https://raw.githubusercontent.com/flathub/org.videolan.VLC/master/vlc_screenshot_gnome3_dark.jpg</image></screenshot>
+        <screenshot type="default"><image type="source">https://raw.githubusercontent.com/flathub/org.videolan.VLC/master/images/vlc_screenshot_gnome-4_light_windowed.png</image></screenshot>
+        <screenshot><image type="source">https://raw.githubusercontent.com/flathub/org.videolan.VLC/master/images/vlc_screenshot_gnome-4_light_fullscreen.png</image></screenshot>
+        <screenshot><image type="source">https://raw.githubusercontent.com/flathub/org.videolan.VLC/master/images/vlc_screenshot_gnome-4_dark_windowed.png</image></screenshot>
+        <screenshot><image type="source">https://raw.githubusercontent.com/flathub/org.videolan.VLC/master/images/vlc_screenshot_gnome-4_dark_fullscreen.png</image></screenshot>
     </screenshots>
 </component>
