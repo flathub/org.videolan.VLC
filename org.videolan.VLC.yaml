@@ -73,8 +73,7 @@ modules:
       - --disable-static
     sources:
       - type: archive
-        url: >-
-          https://deb.debian.org/debian/pool/main/liba/libavc1394/libavc1394_0.5.4.orig.tar.gz
+        url: https://deb.debian.org/debian/pool/main/liba/libavc1394/libavc1394_0.5.4.orig.tar.gz
         sha256: 7cb1ff09506ae911ca9860bef4af08c2403f3e131f6c913a2cbd6ddca4215b53
       - type: script
         commands:
@@ -84,8 +83,7 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: >-
-          https://deb.debian.org/debian/pool/main/z/zvbi/zvbi_0.2.35.orig.tar.bz2
+        url: https://deb.debian.org/debian/pool/main/z/zvbi/zvbi_0.2.35.orig.tar.bz2
         sha256: fc883c34111a487c4a783f91b1b2bb5610d8d8e58dcba80c7ab31e67e4765318
       - type: script
         commands:
@@ -97,8 +95,7 @@ modules:
       - --disable-static
     sources:
       - type: archive
-        url: >-
-          https://deb.debian.org/debian/pool/main/libd/libdc1394-22/libdc1394-22_2.2.5.orig.tar.gz
+        url: https://deb.debian.org/debian/pool/main/libd/libdc1394-22/libdc1394-22_2.2.5.orig.tar.gz
         sha256: 350cc8d08aee5ffc4e1f3049e2e1c2bc6660642d424595157da97ab5b1263337
       - type: script
         commands:
@@ -138,8 +135,7 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: >-
-          https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.15.tar.bz2
+        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.15.tar.bz2
         sha256: 794e92c6ea83456f25a929e2e1faa005f7178db8bc4b0b4b19eaca2cc7e66384
       - type: script
         commands:
@@ -184,8 +180,7 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: >-
-          https://download.videolan.org/pub/libdvbpsi/1.3.3/libdvbpsi-1.3.3.tar.bz2
+        url: https://download.videolan.org/pub/libdvbpsi/1.3.3/libdvbpsi-1.3.3.tar.bz2
         sha256: 02b5998bcf289cdfbd8757bedd5987e681309b0a25b3ffe6cebae599f7a00112
       - type: script
         commands:
@@ -198,8 +193,7 @@ modules:
       - --disable-doc
     sources:
       - type: archive
-        url: >-
-          https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/libkate/libkate-0.4.1.tar.gz
+        url: https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/libkate/libkate-0.4.1.tar.gz
         sha256: c40e81d5866c3d4bf744e76ce0068d8f388f0e25f7e258ce0c8e76d7adc87b68
       - type: patch
         path: libkate.patch
@@ -213,8 +207,7 @@ modules:
       - --enable-fontconfig
     sources:
       - type: archive
-        url: >-
-          https://github.com/libass/libass/releases/download/0.17.0/libass-0.17.0.tar.xz
+        url: https://github.com/libass/libass/releases/download/0.17.0/libass-0.17.0.tar.xz
         sha256: 971e2e1db59d440f88516dcd1187108419a370e64863f70687da599fdf66cc1a
       - type: script
         commands:
@@ -261,15 +254,13 @@ modules:
       - -DWITH_FFMPEG=OFF
     sources:
       - type: archive
-        url: >-
-          https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.13.tar.gz
+        url: https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.13.tar.gz
         sha256: 0ae5bb9175dc0a602fe85c1cf591ac47ee5247b87f2bf164c16b05f87cbfa81a
   - name: libdvdread
     rm-configure: true
     sources:
       - type: archive
-        url: >-
-          https://download.videolan.org/videolan/libdvdread/6.1.3/libdvdread-6.1.3.tar.bz2
+        url: https://download.videolan.org/videolan/libdvdread/6.1.3/libdvdread-6.1.3.tar.bz2
         sha256: ce35454997a208cbe50e91232f0e73fb1ac3471965813a13b8730a8f18a15369
       - type: script
         commands:
@@ -279,8 +270,7 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: >-
-          https://download.videolan.org/videolan/libdvdnav/6.1.1/libdvdnav-6.1.1.tar.bz2
+        url: https://download.videolan.org/videolan/libdvdnav/6.1.1/libdvdnav-6.1.1.tar.bz2
         sha256: c191a7475947d323ff7680cf92c0fb1be8237701885f37656c64d04e98d18d48
       - type: script
         commands:
@@ -290,8 +280,7 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: >-
-          https://download.videolan.org/videolan/libdvdcss/1.4.3/libdvdcss-1.4.3.tar.bz2
+        url: https://download.videolan.org/videolan/libdvdcss/1.4.3/libdvdcss-1.4.3.tar.bz2
         sha256: 233cc92f5dc01c5d3a96f5b3582be7d5cee5a35a52d3a08158745d3d86070079
       - type: script
         commands:
@@ -301,8 +290,7 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: >-
-          https://deb.debian.org/debian/pool/main/libm/libmodplug/libmodplug_0.8.9.0.orig.tar.gz
+        url: https://deb.debian.org/debian/pool/main/libm/libmodplug/libmodplug_0.8.9.0.orig.tar.gz
         sha256: 457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de
       - type: script
         commands:
@@ -359,8 +347,7 @@ modules:
       - --disable-static
     sources:
       - type: archive
-        url: >-
-          https://download.videolan.org/videolan/libaacs/0.11.1/libaacs-0.11.1.tar.bz2
+        url: https://download.videolan.org/videolan/libaacs/0.11.1/libaacs-0.11.1.tar.bz2
         sha256: a88aa0ebe4c98a77f7aeffd92ab3ef64ac548c6b822e8248a8b926725bea0a39
   - name: libbdplus
     rm-configure: true
@@ -372,8 +359,7 @@ modules:
       append-path: /app/share/vlc/extra/bluray/ant/bin
     sources:
       - type: archive
-        url: >-
-          https://download.videolan.org/videolan/libbdplus/0.2.0/libbdplus-0.2.0.tar.bz2
+        url: https://download.videolan.org/videolan/libbdplus/0.2.0/libbdplus-0.2.0.tar.bz2
         sha256: b93eea3eaef33d6e9155d2c34b068c505493aa5a4936e63274f4342ab0f40a58
       - type: patch
         path: libbdplus-gpg-error.patch
@@ -383,8 +369,7 @@ modules:
       - --disable-bdjava-jar
     sources:
       - type: archive
-        url: >-
-          https://download.videolan.org/videolan/libbluray/1.3.4/libbluray-1.3.4.tar.bz2
+        url: https://download.videolan.org/videolan/libbluray/1.3.4/libbluray-1.3.4.tar.bz2
         sha256: 478ffd68a0f5dde8ef6ca989b7f035b5a0a22c599142e5cd3ff7b03bbebe5f2b
   - shared-modules/libusb/libusb.json
   - name: libmtp
@@ -393,8 +378,7 @@ modules:
       - --with-udev=/app/lib/udev
     sources:
       - type: archive
-        url: >-
-          https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libmtp/1.1.19-1/libmtp_1.1.19.orig.tar.gz
+        url: https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libmtp/1.1.19-1/libmtp_1.1.19.orig.tar.gz
         sha256: deb4af6f63f5e71215cfa7fb961795262920b4ec6cb4b627f55b30b18aa33228
   - name: chromaprint
     buildsystem: cmake-ninja
@@ -404,8 +388,7 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: >-
-          https://github.com/acoustid/chromaprint/releases/download/v1.5.1/chromaprint-1.5.1.tar.gz
+        url: https://github.com/acoustid/chromaprint/releases/download/v1.5.1/chromaprint-1.5.1.tar.gz
         sha256: a1aad8fa3b8b18b78d3755b3767faff9abb67242e01b478ec9a64e190f335e1c
   - name: fluidlite
     buildsystem: cmake-ninja
@@ -425,8 +408,7 @@ modules:
       - --disable-ruby
     sources:
       - type: archive
-        url: >-
-          https://deb.debian.org/debian/pool/main/libc/libcaca/libcaca_0.99.beta19.orig.tar.gz
+        url: https://deb.debian.org/debian/pool/main/libc/libcaca/libcaca_0.99.beta19.orig.tar.gz
         sha256: 128b467c4ed03264c187405172a4e83049342cc8cc2f655f53a2d0ee9d3772f4
   - name: libplacebo
     buildsystem: meson
@@ -440,15 +422,13 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: >-
-          https://github.com/videolabs/libdsm/releases/download/v0.4.3/libdsm-0.4.3.tar.xz
+        url: https://github.com/videolabs/libdsm/releases/download/v0.4.3/libdsm-0.4.3.tar.xz
         sha256: d31921bd6f6a23878266b945731f7d57505472ef85d66f944c43b9f8eacc2a8a
   - name: microdns
     buildsystem: meson
     sources:
       - type: archive
-        url: >-
-          https://github.com/videolabs/libmicrodns/releases/download/0.2.0/microdns-0.2.0.tar.xz
+        url: https://github.com/videolabs/libmicrodns/releases/download/0.2.0/microdns-0.2.0.tar.xz
         sha256: 2da28e7dda4861d76f797f92ac3e6c3e048333b95f9e4fc3a6548ad8afd8c446
   - name: spatialaudio
     builddir: true
@@ -459,8 +439,7 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: >-
-          https://github.com/videolabs/libspatialaudio/releases/download/0.3.0/spatialaudio-0.3.0.tar.bz2
+        url: https://github.com/videolabs/libspatialaudio/releases/download/0.3.0/spatialaudio-0.3.0.tar.bz2
         sha256: 284c1dbd8efd46c03be84ac7070bc87cae81b7125352b143a70be3e2b96988e3
   - name: srt
     builddir: true
@@ -476,17 +455,11 @@ modules:
   - name: live555
     buildsystem: simple
     build-commands:
-      - >-
-        CXXFLAGS=`sed "s/'/\"/g" /etc/flatpak-builder/defaults.json | jq -r
-        .cxxflags` ; sed -i -e "s|-O2|$CXXFLAGS|"
+      - CXXFLAGS=`sed "s/'/\"/g" /etc/flatpak-builder/defaults.json | jq -r .cxxflags` ; sed -i -e "s|-O2|$CXXFLAGS|"
         config.linux-with-shared-libraries
       - ./genMakefiles linux-with-shared-libraries
-      - >-
-        LDFLAGS=`sed "s/'/\"/g" /etc/flatpak-builder/defaults.json | jq -r
-        .ldflags` ; make -j4 PREFIX=/app LIBDIR=/app/lib install
-      - >-
-        chmod +x /app/lib/libliveMedia.so* /app/lib/libUsageEnvironment.so*
-        /app/lib/libBasicUsageEnvironment.so* /app/lib/libgroupsock.so*
+      - LDFLAGS=`sed "s/'/\"/g" /etc/flatpak-builder/defaults.json | jq -r .ldflags` ; make -j4 PREFIX=/app LIBDIR=/app/lib install
+      - chmod +x /app/lib/libliveMedia.so* /app/lib/libUsageEnvironment.so* /app/lib/libBasicUsageEnvironment.so* /app/lib/libgroupsock.so*
     cleanup:
       - /bin
     sources:
@@ -504,14 +477,12 @@ modules:
       - -Dman=false
     sources:
       - type: archive
-        url: >-
-          https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.2.tar.xz
+        url: https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.2.tar.xz
         sha256: c5f4ed3d1f86e5b118c76415aacb861873ed3e6f0c6b3181b828cf584fc5c616
   - name: protobuf
     sources:
       - type: archive
-        url: >-
-          https://github.com/protocolbuffers/protobuf/releases/download/v21.7/protobuf-cpp-3.21.7.tar.gz
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v21.7/protobuf-cpp-3.21.7.tar.gz
         sha256: 70de993af0b4f2ddacce59e62ba6d7b7e48faf48beb1b0d5f1ac0e1fb0a68423
     cleanup:
       - /bin
@@ -522,23 +493,14 @@ modules:
     cleanup:
       - /share/macosx
     post-install:
-      - >-
-        install -Dp -m 644 org.videolan.VLC.appdata.xml
-        /app/share/appdata/vlc.appdata.xml
+      - install -Dp -m 644 org.videolan.VLC.appdata.xml /app/share/appdata/vlc.appdata.xml
       - mv /app/bin/vlc /app/bin/vlc.bin
       - mv vlc.sh /app/bin/vlc
       - chmod +x /app/bin/vlc
-      - >-
-        sed -i -e 's/Icon=vlc/Icon=org.videolan.VLC/g'
-        /app/share/applications/vlc-*.desktop
-      - >-
-        for s in openbd opendvd opencda openvcd; do mv
-        /app/share/applications/vlc-$s.desktop
-        /app/share/applications/org.videolan.VLC-$s.desktop; done
+      - sed -i -e 's/Icon=vlc/Icon=org.videolan.VLC/g' /app/share/applications/vlc-*.desktop
+      - for s in openbd opendvd opencda openvcd; do mv /app/share/applications/vlc-$s.desktop /app/share/applications/org.videolan.VLC-$s.desktop; done
       - tar xf chrpath-0.16.tar.gz && cd chrpath-0.16 && ./configure && make
-      - >-
-        ./chrpath-0.16/chrpath -d
-        /app/lib/vlc/plugins/access/liblibbluray_plugin.so
+      - ./chrpath-0.16/chrpath -d /app/lib/vlc/plugins/access/liblibbluray_plugin.so
     sources:
       - type: archive
         url: http://download.videolan.org/videolan/vlc/3.0.18/vlc-3.0.18.tar.xz
@@ -554,7 +516,6 @@ modules:
       - type: file
         path: vlc.sh
       - type: file
-        url: >-
-          https://src.fedoraproject.org/lookaside/extras/chrpath/chrpath-0.16.tar.gz/2bf8d1d1ee345fc8a7915576f5649982/chrpath-0.16.tar.gz
+        url: https://src.fedoraproject.org/lookaside/extras/chrpath/chrpath-0.16.tar.gz/2bf8d1d1ee345fc8a7915576f5649982/chrpath-0.16.tar.gz
         sha256: bb0d4c54bac2990e1bdf8132f2c9477ae752859d523e141e72b3b11a12c26e7b
 
