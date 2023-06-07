@@ -14,6 +14,7 @@ finish-args:
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.kde.kwalletd5
   - --talk-name=org.kde.kwalletd
+  - --talk-name=org.kde.StatusNotifierWatcher
   - --talk-name=org.mpris.MediaPlayer2.Player
   - --own-name=org.mpris.MediaPlayer2.vlc
   - --device=all
@@ -497,6 +498,7 @@ modules:
       - mv /app/bin/vlc /app/bin/vlc.bin
       - mv vlc.sh /app/bin/vlc
       - chmod +x /app/bin/vlc
+      - echo "StartupWMClass=VLC" >> /app/share/applications/vlc.desktop
       - sed -i -e 's/Icon=vlc/Icon=org.videolan.VLC/g' /app/share/applications/vlc-*.desktop
       - for s in openbd opendvd opencda openvcd; do mv /app/share/applications/vlc-$s.desktop /app/share/applications/org.videolan.VLC-$s.desktop; done
       - tar xf chrpath-0.16.tar.gz && cd chrpath-0.16 && ./configure && make
