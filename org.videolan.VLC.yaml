@@ -64,6 +64,10 @@ modules:
       - type: archive
         url: https://www.kernel.org/pub/linux/libs/ieee1394/libraw1394-2.1.2.tar.xz
         sha256: 03ccc69761d22c7deb1127fc301010dd13e70e44bb7134b8ff0d07590259a55e
+        x-checker-data:
+          type: anitya
+          project-id: 1710
+          url-template: https://www.kernel.org/pub/linux/libs/ieee1394/libraw1394-$version.tar.xz
       - type: script
         commands:
           - autoreconf -fiv
@@ -74,8 +78,12 @@ modules:
       - --disable-static
     sources:
       - type: archive
-        url: https://deb.debian.org/debian/pool/main/liba/libavc1394/libavc1394_0.5.4.orig.tar.gz
+        url: https://downloads.sourceforge.net/sourceforge/libavc1394/libavc1394-0.5.4.tar.gz
         sha256: 7cb1ff09506ae911ca9860bef4af08c2403f3e131f6c913a2cbd6ddca4215b53
+        x-checker-data:
+          type: anitya
+          project-id: 1562
+          url-template: https://downloads.sourceforge.net/sourceforge/libavc1394/libavc1394-$version.tar.gz
       - type: script
         commands:
           - autoreconf -fiv
@@ -84,8 +92,12 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://deb.debian.org/debian/pool/main/z/zvbi/zvbi_0.2.35.orig.tar.bz2
+        url: https://downloads.sourceforge.net/sourceforge/zapping/zvbi/0.2.35/zvbi-0.2.35.tar.bz2
         sha256: fc883c34111a487c4a783f91b1b2bb5610d8d8e58dcba80c7ab31e67e4765318
+        x-checker-data:
+          type: anitya
+          project-id: 13803
+          url-template: https://downloads.sourceforge.net/sourceforge/zapping/zvbi/$version/zvbi-$version.tar.bz2
       - type: script
         commands:
           - autoreconf -fiv
@@ -96,8 +108,12 @@ modules:
       - --disable-static
     sources:
       - type: archive
-        url: https://deb.debian.org/debian/pool/main/libd/libdc1394-22/libdc1394-22_2.2.5.orig.tar.gz
-        sha256: 350cc8d08aee5ffc4e1f3049e2e1c2bc6660642d424595157da97ab5b1263337
+        url: https://downloads.sourceforge.net/sourceforge/libdc1394/libdc1394-2/2.2.7/libdc1394-2.2.7.tar.gz
+        sha256: 537ceb78dd3cef271a183f4a176191d1cecf85f025520e6bd3758b0e19e6609f
+        x-checker-data:
+          type: anitya
+          project-id: 1591
+          url-template: https://downloads.sourceforge.net/sourceforge/libdc1394/libdc1394-2/$version/libdc1394-$version.tar.gz
       - type: script
         commands:
           - autoreconf -fiv
@@ -106,8 +122,12 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://pkg.freebsd.org/ports-distfiles/libcddb-1.3.2.tar.bz2
+        url: https://downloads.sourceforge.net/sourceforge/libcddb/libcddb/1.3.2/libcddb-1.3.2.tar.bz2
         sha256: 35ce0ee1741ea38def304ddfe84a958901413aa829698357f0bee5bb8f0a223b
+        x-checker-data:
+          type: anitya
+          project-id: 1572
+          url-template: https://downloads.sourceforge.net/sourceforge/libcddb/libcddb/$version/libcddb-$version.tar.bz2
       - type: script
         commands:
           - autoreconf -fiv
@@ -116,8 +136,13 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://pkg.freebsd.org/ports-distfiles/aalib-1.4rc5.tar.gz
+        url: https://downloads.sourceforge.net/sourceforge/aa-project/aa-lib/1.4rc5/aalib-1.4rc5.tar.gz
         sha256: fbddda9230cf6ee2a4f5706b4b11e2190ae45f5eda1f0409dc4f99b35e0a70ee
+        x-checker-data:
+          type: anitya
+          project-id: 7921
+          stable-only: false
+          url-template: https://downloads.sourceforge.net/sourceforge/aa-project/aa-lib/$version/aalib-$version.tar.gz
       - type: script
         commands:
           - autoreconf -fiv
@@ -128,6 +153,10 @@ modules:
       - type: archive
         url: https://downloads.xiph.org/releases/libshout/libshout-2.4.6.tar.gz
         sha256: 39cbd4f0efdfddc9755d88217e47f8f2d7108fa767f9d58a2ba26a16d8f7c910
+        x-checker-data:
+          type: anitya
+          project-id: 11084
+          url-template: https://downloads.xiph.org/releases/libshout/libshout-$version.tar.gz
       - type: script
         commands:
           - autoreconf -fiv
@@ -136,8 +165,12 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.15.tar.bz2
-        sha256: 794e92c6ea83456f25a929e2e1faa005f7178db8bc4b0b4b19eaca2cc7e66384
+        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.17.tar.bz2
+        sha256: 9b877242eba0428c7f949af4d6e7b7b908ce5ebc67cc13475ee6eb0d9bcb6ffb
+        x-checker-data:
+          type: anitya
+          project-id: 21315
+          url-template: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-$version.tar.bz2
       - type: script
         commands:
           - autoreconf -fiv
@@ -152,8 +185,12 @@ modules:
       - -DWITH_ASF=ON
     sources:
       - type: archive
-        url: https://taglib.org/releases/taglib-1.12.tar.gz
-        sha256: 7fccd07669a523b07a15bd24c8da1bbb92206cb19e9366c3692af3d79253b703
+        url: https://taglib.org/releases/taglib-1.13.tar.gz
+        sha256: 58f08b4db3dc31ed152c04896ee9172d22052bc7ef12888028c01d8b1d60ade0
+        x-checker-data:
+          type: anitya
+          project-id: 1982
+          url-template: https://taglib.org/releases/taglib-$version.tar.gz
       - type: script
         commands:
           - autoreconf -fiv
@@ -171,8 +208,13 @@ modules:
       - TOAST_INSTALL_MAN=/app/share/man/man1
     sources:
       - type: archive
-        url: http://www.quut.com/gsm/gsm-1.0.17.tar.gz
+        url: https://www.quut.com/gsm/gsm-1.0.17.tar.gz
         sha256: 855a57d1694941ddf3c73cb79b8d0b3891e9c9e7870b4981613b734e1ad07601
+# TODO needs some patch updates
+#        x-checker-data:
+#          type: anitya
+#          project-id: 12587
+#          url-template: https://www.quut.com/gsm/gsm-$version.tar.gz
       - type: patch
         path: gsm.patch
       - type: patch
@@ -183,6 +225,10 @@ modules:
       - type: archive
         url: https://download.videolan.org/pub/libdvbpsi/1.3.3/libdvbpsi-1.3.3.tar.bz2
         sha256: 02b5998bcf289cdfbd8757bedd5987e681309b0a25b3ffe6cebae599f7a00112
+        x-checker-data:
+          type: anitya
+          project-id: 21684
+          url-template: https://download.videolan.org/pub/libdvbpsi/$version/libdvbpsi-$version.tar.bz2
       - type: script
         commands:
           - autoreconf -fiv
@@ -271,8 +317,12 @@ modules:
       - -DWITH_FFMPEG=OFF
     sources:
       - type: archive
-        url: https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.13.tar.gz
-        sha256: 0ae5bb9175dc0a602fe85c1cf591ac47ee5247b87f2bf164c16b05f87cbfa81a
+        url: https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.14.tar.gz
+        sha256: 83104e4f7e28b02f8bf6b010d69b626fae591f887e949816305daebae527c9a5
+        x-checker-data:
+          type: anitya
+          project-id: 1756
+          url-template: https://github.com/LibVNC/libvncserver/archive/LibVNCServer-$version.tar.gz
   - name: libdvdread
     rm-configure: true
     sources:
@@ -319,8 +369,12 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://deb.debian.org/debian/pool/main/libm/libmodplug/libmodplug_0.8.9.0.orig.tar.gz
+        url: https://downloads.sourceforge.net/sourceforge/modplug-xmms/libmodplug/0.8.9.0/libmodplug-0.8.9.0.tar.gz
         sha256: 457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de
+        x-checker-data:
+          type: anitya
+          project-id: 5669
+          url-template: https://downloads.sourceforge.net/sourceforge/modplug-xmms/libmodplug/$version/libmodplug-$version.tar.gz
       - type: script
         commands:
           - autoreconf -fiv
@@ -434,8 +488,12 @@ modules:
       - --with-udev=/app/lib/udev
     sources:
       - type: archive
-        url: https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libmtp/1.1.19-1/libmtp_1.1.19.orig.tar.gz
-        sha256: deb4af6f63f5e71215cfa7fb961795262920b4ec6cb4b627f55b30b18aa33228
+        url: https://github.com/libmtp/libmtp/releases/download/v1.1.21/libmtp-1.1.21.tar.gz
+        sha256: f4c1ceb3df020a6cb851110f620c14fe399518c494ed252039cbfb4e34335135
+        x-checker-data:
+          type: anitya
+          project-id: 10017
+          url-template: https://github.com/libmtp/libmtp/releases/download/v$version/libmtp-$version.tar.gz
   - name: chromaprint
     buildsystem: cmake-ninja
     config-opts:
@@ -561,8 +619,15 @@ modules:
   - name: protobuf
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/releases/download/v21.7/protobuf-cpp-3.21.7.tar.gz
-        sha256: 70de993af0b4f2ddacce59e62ba6d7b7e48faf48beb1b0d5f1ac0e1fb0a68423
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protobuf-cpp-3.21.12.tar.gz
+        sha256: 4eab9b524aa5913c6fffb20b2a8abf5ef7f95a80bc0701f3a6dbb4c607f73460
+        x-checker-data:
+          type: anitya
+          project-id: 3715
+          versions:
+            '>=': '21'
+            '<': '22'
+          url-template: https://github.com/protocolbuffers/protobuf/releases/download/v$version/protobuf-cpp-3.$version.tar.gz
     cleanup:
       - /bin
   - name: vlc
@@ -583,7 +648,7 @@ modules:
       - ./chrpath-0.16/chrpath -d /app/lib/vlc/plugins/access/liblibbluray_plugin.so
     sources:
       - type: archive
-        url: http://download.videolan.org/videolan/vlc/3.0.18/vlc-3.0.18.tar.xz
+        url: https://download.videolan.org/videolan/vlc/3.0.18/vlc-3.0.18.tar.xz
         sha256: 57094439c365d8aa8b9b41fa3080cc0eef2befe6025bb5cef722accc625aedec
         x-checker-data:
           type: anitya
@@ -591,7 +656,7 @@ modules:
           versions:
             '>=': '3'
             '<': '4'
-          url-template: http://download.videolan.org/videolan/vlc/$version/vlc-$version.tar.xz
+          url-template: https://download.videolan.org/videolan/vlc/$version/vlc-$version.tar.xz
       - type: file
         path: org.videolan.VLC.appdata.xml
       - type: patch
