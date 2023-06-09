@@ -208,8 +208,12 @@ modules:
       - --enable-fontconfig
     sources:
       - type: archive
-        url: https://github.com/libass/libass/releases/download/0.17.0/libass-0.17.0.tar.xz
-        sha256: 971e2e1db59d440f88516dcd1187108419a370e64863f70687da599fdf66cc1a
+        url: https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.xz
+        sha256: f0da0bbfba476c16ae3e1cfd862256d30915911f7abaa1b16ce62ee653192784
+        x-checker-data:
+          type: anitya
+          project-id: 1560
+          url-template: https://github.com/libass/libass/releases/download/$version/libass-$version.tar.xz
       - type: script
         commands:
           - autoreconf -fiv
@@ -225,6 +229,10 @@ modules:
       - type: archive
         url: https://dl.matroska.org/downloads/libebml/libebml-1.4.4.tar.xz
         sha256: 82dc5f83356cc9340aee76ed7512210b3a4edf5f346bc9c2c7044f55052687a7
+        x-checker-data:
+          type: anitya
+          project-id: 7879
+          url-template: https://dl.matroska.org/downloads/libebml/libebml-$version.tar.xz
   - name: libmatroska
     builddir: true
     buildsystem: cmake-ninja
@@ -236,12 +244,20 @@ modules:
       - type: archive
         url: https://dl.matroska.org/downloads/libmatroska/libmatroska-1.7.1.tar.xz
         sha256: 572a3033b8d93d48a6a858e514abce4b2f7a946fe1f02cbfeca39bfd703018b3
+        x-checker-data:
+          type: anitya
+          project-id: 1657
+          url-template: https://dl.matroska.org/downloads/libmatroska/libmatroska-$version.tar.xz
   - name: libssh2
     rm-configure: true
     sources:
       - type: archive
-        url: https://www.libssh2.org/download/libssh2-1.10.0.tar.gz
-        sha256: 2d64e90f3ded394b91d3a2e774ca203a4179f69aebee03003e5a6fa621e41d51
+        url: https://www.libssh2.org/download/libssh2-1.11.0.tar.gz
+        sha256: 3736161e41e2693324deb38c26cfdc3efe6209d634ba4258db1cecff6a5ad461
+        x-checker-data:
+          type: anitya
+          project-id: 1730
+          url-template: https://www.libssh2.org/download/libssh2-$version.tar.gz
       - type: script
         commands:
           - autoreconf -fiv
@@ -263,6 +279,10 @@ modules:
       - type: archive
         url: https://download.videolan.org/videolan/libdvdread/6.1.3/libdvdread-6.1.3.tar.bz2
         sha256: ce35454997a208cbe50e91232f0e73fb1ac3471965813a13b8730a8f18a15369
+        x-checker-data:
+          type: anitya
+          project-id: 5614
+          url-template: https://download.videolan.org/videolan/libdvdread/$version/libdvdread-$version.tar.bz2
       - type: script
         commands:
           - autoreconf -fiv
@@ -273,6 +293,10 @@ modules:
       - type: archive
         url: https://download.videolan.org/videolan/libdvdnav/6.1.1/libdvdnav-6.1.1.tar.bz2
         sha256: c191a7475947d323ff7680cf92c0fb1be8237701885f37656c64d04e98d18d48
+        x-checker-data:
+          type: anitya
+          project-id: 5615
+          url-template: https://download.videolan.org/videolan/libdvdnav/$version/libdvdnav-$version.tar.bz2
       - type: script
         commands:
           - autoreconf -fiv
@@ -283,6 +307,10 @@ modules:
       - type: archive
         url: https://download.videolan.org/videolan/libdvdcss/1.4.3/libdvdcss-1.4.3.tar.bz2
         sha256: 233cc92f5dc01c5d3a96f5b3582be7d5cee5a35a52d3a08158745d3d86070079
+        x-checker-data:
+          type: anitya
+          project-id: 5568
+          url-template: https://download.videolan.org/videolan/libdvdcss/$version/libdvdcss-$version.tar.bz2
       - type: script
         commands:
           - autoreconf -fiv
@@ -304,7 +332,7 @@ modules:
     sources:
       - type: git
         url: https://code.videolan.org/videolan/x264.git
-        commit: baee400fa9ced6f5481a728138fed6e867b0ff7f
+        commit: a8b68ebfaa68621b5ac8907610d3335971839d52
   - name: x265
     builddir: true
     subdir: source
@@ -317,12 +345,20 @@ modules:
       - type: archive
         url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz
         sha256: e70a3335cacacbba0b3a20ec6fecd6783932288ebc8163ad74bcc9606477cae8
+        x-checker-data:
+          type: anitya
+          project-id: 7275
+          url-template: https://bitbucket.org/multicoreware/x265_git/downloads/x265_$version.tar.gz
   - name: dav1d
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/dav1d/1.2.0/dav1d-1.2.0.tar.xz
-        sha256: 231bed8bc1bb28a41d88da6b4c2c118de84b92e5f1d67caffa1b7f81aaea8c6e
+        url: https://download.videolan.org/videolan/dav1d/1.2.1/dav1d-1.2.1.tar.xz
+        sha256: 4e33eb61ec54c768a16da0cf8fa0928b4c4593f5f804a3c887d4a21c318340b2
+        x-checker-data:
+          type: anitya
+          project-id: 18920
+          url-template: https://download.videolan.org/videolan/dav1d/$version/dav1d-$version.tar.xz
   - name: ffmpeg
     config-opts:
       - --enable-pic
@@ -340,6 +376,13 @@ modules:
       - type: archive
         url: https://ffmpeg.org/releases/ffmpeg-4.4.4.tar.xz
         sha256: e80b380d595c809060f66f96a5d849511ef4a76a26b76eacf5778b94c3570309
+        x-checker-data:
+          type: anitya
+          project-id: 5405
+          versions:
+            '>=': '4'
+            '<': '5'
+          url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
   - shared-modules/libsecret/libsecret.json
   - name: libaacs
     config-opts:
@@ -350,6 +393,10 @@ modules:
       - type: archive
         url: https://download.videolan.org/videolan/libaacs/0.11.1/libaacs-0.11.1.tar.bz2
         sha256: a88aa0ebe4c98a77f7aeffd92ab3ef64ac548c6b822e8248a8b926725bea0a39
+        x-checker-data:
+          type: anitya
+          project-id: 5562
+          url-template: https://download.videolan.org/videolan/libaacs/$version/libaacs-$version.tar.bz2
   - name: libbdplus
     rm-configure: true
     config-opts:
@@ -362,6 +409,10 @@ modules:
       - type: archive
         url: https://download.videolan.org/videolan/libbdplus/0.2.0/libbdplus-0.2.0.tar.bz2
         sha256: b93eea3eaef33d6e9155d2c34b068c505493aa5a4936e63274f4342ab0f40a58
+        x-checker-data:
+          type: anitya
+          project-id: 5563
+          url-template: https://download.videolan.org/videolan/libbdplus/$version/libbdplus-$version.tar.bz2
       - type: patch
         path: libbdplus-gpg-error.patch
   - name: libbluray
@@ -372,6 +423,10 @@ modules:
       - type: archive
         url: https://download.videolan.org/videolan/libbluray/1.3.4/libbluray-1.3.4.tar.bz2
         sha256: 478ffd68a0f5dde8ef6ca989b7f035b5a0a22c599142e5cd3ff7b03bbebe5f2b
+        x-checker-data:
+          type: anitya
+          project-id: 1565
+          url-template: https://download.videolan.org/videolan/libbluray/$version/libbluray-$version.tar.bz2
   - shared-modules/libusb/libusb.json
   - name: libmtp
     config-opts:
@@ -391,6 +446,10 @@ modules:
       - type: archive
         url: https://github.com/acoustid/chromaprint/releases/download/v1.5.1/chromaprint-1.5.1.tar.gz
         sha256: a1aad8fa3b8b18b78d3755b3767faff9abb67242e01b478ec9a64e190f335e1c
+        x-checker-data:
+          type: anitya
+          project-id: 286
+          url-template: https://github.com/acoustid/chromaprint/releases/download/v$version/chromaprint-$version.tar.gz
   - name: fluidlite
     buildsystem: cmake-ninja
     config-opts:
@@ -419,6 +478,13 @@ modules:
       - type: archive
         url: https://github.com/haasn/libplacebo/archive/refs/tags/v0.2.1.tar.gz
         sha256: d5d920a1745e4209287d32e8b96a85127b61b843304813980e11104cd9f15e82
+        x-checker-data:
+          type: anitya
+          project-id: 20101
+          versions:
+            '>=': '0.2'
+            '<': '0.3'
+          url-template: https://github.com/haasn/libplacebo/archive/refs/tags/v$version.tar.gz
   - name: libdsm
     buildsystem: meson
     sources:
@@ -431,6 +497,10 @@ modules:
       - type: archive
         url: https://github.com/videolabs/libmicrodns/releases/download/0.2.0/microdns-0.2.0.tar.xz
         sha256: 2da28e7dda4861d76f797f92ac3e6c3e048333b95f9e4fc3a6548ad8afd8c446
+        x-checker-data:
+          type: anitya
+          project-id: 275561
+          url-template: https://github.com/videolabs/libmicrodns/releases/download/$version/microdns-$version.tar.xz
   - name: spatialaudio
     builddir: true
     buildsystem: cmake-ninja
@@ -453,6 +523,10 @@ modules:
       - type: archive
         url: https://github.com/Haivision/srt/archive/v1.5.1.tar.gz
         sha256: af891e7a7ffab61aa76b296982038b3159da690f69ade7c119f445d924b3cf53
+        x-checker-data:
+          type: anitya
+          project-id: 236296
+          url-template: https://github.com/Haivision/srt/archive/v$version.tar.gz
   - name: live555
     buildsystem: simple
     build-commands:
@@ -480,6 +554,10 @@ modules:
       - type: archive
         url: https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.2.tar.xz
         sha256: c5f4ed3d1f86e5b118c76415aacb861873ed3e6f0c6b3181b828cf584fc5c616
+        x-checker-data:
+          type: anitya
+          project-id: 13149
+          url-template: https://download.gnome.org/sources/libnotify/$major.$minor/libnotify-$version.tar.xz
   - name: protobuf
     sources:
       - type: archive
@@ -507,6 +585,13 @@ modules:
       - type: archive
         url: http://download.videolan.org/videolan/vlc/3.0.18/vlc-3.0.18.tar.xz
         sha256: 57094439c365d8aa8b9b41fa3080cc0eef2befe6025bb5cef722accc625aedec
+        x-checker-data:
+          type: anitya
+          project-id: 6504
+          versions:
+            '>=': '3'
+            '<': '4'
+          url-template: http://download.videolan.org/videolan/vlc/$version/vlc-$version.tar.xz
       - type: file
         path: org.videolan.VLC.appdata.xml
       - type: patch
