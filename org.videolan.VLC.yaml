@@ -639,7 +639,7 @@ modules:
       - --enable-wayland
       - --enable-avcodec
       - --enable-vdpau
-      - ---enable-dav1d
+      - --enable-dav1d
     cleanup:
       - /share/macosx
     post-install:
