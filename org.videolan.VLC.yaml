@@ -7,6 +7,8 @@ finish-args:
   - --require-version=0.11.4
   - --share=ipc
   - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --socket=pulseaudio
   - --share=network
   - --filesystem=host
@@ -634,6 +636,10 @@ modules:
     config-opts:
       - BUILDCC=/usr/bin/gcc -std=gnu99
       - --disable-a52
+      - --enable-wayland
+      - --enable-avcodec
+      - --enable-vdpau
+      - ---enable-dav1d
     cleanup:
       - /share/macosx
     post-install:
