@@ -198,8 +198,8 @@ modules:
   - name: gsm
     no-autogen: true
     build-options:
-      cflags: '-fPIC'
-      cxxflags: '-c -fPIC'
+      cflags: -fPIC
+      cxxflags: -c -fPIC
     make-install-args:
       - -j1
       - INSTALL_ROOT=/app
@@ -435,7 +435,7 @@ modules:
           project-id: 5405
           versions:
             '>=': '4'
-            '<': '5'
+            <: '5'
           url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
   - shared-modules/libsecret/libsecret.json
   - name: libaacs
@@ -541,7 +541,7 @@ modules:
           project-id: 20101
           versions:
             '>=': '0.2'
-            '<': '0.3'
+            <: '0.3'
           url-template: https://github.com/haasn/libplacebo/archive/refs/tags/v$version.tar.gz
   - name: libdsm
     buildsystem: meson
@@ -579,8 +579,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://github.com/Haivision/srt/archive/v1.5.1.tar.gz
-        sha256: af891e7a7ffab61aa76b296982038b3159da690f69ade7c119f445d924b3cf53
+        url: https://github.com/Haivision/srt/archive/v1.5.2.tar.gz
+        sha256: 463970a3f575446b3f55abb6f323d5476c963c77b3c975cd902e9c87cdd9a92c
         x-checker-data:
           type: anitya
           project-id: 236296
@@ -588,11 +588,13 @@ modules:
   - name: live555
     buildsystem: simple
     build-commands:
-      - CXXFLAGS=`sed "s/'/\"/g" /etc/flatpak-builder/defaults.json | jq -r .cxxflags` ; sed -i -e "s|-O2|$CXXFLAGS|"
-        config.linux-with-shared-libraries
+      - CXXFLAGS=`sed "s/'/\"/g" /etc/flatpak-builder/defaults.json | jq -r .cxxflags`
+        ; sed -i -e "s|-O2|$CXXFLAGS|" config.linux-with-shared-libraries
       - ./genMakefiles linux-with-shared-libraries
-      - LDFLAGS=`sed "s/'/\"/g" /etc/flatpak-builder/defaults.json | jq -r .ldflags` ; make -j4 PREFIX=/app LIBDIR=/app/lib install
-      - chmod +x /app/lib/libliveMedia.so* /app/lib/libUsageEnvironment.so* /app/lib/libBasicUsageEnvironment.so* /app/lib/libgroupsock.so*
+      - LDFLAGS=`sed "s/'/\"/g" /etc/flatpak-builder/defaults.json | jq -r .ldflags`
+        ; make -j4 PREFIX=/app LIBDIR=/app/lib install
+      - chmod +x /app/lib/libliveMedia.so* /app/lib/libUsageEnvironment.so* /app/lib/libBasicUsageEnvironment.so*
+        /app/lib/libgroupsock.so*
     cleanup:
       - /bin
     sources:
@@ -626,7 +628,7 @@ modules:
           project-id: 3715
           versions:
             '>=': '21'
-            '<': '22'
+            <: '22'
           url-template: https://github.com/protocolbuffers/protobuf/releases/download/v$version/protobuf-cpp-3.$version.tar.gz
     cleanup:
       - /bin
@@ -643,7 +645,8 @@ modules:
       - chmod +x /app/bin/vlc
       - echo "StartupWMClass=VLC" >> /app/share/applications/vlc.desktop
       - sed -i -e 's/Icon=vlc/Icon=org.videolan.VLC/g' /app/share/applications/vlc-*.desktop
-      - for s in openbd opendvd opencda openvcd; do mv /app/share/applications/vlc-$s.desktop /app/share/applications/org.videolan.VLC-$s.desktop; done
+      - for s in openbd opendvd opencda openvcd; do mv /app/share/applications/vlc-$s.desktop
+        /app/share/applications/org.videolan.VLC-$s.desktop; done
       - tar xf chrpath-0.16.tar.gz && cd chrpath-0.16 && ./configure && make
       - ./chrpath-0.16/chrpath -d /app/lib/vlc/plugins/access/liblibbluray_plugin.so
     sources:
@@ -655,7 +658,7 @@ modules:
           project-id: 6504
           versions:
             '>=': '3'
-            '<': '4'
+            <: '4'
           url-template: https://download.videolan.org/videolan/vlc/$version/vlc-$version.tar.xz
       - type: file
         path: org.videolan.VLC.appdata.xml
