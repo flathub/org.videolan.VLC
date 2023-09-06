@@ -668,6 +668,8 @@ modules:
         path: vlc-disc-shortcuts.patch
       - type: patch
         path: vlc-ignore-time-for-cache.patch
+      - type: patch
+        path: vlc-packetizer-flac-fix-CRC-from-emulated-sync.patch
       - type: file
         path: vlc.sh
       - type: file
