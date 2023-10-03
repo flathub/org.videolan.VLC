@@ -518,7 +518,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/divideconcept/FluidLite.git
-        commit: adc0bc0229ea1e0af7b46c23b7f3c53fbdcce094
+        commit: d59d2328818f913b7d1a6a59aed695c47a8ce388
   - name: libcaca
     config-opts:
       - --disable-static
