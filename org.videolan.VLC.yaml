@@ -1,4 +1,5 @@
 app-id: org.videolan.VLC
+branch: alpha
 runtime: org.kde.Platform
 runtime-version: 5.15-23.08
 sdk: org.kde.Sdk
@@ -18,10 +19,9 @@ finish-args:
   - --talk-name=org.mpris.MediaPlayer2.Player
   - --own-name=org.mpris.MediaPlayer2.vlc
   - --device=all
-  - --filesystem=xdg-run/gvfs
 add-extensions:
   org.videolan.VLC.Plugin:
-    versions: 3-5.15-23.08;3-23.08
+    versions: 4-5.15-23.08;4-23.08
     directory: share/vlc/extra
     subdirectories: true
     merge-dirs: plugins
@@ -43,7 +43,7 @@ cleanup-commands:
   - mkdir -p /app/share/vlc/extra
   - ln -s /app/share/vlc/extra/plugins /app/lib/vlc/plugins/extra
   - rm -f /app/lib/vlc/plugins/plugins.dat
-  - /app/lib/vlc/vlc-cache-gen /app/lib/vlc/plugins
+  - /app/bin/vlc.bin --reset-plugins-cache --no-audio --no-video --intf dummy vlc://quit
 build-options:
   env:
     V: '1'
@@ -423,17 +423,15 @@ modules:
       - --enable-libopus
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.4.4.tar.xz
-        sha256: e80b380d595c809060f66f96a5d849511ef4a76a26b76eacf5778b94c3570309
+        url: https://ffmpeg.org/releases/ffmpeg-6.0.1.tar.xz
+        sha256: 9b16b8731d78e596b4be0d720428ca42df642bb2d78342881ff7f5bc29fc9623
         x-checker-data:
           type: anitya
           project-id: 5405
           versions:
-            '>=': '4'
-            <: '5'
+            '>=': '6'
+            '<': '7'
           url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
-      - type: patch
-        path: ffmpeg_binutils241.patch
   - shared-modules/libsecret/libsecret.json
   - name: libaacs
     config-opts:
@@ -528,18 +526,63 @@ modules:
   - name: libplacebo
     buildsystem: meson
     config-opts:
-      - -Dvulkan=false
+      - -Dvulkan=enabled
+      - -Dshaderc=enabled
     sources:
-      - type: archive
-        url: https://github.com/haasn/libplacebo/archive/refs/tags/v0.2.1.tar.gz
-        sha256: d5d920a1745e4209287d32e8b96a85127b61b843304813980e11104cd9f15e82
-        x-checker-data:
-          type: anitya
-          project-id: 20101
-          versions:
-            '>=': '0.2'
-            <: '0.3'
-          url-template: https://github.com/haasn/libplacebo/archive/refs/tags/v$version.tar.gz
+      - type: git
+        url: https://code.videolan.org/videolan/libplacebo.git
+        mirror-urls:
+          - https://github.com/haasn/libplacebo.git
+        tag: v5.264.1
+        commit: ed29e541a55acf28022738440b2a925386292551
+#        x-checker-data:
+#          type: git
+#          tag-pattern: ^v([\d.]+)$
+    modules:
+      - name: shaderc
+        buildsystem: cmake-ninja
+        builddir: true
+        config-opts:
+          - -DSHADERC_SKIP_COPYRIGHT_CHECK=ON
+          - -DSHADERC_SKIP_EXAMPLES=ON
+          - -DSHADERC_SKIP_TESTS=ON
+          - -DSPIRV_SKIP_EXECUTABLES=ON
+          - -DENABLE_GLSLANG_BINARIES=OFF
+        cleanup:
+          - /bin
+          - /lib/cmake
+        sources:
+          - type: git
+            url: https://github.com/google/shaderc.git
+            tag: v2023.4
+            commit: 45b735dfddefe26a99b77e5a74e30d860713ac64
+#            x-checker-data:
+#              type: git
+#              tag-pattern: ^v(\d{4}\.\d{1,2})$
+          - type: git
+            url: https://github.com/KhronosGroup/SPIRV-Tools.git
+            tag: v2023.2
+            commit: 44d72a9b36702f093dd20815561a56778b2d181e
+            dest: third_party/spirv-tools
+#            x-checker-data:
+#              type: git
+#              tag-pattern: ^v(\d{4}\.\d{1})$
+          - type: git
+            url: https://github.com/KhronosGroup/SPIRV-Headers.git
+            tag: sdk-1.3.246.1
+            commit: 1feaf4414eb2b353764d01d88f8aa4bcc67b60db
+            dest: third_party/spirv-headers
+#            x-checker-data:
+#              type: git
+#              tag-pattern: ^sdk-([\d.]+)$
+          - type: git
+            url: https://github.com/KhronosGroup/glslang.git
+            tag: 12.2.0
+            commit: d1517d64cfca91f573af1bf7341dc3a5113349c0
+            dest: third_party/glslang
+#            x-checker-data:
+#              type: git
+#              tag-pattern: ^(\d{1,2}\.\d{1,2}\.\d{1,4})$
   - name: libdsm
     buildsystem: meson
     sources:
@@ -629,6 +672,15 @@ modules:
           url-template: https://github.com/protocolbuffers/protobuf/releases/download/v$version/protobuf-cpp-3.$version.tar.gz
     cleanup:
       - /bin
+  - name: medialibrary
+    buildsystem: meson
+    config-opts:
+      - -Dlibvlc=disabled
+      - -Dlibtool_workaround=true
+    sources:
+      - type: archive
+        url: https://code.videolan.org/videolan/medialibrary/-/archive/0.12.4/medialibrary-0.12.4.tar.bz2
+        sha512: 2b9e9eb5000fd8ff333d29786c3c8ed9f2e2541cd34652b7087ea0fb6b46bfb354472e20dad7c53c159dd447882427e61233ef6224ad5902bedff37756fd950a
   - name: vlc
     config-opts:
       - BUILDCC=/usr/bin/gcc -std=gnu99
@@ -647,22 +699,13 @@ modules:
       - tar xf chrpath-0.16.tar.gz && cd chrpath-0.16 && ./configure && make
       - ./chrpath-0.16/chrpath -d /app/lib/vlc/plugins/access/liblibbluray_plugin.so
     sources:
-      - type: archive
-        url: https://download.videolan.org/videolan/vlc/3.0.20/vlc-3.0.20.tar.xz
-        sha256: adc7285b4d2721cddf40eb5270cada2aaa10a334cb546fd55a06353447ba29b5
-        x-checker-data:
-          type: anitya
-          project-id: 6504
-          versions:
-            '>=': '3'
-            <: '4'
-          url-template: https://download.videolan.org/videolan/vlc/$version/vlc-$version.tar.xz
+      - type: git
+        url: https://code.videolan.org/videolan/vlc.git
+        commit: a92d924e42648adb787bf6c75d3323a83d113472
       - type: file
         path: org.videolan.VLC.appdata.xml
       - type: patch
         path: vlc-fix-appdata.patch
-      - type: patch
-        path: vlc-disc-shortcuts.patch
       - type: patch
         path: vlc-ignore-time-for-cache.patch
       - type: file
