@@ -1,12 +1,13 @@
 app-id: org.videolan.VLC
 runtime: org.kde.Platform
-runtime-version: 5.15-24.08
+runtime-version: '6.8'
 sdk: org.kde.Sdk
 command: vlc
 finish-args:
   - --require-version=0.11.4
   - --share=ipc
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --socket=pulseaudio
   - --share=network
   - --filesystem=host
@@ -18,17 +19,16 @@ finish-args:
   - --talk-name=org.mpris.MediaPlayer2.Player
   - --own-name=org.mpris.MediaPlayer2.vlc
   - --device=all
-  - --filesystem=xdg-run/gvfs
 add-extensions:
   org.videolan.VLC.Plugin:
-    versions: 3-5.15-24.08;3-24.08
+    versions: 4-6.8;4-24.08
     directory: share/vlc/extra
     subdirectories: true
     merge-dirs: plugins
     add-ld-path: lib
     no-autodownload: true
     autodelete: true
-rename-appdata-file: vlc.appdata.xml
+rename-appdata-file: org.videolan.vlc.appdata.xml
 rename-desktop-file: vlc.desktop
 rename-icon: vlc
 copy-icon: true
@@ -43,7 +43,7 @@ cleanup-commands:
   - mkdir -p /app/share/vlc/extra
   - ln -s /app/share/vlc/extra/plugins /app/lib/vlc/plugins/extra
   - rm -f /app/lib/vlc/plugins/plugins.dat
-  - /app/lib/vlc/vlc-cache-gen /app/lib/vlc/plugins
+  - /app/libexec/vlc/vlc-cache-gen /app/lib/vlc/plugins
 build-options:
   env:
     V: '1'
@@ -342,12 +342,13 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_4.1.tar.gz
-        sha256: a31699c6a89806b74b0151e5e6a7df65de4b49050482fe5ebf8a4379d7af8f29
-        x-checker-data:
-          type: anitya
-          project-id: 7275
-          url-template: https://bitbucket.org/multicoreware/x265_git/downloads/x265_$version.tar.gz
+        url: https://download.videolan.org/videolan/x265/x265_4.0.tar.gz
+        sha256: 75b4d05629e365913de3100b38a459b04e2a217a8f30efaa91b572d8e6d71282
+        # Do not update to 4.1 for now, some API changes has been reverted
+        # x-checker-data:
+        #   type: anitya
+        #   project-id: 7275
+        #   url-template: https://download.videolan.org/videolan/x265/x265_$version.tar.gz
   - name: dav1d
     buildsystem: meson
     sources:
@@ -373,14 +374,14 @@ modules:
       - --enable-libopus
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.4.5.tar.xz
-        sha256: f9514e0d3515aee5a271283df71636e1d1ff7274b15853bcd84e144be416ab07
+        url: https://ffmpeg.org/releases/ffmpeg-7.1.tar.xz
+        sha256: 40973d44970dbc83ef302b0609f2e74982be2d85916dd2ee7472d30678a7abe6
         x-checker-data:
           type: anitya
           project-id: 5405
           versions:
-            '>=': '4'
-            <: '5'
+            '>=': '7'
+            '<': '8'
           url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
   - shared-modules/libsecret/libsecret.json
   # libgcrypt-1.11.0 build fails with freedeskop 24.08
@@ -455,20 +456,6 @@ modules:
           type: anitya
           project-id: 10017
           url-template: https://github.com/libmtp/libmtp/releases/download/v$version/libmtp-$version.tar.gz
-  - name: chromaprint
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
-      - -DBUILD_SHARED_LIBS=ON
-      - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
-    sources:
-      - type: archive
-        url: https://github.com/acoustid/chromaprint/releases/download/v1.5.1/chromaprint-1.5.1.tar.gz
-        sha256: a1aad8fa3b8b18b78d3755b3767faff9abb67242e01b478ec9a64e190f335e1c
-        x-checker-data:
-          type: anitya
-          project-id: 286
-          url-template: https://github.com/acoustid/chromaprint/releases/download/v$version/chromaprint-$version.tar.gz
   - name: fluidlite
     buildsystem: cmake-ninja
     config-opts:
@@ -492,18 +479,21 @@ modules:
   - name: libplacebo
     buildsystem: meson
     config-opts:
-      - -Dvulkan=false
+      - -Dvulkan=enabled
+      - -Dshaderc=enabled
+    cleanup:
+      - /include
+      - /lib/pkgconfig
     sources:
-      - type: archive
-        url: https://github.com/haasn/libplacebo/archive/refs/tags/v0.2.1.tar.gz
-        sha256: d5d920a1745e4209287d32e8b96a85127b61b843304813980e11104cd9f15e82
-        x-checker-data:
-          type: anitya
-          project-id: 20101
-          versions:
-            '>=': '0.2'
-            <: '0.3'
-          url-template: https://github.com/haasn/libplacebo/archive/refs/tags/v$version.tar.gz
+      - type: git
+        url: https://code.videolan.org/videolan/libplacebo.git
+        mirror-urls:
+          - https://github.com/haasn/libplacebo.git
+        tag: v5.264.1
+        commit: ed29e541a55acf28022738440b2a925386292551
+#        x-checker-data:
+#          type: git
+#          tag-pattern: ^v([\d.]+)$
   - name: lmdb
     sources:
       - sha256: dd70a8c67807b3b8532b3e987b0a4e998962ecc28643e1af5ec77696b081c9b0
@@ -623,6 +613,15 @@ modules:
           url-template: https://github.com/protocolbuffers/protobuf/releases/download/v$version/protobuf-cpp-3.$version.tar.gz
     cleanup:
       - /bin
+  - name: medialibrary
+    buildsystem: meson
+    config-opts:
+      - -Dlibvlc=disabled
+      - -Dlibtool_workaround=true
+    sources:
+      - type: archive
+        url: https://code.videolan.org/videolan/medialibrary/-/archive/0.13.1/medialibrary-0.13.1.tar.bz2
+        sha256: e838dc093eae490879f69ca8b07dd5de90367bc8693943f4eefa38289c33ec2d
   - name: vlc
     config-opts:
       - BUILDCC=/usr/bin/gcc -std=gnu99
@@ -641,20 +640,11 @@ modules:
       - tar xf chrpath-0.16.tar.gz && cd chrpath-0.16 && ./configure && make
       - ./chrpath-0.16/chrpath -d /app/lib/vlc/plugins/access/liblibbluray_plugin.so
     sources:
-      - type: archive
-        url: https://download.videolan.org/videolan/vlc/3.0.21/vlc-3.0.21.tar.xz
-        sha256: 24dbbe1d7dfaeea0994d5def0bbde200177347136dbfe573f5b6a4cee25afbb0
-        x-checker-data:
-          type: anitya
-          project-id: 6504
-          versions:
-            '>=': '3'
-            <: '4'
-          url-template: https://download.videolan.org/videolan/vlc/$version/vlc-$version.tar.xz
+      - type: git
+        url: https://code.videolan.org/videolan/vlc.git
+        commit: 3c8ec534e26513c6ce769b2aa9a34e3f831d43fc
       - type: patch
         path: vlc-fix-appdata.patch
-      - type: patch
-        path: vlc-disc-shortcuts.patch
       - type: patch
         path: vlc-ignore-time-for-cache.patch
       - type: file
