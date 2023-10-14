@@ -651,8 +651,8 @@ modules:
       - ./chrpath-0.16/chrpath -d /app/lib/vlc/plugins/access/liblibbluray_plugin.so
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/vlc/3.0.18/vlc-3.0.18.tar.xz
-        sha256: 57094439c365d8aa8b9b41fa3080cc0eef2befe6025bb5cef722accc625aedec
+        url: https://download.videolan.org/videolan/vlc/3.0.19/vlc-3.0.19.tar.xz
+        sha256: 643e3294bafe922324663ca499515b7564f2794575fd7d2b7992d20896381745
         x-checker-data:
           type: anitya
           project-id: 6504
@@ -668,8 +668,6 @@ modules:
         path: vlc-disc-shortcuts.patch
       - type: patch
         path: vlc-ignore-time-for-cache.patch
-      - type: patch
-        path: vlc-packetizer-flac-fix-CRC-from-emulated-sync.patch
       - type: file
         path: vlc.sh
       - type: file
