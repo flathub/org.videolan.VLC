@@ -1,6 +1,6 @@
 app-id: org.videolan.VLC
 runtime: org.kde.Platform
-runtime-version: 5.15-22.08
+runtime-version: 5.15-23.08
 sdk: org.kde.Sdk
 command: vlc
 finish-args:
@@ -21,7 +21,7 @@ finish-args:
   - --filesystem=xdg-run/gvfs
 add-extensions:
   org.videolan.VLC.Plugin:
-    versions: 3-5.15-22.08;3-22.08
+    versions: 3-5.15-23.08;3-23.08
     directory: share/vlc/extra
     subdirectories: true
     merge-dirs: plugins
