@@ -1,6 +1,6 @@
 app-id: org.videolan.VLC
 runtime: org.kde.Platform
-runtime-version: 5.15-22.08
+runtime-version: 5.15-23.08
 sdk: org.kde.Sdk
 command: vlc
 finish-args:
@@ -21,7 +21,7 @@ finish-args:
   - --filesystem=xdg-run/gvfs
 add-extensions:
   org.videolan.VLC.Plugin:
-    versions: 3-5.15-22.08;3-22.08
+    versions: 3-5.15-23.08;3-23.08
     directory: share/vlc/extra
     subdirectories: true
     merge-dirs: plugins
@@ -33,15 +33,10 @@ rename-desktop-file: vlc.desktop
 rename-icon: vlc
 copy-icon: true
 cleanup:
-  - /include
-  - /lib/pkgconfig
-  - /share/aclocal
   - /share/doc
   - /share/gtk-doc
   - /share/info
   - /share/man
-  - /share/pkgconfig
-  - /lib/cmake
   - '*.la'
   - '*.a'
 cleanup-commands:
@@ -437,6 +432,8 @@ modules:
             '>=': '4'
             <: '5'
           url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
+      - type: patch
+        path: ffmpeg_binutils241.patch
   - shared-modules/libsecret/libsecret.json
   - name: libaacs
     config-opts:
