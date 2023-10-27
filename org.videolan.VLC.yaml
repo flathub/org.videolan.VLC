@@ -33,15 +33,10 @@ rename-desktop-file: vlc.desktop
 rename-icon: vlc
 copy-icon: true
 cleanup:
-  - /include
-  - /lib/pkgconfig
-  - /share/aclocal
   - /share/doc
   - /share/gtk-doc
   - /share/info
   - /share/man
-  - /share/pkgconfig
-  - /lib/cmake
   - '*.la'
   - '*.a'
 cleanup-commands:
