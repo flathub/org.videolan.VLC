@@ -648,8 +648,8 @@ modules:
       - ./chrpath-0.16/chrpath -d /app/lib/vlc/plugins/access/liblibbluray_plugin.so
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/vlc/3.0.19/vlc-3.0.19.tar.xz
-        sha256: 643e3294bafe922324663ca499515b7564f2794575fd7d2b7992d20896381745
+        url: https://download.videolan.org/videolan/vlc/3.0.20/vlc-3.0.20.tar.xz
+        sha256: adc7285b4d2721cddf40eb5270cada2aaa10a334cb546fd55a06353447ba29b5
         x-checker-data:
           type: anitya
           project-id: 6504
