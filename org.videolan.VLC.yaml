@@ -268,8 +268,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://dl.matroska.org/downloads/libebml/libebml-1.4.4.tar.xz
-        sha256: 82dc5f83356cc9340aee76ed7512210b3a4edf5f346bc9c2c7044f55052687a7
+        url: https://dl.matroska.org/downloads/libebml/libebml-1.4.5.tar.xz
+        sha256: 4971640b0592da29c2d426f303e137a9b0b3d07e1b81d069c1e56a2f49ab221b
         x-checker-data:
           type: anitya
           project-id: 7879
