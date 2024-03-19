@@ -629,6 +629,19 @@ modules:
           url-template: https://github.com/protocolbuffers/protobuf/releases/download/v$version/protobuf-cpp-3.$version.tar.gz
     cleanup:
       - /bin
+
+  - name: libde265
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=None
+      - -DENABLE_SDL=OFF
+    sources:
+      - type: archive
+        url: https://github.com/strukturag/libde265/archive/v1.0.15/libde265-1.0.15.tar.gz
+        sha256: d4e55706dfc5b2c5c9702940b675ce2d3e7511025c6894eaddcdbaf0b15fd3f3
+    cleanup:
+      - /bin
+
   - name: vlc
     config-opts:
       - BUILDCC=/usr/bin/gcc -std=gnu99
