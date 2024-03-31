@@ -679,8 +679,8 @@ modules:
       - -Dlibtool_workaround=true
     sources:
       - type: archive
-        url: https://code.videolan.org/videolan/medialibrary/-/archive/0.12.4/medialibrary-0.12.4.tar.bz2
-        sha512: 2b9e9eb5000fd8ff333d29786c3c8ed9f2e2541cd34652b7087ea0fb6b46bfb354472e20dad7c53c159dd447882427e61233ef6224ad5902bedff37756fd950a
+        url: https://code.videolan.org/videolan/medialibrary/-/archive/0.13.0/medialibrary-0.13.0.tar.bz2
+        sha256: 0aa084caa3461e7d97b277c0707de7bfe51aabd7e57cad8c8572575cff0a01aa
   - name: vlc
     config-opts:
       - BUILDCC=/usr/bin/gcc -std=gnu99
@@ -701,7 +701,7 @@ modules:
     sources:
       - type: git
         url: https://code.videolan.org/videolan/vlc.git
-        commit: 6d9b2a09297e4fad9109100bbaeb3e4841d897c4
+        commit: 9394e7eace4f7a343cf0a9de8ef63f2108b515ef
       - type: file
         path: org.videolan.VLC.appdata.xml
       - type: patch
