@@ -185,6 +185,9 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 1982
+          versions:
+            '>=': '1'
+            <: '2'
           url-template: https://taglib.org/releases/taglib-$version.tar.gz
       - type: script
         commands:
@@ -402,8 +405,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/dav1d/1.3.0/dav1d-1.3.0.tar.xz
-        sha256: 6d8be2741c505c47f8f1ced3c9cc427759243436553d01d1acce201f87b39e71
+        url: https://download.videolan.org/videolan/dav1d/1.4.1/dav1d-1.4.1.tar.xz
+        sha256: 8d407dd5fe7986413c937b14e67f36aebd06e1fa5cfec679d10e548476f2d5f8
         x-checker-data:
           type: anitya
           project-id: 18920
@@ -636,7 +639,6 @@ modules:
     cleanup:
       - /share/macosx
     post-install:
-      - install -Dp -m 644 org.videolan.VLC.appdata.xml /app/share/appdata/vlc.appdata.xml
       - mv /app/bin/vlc /app/bin/vlc.bin
       - mv vlc.sh /app/bin/vlc
       - chmod +x /app/bin/vlc
@@ -657,8 +659,6 @@ modules:
             '>=': '3'
             <: '4'
           url-template: https://download.videolan.org/videolan/vlc/$version/vlc-$version.tar.xz
-      - type: file
-        path: org.videolan.VLC.appdata.xml
       - type: patch
         path: vlc-fix-appdata.patch
       - type: patch
