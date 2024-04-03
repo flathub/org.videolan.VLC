@@ -12,7 +12,7 @@ index cc9c39a..e55c8d6 100644
      <url type="donation">https://www.videolan.org/contribute.html</url>
      <releases>
 -        <release version="@VERSION@" />
-+        <release version="@VERSION@" date="2019-01-01"/>
++        <release version="@VERSION@" date="2023-10-30"/>
      </releases>
      <provides>
          <library>libvlc.so.5</library>
