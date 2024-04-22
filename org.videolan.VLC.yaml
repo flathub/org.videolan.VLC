@@ -160,8 +160,8 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.18.tar.bz2
-        sha256: 16a7cee93ce2868ae63ab1a8164dc7de43577c59983b9f61293a310d6888dceb
+        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.19.tar.bz2
+        sha256: b6423c573b758d09539f5e6c4712c1a9fd35dccf835f81d99473d50a50ad49b0
         x-checker-data:
           type: anitya
           project-id: 21315
@@ -395,8 +395,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz
-        sha256: e70a3335cacacbba0b3a20ec6fecd6783932288ebc8163ad74bcc9606477cae8
+        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.6.tar.gz
+        sha256: 663531f341c5389f460d730e62e10a4fcca3428ca2ca109693867bc5fe2e2807
         x-checker-data:
           type: anitya
           project-id: 7275
