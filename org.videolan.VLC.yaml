@@ -252,8 +252,8 @@ modules:
       - --enable-fontconfig
     sources:
       - type: archive
-        url: https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.xz
-        sha256: f0da0bbfba476c16ae3e1cfd862256d30915911f7abaa1b16ce62ee653192784
+        url: https://github.com/libass/libass/releases/download/0.17.2/libass-0.17.2.tar.xz
+        sha256: e8261b51d66ba933fe99248c6fdd8767ed96c5a7e5363c83992c735a2c2fbf74
         x-checker-data:
           type: anitya
           project-id: 1560
@@ -395,8 +395,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz
-        sha256: e70a3335cacacbba0b3a20ec6fecd6783932288ebc8163ad74bcc9606477cae8
+        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.6.tar.gz
+        sha256: 663531f341c5389f460d730e62e10a4fcca3428ca2ca109693867bc5fe2e2807
         x-checker-data:
           type: anitya
           project-id: 7275
@@ -405,8 +405,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/dav1d/1.4.1/dav1d-1.4.1.tar.xz
-        sha256: 8d407dd5fe7986413c937b14e67f36aebd06e1fa5cfec679d10e548476f2d5f8
+        url: https://download.videolan.org/videolan/dav1d/1.4.2/dav1d-1.4.2.tar.xz
+        sha256: 7392cf4c432734eebb383319b5e05e994bffdcdfe66f82287c38873601a4ef0b
         x-checker-data:
           type: anitya
           project-id: 18920
