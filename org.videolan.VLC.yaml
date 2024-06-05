@@ -160,8 +160,8 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.18.tar.bz2
-        sha256: 16a7cee93ce2868ae63ab1a8164dc7de43577c59983b9f61293a310d6888dceb
+        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.19.tar.bz2
+        sha256: b6423c573b758d09539f5e6c4712c1a9fd35dccf835f81d99473d50a50ad49b0
         x-checker-data:
           type: anitya
           project-id: 21315
@@ -252,8 +252,8 @@ modules:
       - --enable-fontconfig
     sources:
       - type: archive
-        url: https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.xz
-        sha256: f0da0bbfba476c16ae3e1cfd862256d30915911f7abaa1b16ce62ee653192784
+        url: https://github.com/libass/libass/releases/download/0.17.2/libass-0.17.2.tar.xz
+        sha256: e8261b51d66ba933fe99248c6fdd8767ed96c5a7e5363c83992c735a2c2fbf74
         x-checker-data:
           type: anitya
           project-id: 1560
@@ -395,8 +395,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz
-        sha256: e70a3335cacacbba0b3a20ec6fecd6783932288ebc8163ad74bcc9606477cae8
+        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.6.tar.gz
+        sha256: 663531f341c5389f460d730e62e10a4fcca3428ca2ca109693867bc5fe2e2807
         x-checker-data:
           type: anitya
           project-id: 7275
@@ -405,8 +405,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/dav1d/1.4.1/dav1d-1.4.1.tar.xz
-        sha256: 8d407dd5fe7986413c937b14e67f36aebd06e1fa5cfec679d10e548476f2d5f8
+        url: https://download.videolan.org/videolan/dav1d/1.4.2/dav1d-1.4.2.tar.xz
+        sha256: 7392cf4c432734eebb383319b5e05e994bffdcdfe66f82287c38873601a4ef0b
         x-checker-data:
           type: anitya
           project-id: 18920
@@ -650,8 +650,8 @@ modules:
       - ./chrpath-0.16/chrpath -d /app/lib/vlc/plugins/access/liblibbluray_plugin.so
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/vlc/3.0.20/vlc-3.0.20.tar.xz
-        sha256: adc7285b4d2721cddf40eb5270cada2aaa10a334cb546fd55a06353447ba29b5
+        url: https://download.videolan.org/videolan/vlc/3.0.21/vlc-3.0.21.tar.xz
+        sha256: 24dbbe1d7dfaeea0994d5def0bbde200177347136dbfe573f5b6a4cee25afbb0
         x-checker-data:
           type: anitya
           project-id: 6504
