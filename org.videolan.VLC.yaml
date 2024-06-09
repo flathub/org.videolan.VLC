@@ -193,30 +193,6 @@ modules:
         commands:
           - autoreconf -fiv
         dest-filename: autogen.sh
-  - name: gsm
-    no-autogen: true
-    build-options:
-      cflags: -fPIC
-      cxxflags: -c -fPIC
-    make-install-args:
-      - -j1
-      - INSTALL_ROOT=/app
-      - GSM_INSTALL_INC=/app/include/gsm
-      - GSM_INSTALL_MAN=/app/share/man/man3
-      - TOAST_INSTALL_MAN=/app/share/man/man1
-    sources:
-      - type: archive
-        url: https://www.quut.com/gsm/gsm-1.0.17.tar.gz
-        sha256: 855a57d1694941ddf3c73cb79b8d0b3891e9c9e7870b4981613b734e1ad07601
-# TODO needs some patch updates
-#        x-checker-data:
-#          type: anitya
-#          project-id: 12587
-#          url-template: https://www.quut.com/gsm/gsm-$version.tar.gz
-      - type: patch
-        path: gsm.patch
-      - type: patch
-        path: gsm-makefile.patch
   - name: libdvbpsi
     rm-configure: true
     sources:
