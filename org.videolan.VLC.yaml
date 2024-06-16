@@ -381,8 +381,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/dav1d/1.4.2/dav1d-1.4.2.tar.xz
-        sha256: 7392cf4c432734eebb383319b5e05e994bffdcdfe66f82287c38873601a4ef0b
+        url: https://download.videolan.org/videolan/dav1d/1.4.3/dav1d-1.4.3.tar.xz
+        sha256: 42fe524bcc82ea3a830057178faace22923a79bad3d819a4962d8cfc54c36f19
         x-checker-data:
           type: anitya
           project-id: 18920
