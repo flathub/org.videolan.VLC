@@ -160,8 +160,8 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.19.tar.bz2
-        sha256: b6423c573b758d09539f5e6c4712c1a9fd35dccf835f81d99473d50a50ad49b0
+        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.20.tar.bz2
+        sha256: ee4b4f85aa00ce38b782cf480fa569a90c7ccb23b0a9a076073a2d0bd6227335
         x-checker-data:
           type: anitya
           project-id: 21315
@@ -228,8 +228,8 @@ modules:
       - --enable-fontconfig
     sources:
       - type: archive
-        url: https://github.com/libass/libass/releases/download/0.17.2/libass-0.17.2.tar.xz
-        sha256: e8261b51d66ba933fe99248c6fdd8767ed96c5a7e5363c83992c735a2c2fbf74
+        url: https://github.com/libass/libass/releases/download/0.17.3/libass-0.17.3.tar.xz
+        sha256: eae425da50f0015c21f7b3a9c7262a910f0218af469e22e2931462fed3c50959
         x-checker-data:
           type: anitya
           project-id: 1560
@@ -272,8 +272,8 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://www.libssh2.org/download/libssh2-1.11.0.tar.gz
-        sha256: 3736161e41e2693324deb38c26cfdc3efe6209d634ba4258db1cecff6a5ad461
+        url: https://www.libssh2.org/download/libssh2-1.11.1.tar.gz
+        sha256: d9ec76cbe34db98eec3539fe2c899d26b0c837cb3eb466a56b0f109cabf658f7
         x-checker-data:
           type: anitya
           project-id: 1730
@@ -371,8 +371,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.6.tar.gz
-        sha256: 663531f341c5389f460d730e62e10a4fcca3428ca2ca109693867bc5fe2e2807
+        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_4.0.tar.gz
+        sha256: 75b4d05629e365913de3100b38a459b04e2a217a8f30efaa91b572d8e6d71282
         x-checker-data:
           type: anitya
           project-id: 7275
@@ -402,8 +402,8 @@ modules:
       - --enable-libopus
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.4.4.tar.xz
-        sha256: e80b380d595c809060f66f96a5d849511ef4a76a26b76eacf5778b94c3570309
+        url: https://ffmpeg.org/releases/ffmpeg-4.4.5.tar.xz
+        sha256: f9514e0d3515aee5a271283df71636e1d1ff7274b15853bcd84e144be416ab07
         x-checker-data:
           type: anitya
           project-id: 5405
