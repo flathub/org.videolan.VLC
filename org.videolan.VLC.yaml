@@ -622,6 +622,7 @@ modules:
       - sed -i -e 's/Icon=vlc/Icon=org.videolan.VLC/g' /app/share/applications/vlc-*.desktop
       - for s in openbd opendvd opencda openvcd; do mv /app/share/applications/vlc-$s.desktop
         /app/share/applications/org.videolan.VLC-$s.desktop; done
+      - rm /app/share/icons/hicolor/16x16/apps/vlc.xpm /app/share/icons/hicolor/32x32/apps/vlc.xpm
       - tar xf chrpath-0.16.tar.gz && cd chrpath-0.16 && ./configure && make
       - ./chrpath-0.16/chrpath -d /app/lib/vlc/plugins/access/liblibbluray_plugin.so
     sources:
