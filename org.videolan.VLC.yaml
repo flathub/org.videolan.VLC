@@ -371,8 +371,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_4.0.tar.gz
-        sha256: 75b4d05629e365913de3100b38a459b04e2a217a8f30efaa91b572d8e6d71282
+        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_4.1.tar.gz
+        sha256: a31699c6a89806b74b0151e5e6a7df65de4b49050482fe5ebf8a4379d7af8f29
         x-checker-data:
           type: anitya
           project-id: 7275
@@ -462,8 +462,8 @@ modules:
       - --with-udev=/app/lib/udev
     sources:
       - type: archive
-        url: https://github.com/libmtp/libmtp/releases/download/v1.1.21/libmtp-1.1.21.tar.gz
-        sha256: f4c1ceb3df020a6cb851110f620c14fe399518c494ed252039cbfb4e34335135
+        url: https://github.com/libmtp/libmtp/releases/download/v1.1.22/libmtp-1.1.22.tar.gz
+        sha256: c3fcf411aea9cb9643590cbc9df99fa5fe30adcac695024442973d76fa5f87bc
         x-checker-data:
           type: anitya
           project-id: 10017
@@ -553,8 +553,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://github.com/Haivision/srt/archive/v1.5.3.tar.gz
-        sha256: befaeb16f628c46387b898df02bc6fba84868e86a6f6d8294755375b9932d777
+        url: https://github.com/Haivision/srt/archive/v1.5.4.tar.gz
+        sha256: d0a8b600fe1b4eaaf6277530e3cfc8f15b8ce4035f16af4a5eb5d4b123640cdd
         x-checker-data:
           type: anitya
           project-id: 236296
