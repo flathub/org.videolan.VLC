@@ -291,8 +291,8 @@ modules:
       - -DWITH_FFMPEG=OFF
     sources:
       - type: archive
-        url: https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.14.tar.gz
-        sha256: 83104e4f7e28b02f8bf6b010d69b626fae591f887e949816305daebae527c9a5
+        url: https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.15.tar.gz
+        sha256: 62352c7795e231dfce044beb96156065a05a05c974e5de9e023d688d8ff675d7
         x-checker-data:
           type: anitya
           project-id: 1756
@@ -381,8 +381,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/dav1d/1.5.0/dav1d-1.5.0.tar.xz
-        sha256: 14bd6f5157808ed9aedcafbe50df689d304fd4810ac20be6eec1ab037436afd6
+        url: https://download.videolan.org/videolan/dav1d/1.5.1/dav1d-1.5.1.tar.xz
+        sha256: 401813f1f89fa8fd4295805aa5284d9aed9bc7fc1fdbe554af4292f64cbabe21
         x-checker-data:
           type: anitya
           project-id: 18920
