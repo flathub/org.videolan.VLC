@@ -132,8 +132,8 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.20.tar.bz2
-        sha256: ee4b4f85aa00ce38b782cf480fa569a90c7ccb23b0a9a076073a2d0bd6227335
+        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.25.tar.bz2
+        sha256: 36fdf15767573f4f92320f01b3fd3c1cb41732b91cfc24d10d1e6a55969c9f56
         x-checker-data:
           type: anitya
           project-id: 21315
@@ -200,8 +200,8 @@ modules:
       - --enable-fontconfig
     sources:
       - type: archive
-        url: https://github.com/libass/libass/releases/download/0.17.3/libass-0.17.3.tar.xz
-        sha256: eae425da50f0015c21f7b3a9c7262a910f0218af469e22e2931462fed3c50959
+        url: https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz
+        sha256: 78f1179b838d025e9c26e8fef33f8092f65611444ffa1bfc0cfac6a33511a05a
         x-checker-data:
           type: anitya
           project-id: 1560
@@ -353,8 +353,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/dav1d/1.5.1/dav1d-1.5.1.tar.xz
-        sha256: 401813f1f89fa8fd4295805aa5284d9aed9bc7fc1fdbe554af4292f64cbabe21
+        url: https://download.videolan.org/videolan/dav1d/1.5.2/dav1d-1.5.2.tar.xz
+        sha256: cce88ebcffd3f790bde49caa75f97b9cc2dd54ca8f57e38c62707266ec71bc4e
         x-checker-data:
           type: anitya
           project-id: 18920
@@ -374,8 +374,8 @@ modules:
       - --enable-libopus
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.4.5.tar.xz
-        sha256: f9514e0d3515aee5a271283df71636e1d1ff7274b15853bcd84e144be416ab07
+        url: https://ffmpeg.org/releases/ffmpeg-4.4.6.tar.xz
+        sha256: 2290461f467c08ab801731ed412d8e724a5511d6c33173654bd9c1d2e25d0617
         x-checker-data:
           type: anitya
           project-id: 5405
@@ -547,8 +547,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar
-        url: https://download.samba.org/pub/samba/stable/samba-4.21.3.tar.gz
-        sha256: ae2179a613e7a5d4088735ab100d4ca1cae0f92374d6307e22eaec13ad90125c
+        url: https://download.samba.org/pub/samba/stable/samba-4.23.4.tar.gz
+        sha256: af429d078a86f1ce16d0d1ecee35c42a3610790b47b84468f31284a8c4060140
         x-checker-data:
           type: html
           url: https://download.samba.org/pub/samba/stable/?C=M;O=D
