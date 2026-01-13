@@ -1,30 +1,22 @@
----
- share/Makefile.am            | 5 +++--
- share/vlc-openbd.desktop.in  | 9 +++++++++
- share/vlc-opencda.desktop.in | 9 +++++++++
- share/vlc-opendvd.desktop.in | 9 +++++++++
- share/vlc-openvcd.desktop.in | 9 +++++++++
- share/vlc.desktop.mimetypes  | 4 ----
- 6 files changed, 39 insertions(+), 6 deletions(-)
- create mode 100644 share/vlc-openbd.desktop.in
- create mode 100644 share/vlc-opencda.desktop.in
- create mode 100644 share/vlc-opendvd.desktop.in
- create mode 100644 share/vlc-openvcd.desktop.in
+commit d7b2b9ca9523b0b0179655e03b45996a8312c6a2
+Author: Mathieu Velten <mathieu@velten.xyz>
+Date:   Wed Jan 14 10:11:19 2026 +0100
+
+    Disk desktop entries
 
 diff --git a/share/Makefile.am b/share/Makefile.am
-index bf81792..75add73 100644
+index 7afbfa5..223fcf0 100644
 --- a/share/Makefile.am
 +++ b/share/Makefile.am
-@@ -5,7 +5,7 @@
+@@ -5,16 +5,17 @@ EXTRA_DIST =
  desktopdir = $(datadir)/applications
  if !HAVE_WIN32
  if !HAVE_DARWIN
 -desktop_DATA = vlc.desktop
 +desktop_DATA = vlc.desktop vlc-openbd.desktop vlc-opendvd.desktop vlc-openvcd.desktop vlc-opencda.desktop
  appdatadir = $(datarootdir)/metainfo
- appdata_DATA = $(appdata_in_files:.xml.in=.xml)
- appdata_in_files = vlc.appdata.xml.in
-@@ -13,9 +13,10 @@
+ appdata_DATA = org.videolan.vlc.appdata.xml
+ endif
  endif
  
  EXTRA_DIST += vlc.desktop.in vlc.desktop.mimetypes
@@ -33,7 +25,7 @@ index bf81792..75add73 100644
  
 -vlc.desktop: vlc.desktop.in $(top_builddir)/config.status
 +%.desktop: %.desktop.in $(top_builddir)/config.status
- 	$(AM_V_GEN)mimetypes="$$(sed 's/\s*#.*$$//g' $(srcdir)/vlc.desktop.mimetypes | egrep -v '^$$' | tr "\n" ';')"; \
+ 	$(AM_V_GEN)mimetypes="$$(sed 's/\s*#.*$$//g' $(srcdir)/vlc.desktop.mimetypes | $(EGREP) -v '^$$' | tr "\n" ';')"; \
  	sed \
  		-e 's,\@bindir\@,$(bindir),g' \
 diff --git a/share/vlc-openbd.desktop.in b/share/vlc-openbd.desktop.in
@@ -101,7 +93,7 @@ index 0d866f7..d521c6c 100644
 --- a/share/vlc.desktop.mimetypes
 +++ b/share/vlc.desktop.mimetypes
 @@ -119,10 +119,6 @@ x-scheme-handler/icyx   # Icecast
-
+ 
  # Linux desktop environment hooks for ISOs etc.
  application/x-cd-image
 -x-content/video-vcd
@@ -109,7 +101,5 @@ index 0d866f7..d521c6c 100644
 -x-content/video-dvd
 -x-content/audio-cdda
  x-content/audio-player
-
+ 
  # Playlists / text/xml list with URLs
-…
-
