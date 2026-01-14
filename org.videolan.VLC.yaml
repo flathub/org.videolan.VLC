@@ -353,8 +353,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/dav1d/1.5.2/dav1d-1.5.2.tar.xz
-        sha256: cce88ebcffd3f790bde49caa75f97b9cc2dd54ca8f57e38c62707266ec71bc4e
+        url: https://download.videolan.org/videolan/dav1d/1.5.3/dav1d-1.5.3.tar.xz
+        sha256: 732010aa5ef461fa93355ed2c6c5fedb48ddc4b74e697eaabe8907eaeb943011
         x-checker-data:
           type: anitya
           project-id: 18920
@@ -464,8 +464,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://github.com/acoustid/chromaprint/releases/download/v1.5.1/chromaprint-1.5.1.tar.gz
-        sha256: a1aad8fa3b8b18b78d3755b3767faff9abb67242e01b478ec9a64e190f335e1c
+        url: https://github.com/acoustid/chromaprint/releases/download/v1.6.0/chromaprint-1.6.0.tar.gz
+        sha256: 9d33482e56a1389a37a0d6742c376139fa43e3b8a63d29003222b93db2cb40da
         x-checker-data:
           type: anitya
           project-id: 286
