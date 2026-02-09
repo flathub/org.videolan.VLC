@@ -132,8 +132,8 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.25.tar.bz2
-        sha256: 36fdf15767573f4f92320f01b3fd3c1cb41732b91cfc24d10d1e6a55969c9f56
+        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.29.tar.bz2
+        sha256: 021bc19c8fc42748bf65707ab091cfe63caa57ffabd3848f43c6dcf39e0bde1e
         x-checker-data:
           type: anitya
           project-id: 21315
