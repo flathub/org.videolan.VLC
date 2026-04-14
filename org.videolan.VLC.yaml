@@ -1,6 +1,6 @@
 app-id: org.videolan.VLC
 runtime: org.kde.Platform
-runtime-version: 5.15-24.08
+runtime-version: 5.15-25.08
 sdk: org.kde.Sdk
 command: vlc
 finish-args:
@@ -22,7 +22,7 @@ finish-args:
   - --filesystem=xdg-run/gvfs
 add-extensions:
   org.videolan.VLC.Plugin:
-    versions: 3-5.15-24.08;3-24.08
+    versions: 3-5.15-25.08;3-25.08
     directory: share/vlc/extra
     subdirectories: true
     merge-dirs: plugins
@@ -150,6 +150,7 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
       - -DWITH_MP4=ON
       - -DWITH_ASF=ON
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
         url: https://taglib.org/releases/taglib-1.13.1.tar.gz
@@ -217,6 +218,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DBUILD_SHARED_LIBS=ON
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
         url: https://dl.matroska.org/downloads/libebml/libebml-1.4.5.tar.xz
@@ -232,6 +234,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DBUILD_SHARED_LIBS=ON
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
         url: https://dl.matroska.org/downloads/libmatroska/libmatroska-1.7.1.tar.xz
@@ -261,6 +264,7 @@ modules:
       - -DBUILD_SHARED_LIBS=ON
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
       - -DWITH_FFMPEG=OFF
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
         url: https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.15.tar.gz
@@ -341,6 +345,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DBUILD_SHARED_LIBS=ON
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
         url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_4.1.tar.gz
@@ -349,6 +354,8 @@ modules:
           type: anitya
           project-id: 7275
           url-template: https://bitbucket.org/multicoreware/x265_git/downloads/x265_$version.tar.gz
+      - type: patch
+        path: x265-Fix-for-CMake-Build-Errors-in-MacOS.patch
   - name: dav1d
     buildsystem: meson
     sources:
@@ -383,23 +390,6 @@ modules:
             '>=': '4'
             <: '5'
           url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
-  - shared-modules/libsecret/libsecret.json
-  # libgcrypt-1.11.0 build fails with freedeskop 24.08
-  - name: libgcrypt
-    config-opts:
-      - --disable-static
-      - --disable-doc
-    sources:
-      - type: git
-        url: https://dev.gnupg.org/source/libgcrypt.git
-        tag: libgcrypt-1.10.3
-        commit: aa1610866f8e42bdc272584f0a717f32ee050a22
-        # disabled for libgcrypt-1.11 because of build fail
-        #x-checker-data:
-        #  type: anitya
-        #  project-id: 1623
-        #  stable-only: true
-        #  tag-template: libgcrypt-$version
   - name: libaacs
     config-opts:
       - --with-pic
@@ -413,6 +403,15 @@ modules:
           type: anitya
           project-id: 5562
           url-template: https://download.videolan.org/videolan/libaacs/$version/libaacs-$version.tar.bz2
+      # fix broken detection of libgcrypt >= 1.11.0
+      # see
+      #  https://gitlab.archlinux.org/archlinux/packaging/packages/libaacs/-/commit/d3f096b01f2b593ab0739f3a9eb64331b99553e7
+      #  https://salsa.debian.org/multimedia-team/libaacs/-/commit/87e3cd8aeaa165624d531b2789f9fd9e5d9c01f5
+      - type: shell
+        commands:
+          - rm --force --verbose m4/libgcrypt.m4
+          - autoreconf --force --install --verbose
+          - libtoolize
   - name: libbdplus
     rm-configure: true
     config-opts:
@@ -431,6 +430,8 @@ modules:
           url-template: https://download.videolan.org/videolan/libbdplus/$version/libbdplus-$version.tar.bz2
       - type: patch
         path: libbdplus-gpg-error.patch
+      - type: patch
+        path: gcrypt.diff
   - name: libbluray
     config-opts:
       - --disable-static
@@ -443,7 +444,6 @@ modules:
           type: anitya
           project-id: 1565
           url-template: https://download.videolan.org/videolan/libbluray/$version/libbluray-$version.tar.bz2
-  - shared-modules/libusb/libusb.json
   - name: libmtp
     config-opts:
       - --disable-static
@@ -463,6 +463,7 @@ modules:
       - -DBUILD_SHARED_LIBS=ON
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
       - -DFFT_LIB=kissfft
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
         url: https://github.com/acoustid/chromaprint/releases/download/v1.5.1/chromaprint-1.5.1.tar.gz
@@ -480,6 +481,7 @@ modules:
       - -DBUILD_SHARED_LIBS=ON
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
       - -DENABLE_SF3=YES
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/divideconcept/FluidLite.git
@@ -574,6 +576,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DBUILD_SHARED_LIBS=ON
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
         url: https://github.com/videolabs/libspatialaudio/releases/download/0.3.0/spatialaudio-0.3.0.tar.bz2
@@ -585,6 +588,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DBUILD_SHARED_LIBS=ON
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
         url: https://github.com/Haivision/srt/archive/v1.5.4.tar.gz
