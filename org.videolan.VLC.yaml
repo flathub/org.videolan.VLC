@@ -132,11 +132,13 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.25.tar.bz2
-        sha256: 36fdf15767573f4f92320f01b3fd3c1cb41732b91cfc24d10d1e6a55969c9f56
+        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.30.tar.bz2
+        sha256: 27038a7dd7fa3ccf147b7d310bff7d208739e5dfe53092f22199e5f342ebc488
         x-checker-data:
           type: anitya
           project-id: 21315
+          versions:
+            <: '1.18'
           url-template: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-$version.tar.bz2
       - type: script
         commands:
@@ -450,8 +452,8 @@ modules:
       - --with-udev=/app/lib/udev
     sources:
       - type: archive
-        url: https://github.com/libmtp/libmtp/releases/download/v1.1.22/libmtp-1.1.22.tar.gz
-        sha256: c3fcf411aea9cb9643590cbc9df99fa5fe30adcac695024442973d76fa5f87bc
+        url: https://github.com/libmtp/libmtp/releases/download/v1.1.23/libmtp-1.1.23.tar.gz
+        sha256: 74a2b6e8cb4a0304e95b995496ea3ac644c29371649b892b856e22f12a0bdeed
         x-checker-data:
           type: anitya
           project-id: 10017
@@ -552,8 +554,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar
-        url: https://download.samba.org/pub/samba/stable/samba-4.23.5.tar.gz
-        sha256: 593a43ddd0d57902237dfa76888f7b02cb7fc7747111369cb31e126db4836b9f
+        url: https://download.samba.org/pub/samba/stable/samba-4.24.0.tar.gz
+        sha256: 1b1e457fd651a612cd08226cc6efd04e5d01e36d918c8b4c4e470e74e86881ea
         x-checker-data:
           type: html
           url: https://download.samba.org/pub/samba/stable/?C=M;O=D
