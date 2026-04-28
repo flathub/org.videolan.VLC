@@ -132,8 +132,8 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.30.tar.bz2
-        sha256: 27038a7dd7fa3ccf147b7d310bff7d208739e5dfe53092f22199e5f342ebc488
+        url: https://downloads.sourceforge.net/sourceforge/pupnp/libupnp-1.14.31.tar.bz2
+        sha256: e72c7690d5df862c07e9014f99513f5a94b55f80d916120655f73e11863edf3f
         x-checker-data:
           type: anitya
           project-id: 21315
@@ -554,8 +554,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar
-        url: https://download.samba.org/pub/samba/stable/samba-4.24.0.tar.gz
-        sha256: 1b1e457fd651a612cd08226cc6efd04e5d01e36d918c8b4c4e470e74e86881ea
+        url: https://download.samba.org/pub/samba/stable/samba-4.24.1.tar.gz
+        sha256: 217151ca318a5576f8e0de72ba0acdf08157ecf12adac42d1af86db0b09a5f5a
         x-checker-data:
           type: html
           url: https://download.samba.org/pub/samba/stable/?C=M;O=D
@@ -593,8 +593,8 @@ modules:
       - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
-        url: https://github.com/Haivision/srt/archive/v1.5.4.tar.gz
-        sha256: d0a8b600fe1b4eaaf6277530e3cfc8f15b8ce4035f16af4a5eb5d4b123640cdd
+        url: https://github.com/Haivision/srt/archive/v1.5.5.tar.gz
+        sha256: c3518bc43a71b5289032395b2db4c3e09e73d78b54247d56c14553a503b491cf
         x-checker-data:
           type: anitya
           project-id: 236296
