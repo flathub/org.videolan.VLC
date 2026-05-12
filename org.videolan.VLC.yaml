@@ -383,8 +383,8 @@ modules:
       - --enable-libopus
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.4.6.tar.xz
-        sha256: 2290461f467c08ab801731ed412d8e724a5511d6c33173654bd9c1d2e25d0617
+        url: https://ffmpeg.org/releases/ffmpeg-4.4.7.tar.xz
+        sha256: 39e7d6d0af050a0a8aae737d610d77264e67b9657f3a346f72bba03312565e2a
         x-checker-data:
           type: anitya
           project-id: 5405
@@ -554,8 +554,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar
-        url: https://download.samba.org/pub/samba/stable/samba-4.24.1.tar.gz
-        sha256: 217151ca318a5576f8e0de72ba0acdf08157ecf12adac42d1af86db0b09a5f5a
+        url: https://download.samba.org/pub/samba/stable/samba-4.24.2.tar.gz
+        sha256: ac24583f271a82ac324f7c6fad7327f65b591ad3492e1dccfee988e2c1c81dd1
         x-checker-data:
           type: html
           url: https://download.samba.org/pub/samba/stable/?C=M;O=D
