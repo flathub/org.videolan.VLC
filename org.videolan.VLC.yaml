@@ -6,8 +6,8 @@ command: vlc
 finish-args:
   - --require-version=0.11.4
   - --share=ipc
-  - --socket=x11
   - --socket=wayland
+  - --socket=fallback-x11
   - --socket=pulseaudio
   - --share=network
   - --filesystem=host
