@@ -203,8 +203,8 @@ modules:
       - --enable-fontconfig
     sources:
       - type: archive
-        url: https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz
-        sha256: 78f1179b838d025e9c26e8fef33f8092f65611444ffa1bfc0cfac6a33511a05a
+        url: https://github.com/libass/libass/releases/download/0.17.5/libass-0.17.5.tar.xz
+        sha256: 2dca25c0e0c837ddf00b52011b3f82cac1e4ddd3ad018227806b0c2288864acc
         x-checker-data:
           type: anitya
           project-id: 1560
@@ -350,14 +350,12 @@ modules:
       - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
-        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_4.1.tar.gz
-        sha256: a31699c6a89806b74b0151e5e6a7df65de4b49050482fe5ebf8a4379d7af8f29
+        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_4.2.tar.gz
+        sha256: 40b1ea0453e0309f0eba934e0ddf533f8f6295966679e8894e8f1c1c8d5e1210
         x-checker-data:
           type: anitya
           project-id: 7275
           url-template: https://bitbucket.org/multicoreware/x265_git/downloads/x265_$version.tar.gz
-      - type: patch
-        path: x265-Fix-for-CMake-Build-Errors-in-MacOS.patch
   - name: dav1d
     buildsystem: meson
     sources:
@@ -383,8 +381,8 @@ modules:
       - --enable-libopus
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.4.7.tar.xz
-        sha256: 39e7d6d0af050a0a8aae737d610d77264e67b9657f3a346f72bba03312565e2a
+        url: https://ffmpeg.org/releases/ffmpeg-4.4.8.tar.xz
+        sha256: c73848c4ae283d9eaee7be3b276affbc3543380483555500d0dd2c9b7e1c39c3
         x-checker-data:
           type: anitya
           project-id: 5405
@@ -556,8 +554,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar
-        url: https://download.samba.org/pub/samba/stable/samba-4.24.2.tar.gz
-        sha256: ac24583f271a82ac324f7c6fad7327f65b591ad3492e1dccfee988e2c1c81dd1
+        url: https://download.samba.org/pub/samba/stable/samba-4.24.4.tar.gz
+        sha256: df2c51ab4361ec626ab9988e5946efcca8465bc7afae834291d5558468265ff8
         x-checker-data:
           type: html
           url: https://download.samba.org/pub/samba/stable/?C=M;O=D
