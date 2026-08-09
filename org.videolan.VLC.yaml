@@ -573,16 +573,14 @@ modules:
           url-template: https://github.com/videolabs/libmicrodns/releases/download/$version/microdns-$version.tar.xz
   - name: spatialaudio
     builddir: true
-    buildsystem: cmake-ninja
+    buildsystem: meson
     config-opts:
-      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
-      - -DBUILD_SHARED_LIBS=ON
-      - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
-      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+      - -Dlibmysofa=disabled
+      - -Dmit_hrtf=disabled
     sources:
       - type: archive
-        url: https://github.com/videolabs/libspatialaudio/releases/download/0.3.0/spatialaudio-0.3.0.tar.bz2
-        sha256: 284c1dbd8efd46c03be84ac7070bc87cae81b7125352b143a70be3e2b96988e3
+        url: https://github.com/videolan/libspatialaudio/releases/download/0.4.0/libspatialaudio-0.4.0.tar.xz
+        sha256: 79f00d6f2695844764604897f704f4520440e1c9e63ccb2aff482717f66b6187 
   - name: srt
     builddir: true
     buildsystem: cmake-ninja
