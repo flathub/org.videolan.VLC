@@ -223,8 +223,8 @@ modules:
       - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
-        url: https://dl.matroska.org/downloads/libebml/libebml-1.4.5.tar.xz
-        sha256: 4971640b0592da29c2d426f303e137a9b0b3d07e1b81d069c1e56a2f49ab221b
+        url: https://dl.matroska.org/downloads/libebml/libebml-1.4.7.tar.xz
+        sha256: 5b08214f929ee54c6187c370f84235fc9d0f2a2258c4d320d68eae6e2bdfd3f7
         x-checker-data:
           type: anitya
           project-id: 7879
@@ -239,8 +239,8 @@ modules:
       - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
-        url: https://dl.matroska.org/downloads/libmatroska/libmatroska-1.7.1.tar.xz
-        sha256: 572a3033b8d93d48a6a858e514abce4b2f7a946fe1f02cbfeca39bfd703018b3
+        url: https://dl.matroska.org/downloads/libmatroska/libmatroska-1.7.2.tar.xz
+        sha256: f3e4d406daf7f1399962c43940e4a87de089474d5bcfbf2e6ca516e98bb87cfc
         x-checker-data:
           type: anitya
           project-id: 1657
@@ -360,8 +360,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/dav1d/1.5.3/dav1d-1.5.3.tar.xz
-        sha256: 732010aa5ef461fa93355ed2c6c5fedb48ddc4b74e697eaabe8907eaeb943011
+        url: https://download.videolan.org/videolan/dav1d/1.5.4/dav1d-1.5.4.tar.xz
+        sha256: 686616b7c69eb88d44459391ab25cac13b6647a3b288835c5784e71c1514a5c5
         x-checker-data:
           type: anitya
           project-id: 18920
@@ -397,8 +397,8 @@ modules:
       - --disable-static
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/libaacs/0.11.1/libaacs-0.11.1.tar.bz2
-        sha256: a88aa0ebe4c98a77f7aeffd92ab3ef64ac548c6b822e8248a8b926725bea0a39
+        url: https://download.videolan.org/videolan/libaacs/0.12.0/libaacs-0.12.0.tar.bz2
+        sha256: 1996673a9fc45ee4a364c66ffa84756629bf3923e52346c7358b71becb8e4419
         x-checker-data:
           type: anitya
           project-id: 5562
@@ -593,8 +593,8 @@ modules:
       - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
-        url: https://github.com/Haivision/srt/archive/v1.5.5.tar.gz
-        sha256: c3518bc43a71b5289032395b2db4c3e09e73d78b54247d56c14553a503b491cf
+        url: https://github.com/Haivision/srt/archive/v1.5.7.tar.gz
+        sha256: 017cd1e437ef2073a4dd10ddf7b55e86bc3d6ebac0393d13bd22f6a57055d32b
         x-checker-data:
           type: anitya
           project-id: 236296
@@ -653,8 +653,8 @@ modules:
       - ./chrpath-0.16/chrpath -d /app/lib/vlc/plugins/access/liblibbluray_plugin.so
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/vlc/3.0.23/vlc-3.0.23.tar.xz
-        sha256: e891cae6aa3ccda69bf94173d5105cbc55c7a7d9b1d21b9b21666e69eff3e7e0
+        url: https://download.videolan.org/videolan/vlc/3.0.24/vlc-3.0.24.tar.xz
+        sha256: e7cab503d1d7d5849b89d2cf0e1ee60d0ef6d012407791b644b9cfc0cc225fdf
         x-checker-data:
           type: anitya
           project-id: 6504
