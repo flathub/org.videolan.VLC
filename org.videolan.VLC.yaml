@@ -93,7 +93,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 13803
-          url-template: https://downloads.sourceforge.net/sourceforge/zapping/zvbi/$version/zvbi-$version.tar.bz2
+          url-template: https://github.com/zapping-vbi/zvbi/archive/refs/tags/v$version.tar.gz
       - type: script
         commands:
           - autoreconf -fiv
@@ -441,6 +441,7 @@ modules:
         sha512: e3ed8dc7fab472ad382b1b6cd068f1dc0084c34e5ec2c460c1dd84fa14a9d368c4d7af08a23efc5057e7f021f5812222c01247d5f304632716c94fc8c689a1a2
         x-checker-data:
           type: anitya
+          project-id: 89591
           url-template: https://download.videolan.org/videolan/libudfread/libudfread-$version.tar.xz
     cleanup:
       - /include
@@ -459,7 +460,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 1565
-          url-template: https://download.videolan.org/videolan/libbluray/$version/libbluray-$version.tar.bz2
+          url-template: https://download.videolan.org/videolan/libbluray/$version/libbluray-$version.tar.xz
   - name: libmtp
     config-opts:
       - --disable-static
