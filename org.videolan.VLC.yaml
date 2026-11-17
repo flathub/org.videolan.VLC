@@ -320,8 +320,8 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/sourceforge/modplug-xmms/libmodplug/0.8.9.0/libmodplug-0.8.9.0.tar.gz
-        sha256: 457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de
+        url: https://downloads.sourceforge.net/sourceforge/modplug-xmms/libmodplug/0.8.9.2/libmodplug-0.8.9.2.tar.gz
+        sha256: e4d9cb46da78a639d6eadb4ff3ab955f68c3099579b5310af64b37091e28957e
         x-checker-data:
           type: anitya
           project-id: 5669
@@ -359,8 +359,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.videolan.org/videolan/dav1d/1.5.4/dav1d-1.5.4.tar.xz
-        sha256: 686616b7c69eb88d44459391ab25cac13b6647a3b288835c5784e71c1514a5c5
+        url: https://download.videolan.org/videolan/dav1d/1.5.5/dav1d-1.5.5.tar.xz
+        sha256: ca96b1d0ba3f01f55de7231d775892b64994ba061aaeeaaa4f662a390b3abf9e
         x-checker-data:
           type: anitya
           project-id: 18920
@@ -380,8 +380,8 @@ modules:
       - --enable-libopus
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-8.1.3.tar.xz
-        sha256: 7138d28c96d9d3e3af4ee3d8cad72741f8ffb40da90c1112235dea3ecd3178a3
+        url: https://ffmpeg.org/releases/ffmpeg-4.4.8.tar.xz
+        sha256: c73848c4ae283d9eaee7be3b276affbc3543380483555500d0dd2c9b7e1c39c3
         x-checker-data:
           type: anitya
           project-id: 5405
@@ -569,8 +569,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar
-        url: https://download.samba.org/pub/samba/stable/samba-4.25.0.tar.gz
-        sha256: 2e2cb7296833b35b8f7a7fb76045e0c57adc0c2cd03264b37df5d58e40f28437
+        url: https://download.samba.org/pub/samba/stable/samba-4.25.1.tar.gz
+        sha256: 7f367545bca69aa96897628f82f0f04d4b66b3bcb36cb978b9bb952c4b4c428d
         x-checker-data:
           type: html
           url: https://download.samba.org/pub/samba/stable/?C=M;O=D
