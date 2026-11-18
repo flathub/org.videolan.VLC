@@ -88,8 +88,8 @@ modules:
     rm-configure: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/sourceforge/zapping/zvbi/0.2.35/zvbi-0.2.35.tar.bz2
-        sha256: fc883c34111a487c4a783f91b1b2bb5610d8d8e58dcba80c7ab31e67e4765318
+        url: https://github.com/zapping-vbi/zvbi/archive/refs/tags/v0.2.46.tar.gz
+        sha256: 817a26118e2654155ee761cd39414885986a4315fdb6617af5314090ddfffd10
         x-checker-data:
           type: anitya
           project-id: 13803
